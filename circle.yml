@@ -12,7 +12,8 @@ dependencies:
         environment:
           DIR: "themes/${THEME}"
           REPO: "https://github.com/shawnohare/${THEME}.git"
-    - cd "themes/${THEME}" && git pull
+    - git pull:
+        pwd: "themes/${THEME}" 
   cache_directories:
     - bin
     - themes
