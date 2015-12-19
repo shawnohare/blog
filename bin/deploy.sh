@@ -31,14 +31,16 @@ example, in order to specify <branch>, you must also specify <directory>. Like
 the command-line options, these"
 
 parse_args() {
+  echo $1
+  echo $2
 	# Set args from a local environment file.
 	if [ -e ".env" ]; then
 		source .env
 	fi
 
 	# Set args from file specified on the command-line.
-	if [[ $1 = "-c" || $1 = "--config" ]]; then
-		source "$2"
+	if [[ $1 == "-c" || $1 == "--config" ]]; then
+		source "${2}"
 		shift 2
 	fi
 
@@ -227,4 +229,4 @@ sanitize() {
 	"$@" 2> >(filter 1>&2) | filter
 }
 
-[[ $1 = --source-only ]] || main "$@"[ $1 = --source-only ]] || main "$@"
+[[ $1 = --source-only ]] || main "$@"
