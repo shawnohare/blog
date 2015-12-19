@@ -8,7 +8,6 @@ dependencies:
     - git clone https://github.com/shawnohare/hugo-morphism.git themes/hugo-morphism
   cache_directories:
     - bin
-    - themes
 
 test:
   override:
