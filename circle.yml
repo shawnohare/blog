@@ -30,7 +30,7 @@ deployment:
       - bash deploy.sh "${dir}" "${branch}" "${repo}":
           environment:
             dir: "public"
-            branch: "master"
+            branch: "test"
             repo: "https://github.com/shawnohare/shawnohare.github.io.git"
             GIT_DEPLOY_USERNAME: "Shawn O'Hare"
             GIT_DEPLOY_EMAIL: "ohare.shawn@gmail.com"

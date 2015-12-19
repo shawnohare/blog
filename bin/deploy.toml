@@ -1,6 +1,0 @@
-# Deployment config file.
-GIT_DEPLOY_DIR="../public"
-GIT_DEPLOY_BRANCH="master"
-GIT_DEPLOY_REPO="https://github.com/shawnohare/shawnohare.github.io.git"
-GIT_DEPLOY_USERNAME="shawnohare"
-GIT_DEPLOY_EMAIL="ohare.shawn@gmail.com"
