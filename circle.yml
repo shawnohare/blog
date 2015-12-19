@@ -2,8 +2,7 @@ machine:
   environment:
     THEME: "hugo-morphism"
   post:
-    - mkdir -p themes
-    - mkdir -p static
+    - mkdir -p themes static
 
 dependencies:
   pre:
