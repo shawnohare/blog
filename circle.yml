@@ -1,17 +1,17 @@
 machine:
   environment:
-    THEME: hugo-morphism
+    THEME: "hugo-morphism"
   post:
     - mkdir -p themes
 
 dependencies:
-  environment:
-    THEME_REPO: https://github.com/shawnohare/hugo-morphism.git
   pre:
     - go get -v github.com/spf13/hugo
-    - if [[ ! -d "themes/${THEME}" ]];then git clone "${THEME_REPO}" "themes/${THEME}";fi
-    - cd "themes/${THEME}"
-    - git pull
+    - if [[ ! -d "${DIR}" ]];then git clone "${REPO}" "${DIR}";fi
+        environment:
+          DIR: "themes/${THEME}"
+          REPO: "https://github.com/shawnohare/${THEME}.git"
+    - cd "themes/${THEME}" && git pull
   cache_directories:
     - bin
     - themes
