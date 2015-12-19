@@ -3,10 +3,12 @@ machine:
     THEME: "hugo-morphism"
   post:
     - mkdir -p themes
+    - mkdir -p static
 
 dependencies:
   pre:
     - go get -v github.com/spf13/hugo
+  commands:
     - if [[ ! -d "${DIR}" ]];then git clone "${REPO}" "${DIR}";fi:
         environment:
           DIR: "themes/${THEME}"
@@ -18,7 +20,7 @@ dependencies:
 
 test:
   override:
-    - hugo -v
+    - hugo -v "--theme=${THEME}"
 
 deployment:
   production:
