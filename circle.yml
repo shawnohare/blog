@@ -1,0 +1,21 @@
+machine:
+  post:
+    - mkdir -p themes
+
+dependencies:
+  pre:
+    - go get -v github.com/spf13/hugo
+    - git clone https://github.com/shawnohare/hugo-morphism.git themes/hugo-morphism
+  cache_directories:
+    - bin
+    - themes
+
+test:
+  override:
+    - hugo -v
+
+deployment:
+  production:
+    branch: master
+    commands:
+      - echo "Deploying dummy message!" 
