@@ -25,4 +25,5 @@ deployment:
   production:
     branch: master
     commands:
-      - echo "Deploying dummy message!" 
+      - ./deploy.sh --config deploy.toml 
+          pwd: "bin"
