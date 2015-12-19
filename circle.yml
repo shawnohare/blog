@@ -25,5 +25,5 @@ deployment:
   production:
     branch: master
     commands:
-      - ./deploy.sh --config deploy.toml 
+      - ./deploy.sh --config deploy.toml:
           pwd: "bin"
