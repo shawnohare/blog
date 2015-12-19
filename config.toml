@@ -4,7 +4,6 @@ publishdir = "public"
 builddrafts = true 
 baseurl = "https://www.shawnohare.com"
 canonifyurls = true
-theme = "hugo-morphism"
 title = "Shawn O'Hare"
 
 [taxonomies]
