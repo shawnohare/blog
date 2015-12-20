@@ -1,6 +1,6 @@
 machine:
   environment:
-    theme_dir: "themes/hugo-morphism"
+    theme: "hugo-morphism"
     theme_repo: "https://github.com/shawnohare/hugo-morphism.git"
     pub_dir: "public"
     pub_branch: "master"
@@ -13,9 +13,10 @@ machine:
 dependencies:
   pre:
     - go get -v github.com/spf13/hugo
-    - if [[ ! -d "${theme_dir}" ]]; then git clone "${theme_repo}" "${theme_dir}"; fi
+    - if [[ ! -d "${theme}" ]]; then git clone "${theme_repo}" "${theme}"; fi
+        pwd: "themes"
     - git pull:
-        pwd: "${theme_dir}"
+        pwd: "themes/${theme}"
     - wget "https://github.com/shawnohare/git-directory-deploy/raw/master/deploy.sh"
   cache_directories:
     - bin
