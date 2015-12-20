@@ -3,7 +3,7 @@ machine:
     theme_dir: "themes/hugo-morphism"
     theme_repo: "https://github.com/shawnohare/hugo-morphism.git"
     pub_dir: "public"
-    pub_branch: "test"
+    pub_branch: "master"
     pub_repo: "https://github.com/shawnohare/shawnohare.github.io.git"
     GIT_DEPLOY_USERNAME: "Shawn O'Hare"
     GIT_DEPLOY_EMAIL: "ohare.shawn@gmail.com"
