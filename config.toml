@@ -58,12 +58,18 @@ title = "Shawn O'Hare"
 [[menu.footer]]
   name = ""
   pre = "<i class='fa fa-twitter fa-2x'></i> "
-  weight = -99 
+  weight = -90 
   identifier = "twitter"
   url = "https://twitter.com/shawn_ohare"
 [[menu.footer]]
   name = ""
+  pre = "<i class='fa fa-linkedin fa-2x'></i> "
+  weight = -80 
+  identifier = "linkedin"
+  url = "https://www.linkedin.com/in/shawnohare"
+[[menu.footer]]
+  name = ""
   pre = "<i class='fa fa-envelope fa-2x'></i> "
-  weight = -98 
+  weight = -70 
   identifier = "mail"
   url = "mailto:ohare.shawn@gmail.com"

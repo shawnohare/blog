@@ -18,7 +18,7 @@ $$
 $$
 </div>
 
-<!-- more -->
+<!--more-->
 
 To render the blog above we used:
 ```
