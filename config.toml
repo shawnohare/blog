@@ -50,19 +50,19 @@ title = "Shawn O'Hare"
 # Morphism theme footer menu 
 # -----------------------------------------------------------------------
 [[menu.footer]]
-  name = "Github"
+  name = ""
   pre = "<i class='fa fa-github fa-2x'></i> "
   weight = -100 
   identifier = "github"
   url = "https://github.com/shawnohare"
 [[menu.footer]]
-  name = "Twitter"
+  name = ""
   pre = "<i class='fa fa-twitter fa-2x'></i> "
   weight = -99 
   identifier = "twitter"
   url = "https://twitter.com/shawn_ohare"
 [[menu.footer]]
-  name = "Mail"
+  name = ""
   pre = "<i class='fa fa-envelope fa-2x'></i> "
   weight = -98 
   identifier = "mail"
