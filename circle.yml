@@ -25,7 +25,7 @@ dependencies:
 test:
   override:
     - hugo -v "--theme=${theme}"
-    - echo "www.smohare.com" > "${pub_dir}/CNAME"
+    - cp CNAME "${pub_dir}/CNAME"
 
 deployment:
   production:
