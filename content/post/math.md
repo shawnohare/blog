@@ -9,7 +9,9 @@ categories = ["mathjax", "latex"]
 
 This post contains some sample mathemematics rendered with MathJax.
 We quite enjoy `$ \LaTeX $`, and this allows us to a continue to write
-mathematical blog posts with this familiar markup language.
+mathematical blog posts with this familiar markup language.  As
+example of inline math, we record two of the more beautiful expressions:
+`$e^{i \pi} + 1 = 0$` and `$\frac{d}{dx}(e^x) = e^x$`.
 
 The tensor product construction for bisets induces a bilinear map 
 <div class="math">
