@@ -1,8 +1,12 @@
 machine:
   environment:
     theme: "hugo-morphism"
-    deploy-script-repo: "https://github.com/shawnohare/git-directory-deploy"
-    publish-dir: "public"
+    deploy-script-loc: "https://github.com/shawnohare/git-directory-deploy"
+    pub-dir: "public"
+    pub-branch: "test"
+    pub-repo: "https://github.com/shawnohare/shawnohare.github.io.git"
+    GIT_DEPLOY_USERNAME: "Shawn O'Hare"
+    GIT_DEPLOY_EMAIL: "ohare.shawn@gmail.com"
   post:
     - mkdir -p themes static
 
@@ -15,7 +19,7 @@ dependencies:
           repo: "https://github.com/shawnohare/${theme}.git"
     - git pull:
         pwd: "themes/${theme}" 
-    - wget "${deploy-script-repo}/raw/master/deploy.sh"
+    - wget "${deploy-script-loc}"/raw/master/deploy.sh
   cache_directories:
     - bin
     - themes
@@ -23,15 +27,10 @@ dependencies:
 test:
   override:
     - hugo -v "--theme=${theme}"
-    - echo "www.smohare.com" > "${publish-dir}/CNAME"
+    - echo "www.smohare.com" > "${pub-dir}/CNAME"
 
 deployment:
   production:
     branch: master
     commands:
-      - bash deploy.sh "-v" "${publish-dir}" "${branch}" "${repo}":
-          environment:
-            branch: "test"
-            repo: "https://github.com/shawnohare/shawnohare.github.io.git"
-            GIT_DEPLOY_USERNAME: "Shawn O'Hare"
-            GIT_DEPLOY_EMAIL: "ohare.shawn@gmail.com"
+      - bash deploy.sh "-v" "${pub-dir}" "${pub-branch}" "${pub-repo}"
