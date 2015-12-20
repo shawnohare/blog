@@ -1,7 +1,6 @@
 machine:
   environment:
     theme: "hugo-morphism"
-    deploy-script-loc: "https://github.com/shawnohare/git-directory-deploy"
     pub-dir: "public"
     pub-branch: "test"
     pub-repo: "https://github.com/shawnohare/shawnohare.github.io.git"
@@ -19,7 +18,7 @@ dependencies:
           repo: "https://github.com/shawnohare/${theme}.git"
     - git pull:
         pwd: "themes/${theme}" 
-    - wget "${deploy-script-loc}"/raw/master/deploy.sh
+    - wget "https://github.com/shawnohare/git-directory-deploy/raw/master/deploy.sh"
   cache_directories:
     - bin
     - themes
