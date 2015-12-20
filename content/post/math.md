@@ -12,7 +12,7 @@ We quite enjoy `$ \LaTeX $`, and this allows us to a continue to write
 mathematical blog posts with this familiar markup language.
 
 The tensor product construction for bisets induces a bilinear map 
-<div>
+<div class="math">
 $$
   -- \cdot_H -- \colon B(G,H) \times B(H, K) \to B(G, K), \quad ([X], [Y]) \mapsto [X \times_H Y].
 $$
@@ -20,5 +20,13 @@ $$
 
 <!-- more -->
 
+To render the blog above we used:
+```
+<div class="math">
+$$
+  -- \cdot_H -- \colon B(G,H) \times B(H, K) \to B(G, K), \quad ([X], [Y]) \mapsto [X \times_H Y].
+$$
+</div>
+```
 
 
