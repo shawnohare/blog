@@ -13,7 +13,7 @@ machine:
 dependencies:
   pre:
     - go get -v github.com/spf13/hugo
-    - if [[ ! -d "${theme}" ]]; then git clone "${theme_repo}" "${theme}"; fi
+    - if [[ ! -d "${theme}" ]]; then git clone "${theme_repo}" "${theme}"; fi:
         pwd: "themes"
     - git pull:
         pwd: "themes/${theme}"
