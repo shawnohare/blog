@@ -1,9 +1,10 @@
 machine:
   environment:
-    theme: "hugo-morphism"
-    pub-dir: "public"
-    pub-branch: "test"
-    pub-repo: "https://github.com/shawnohare/shawnohare.github.io.git"
+    theme_dir: "themes/hugo-morphism"
+    theme_repo: "https://github.com/shawnohare/hugo-morphism.git"
+    pub_dir: "public"
+    pub_branch: "test"
+    pub_repo: "https://github.com/shawnohare/shawnohare.github.io.git"
     GIT_DEPLOY_USERNAME: "Shawn O'Hare"
     GIT_DEPLOY_EMAIL: "ohare.shawn@gmail.com"
   post:
@@ -12,12 +13,9 @@ machine:
 dependencies:
   pre:
     - go get -v github.com/spf13/hugo
-    - if [[ ! -d "${dir}" ]];then git clone "${repo}" "${dir}";fi:
-        environment:
-          dir: "themes/${theme}"
-          repo: "https://github.com/shawnohare/${theme}.git"
+    - [[ ! -d "${theme_dir}" ]] && git clone "${theme_repo}" "${theme_dir}"
     - git pull:
-        pwd: "themes/${theme}" 
+        pwd: "${theme_dir}"
     - wget "https://github.com/shawnohare/git-directory-deploy/raw/master/deploy.sh"
   cache_directories:
     - bin
@@ -26,10 +24,10 @@ dependencies:
 test:
   override:
     - hugo -v "--theme=${theme}"
-    - echo "www.smohare.com" > "${pub-dir}/CNAME"
+    - echo "www.smohare.com" > "${pub_dir}/CNAME"
 
 deployment:
   production:
     branch: master
     commands:
-      - bash deploy.sh "-v" "${pub-dir}" "${pub-branch}" "${pub-repo}"
+      - bash deploy.sh "-v" "${pub_dir}" "${pub_branch}" "${pub_repo}"
