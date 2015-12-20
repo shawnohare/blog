@@ -2,6 +2,7 @@ machine:
   environment:
     theme: "hugo-morphism"
     deploy-script-repo: "https://github.com/shawnohare/git-directory-deploy"
+    publish-dir: "public"
   post:
     - mkdir -p themes static
 
@@ -21,15 +22,15 @@ dependencies:
 
 test:
   override:
-    - hugo -v "--theme=${THEME}"
+    - hugo -v "--theme=${theme}"
+    - echo "www.smohare.com" > "${publish-dir}/CNAME"
 
 deployment:
   production:
     branch: master
     commands:
-      - bash deploy.sh "${dir}" "${branch}" "${repo}":
+      - bash deploy.sh "-v" "${publish-dir}" "${branch}" "${repo}":
           environment:
-            dir: "public"
             branch: "test"
             repo: "https://github.com/shawnohare/shawnohare.github.io.git"
             GIT_DEPLOY_USERNAME: "Shawn O'Hare"
