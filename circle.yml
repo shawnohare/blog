@@ -13,7 +13,7 @@ machine:
 dependencies:
   pre:
     - go get -v github.com/spf13/hugo
-    - [[ ! -d "${theme_dir}" ]] && git clone "${theme_repo}" "${theme_dir}"
+    - if [[ ! -d "${theme_dir}" ]]; then git clone "${theme_repo}" "${theme_dir}"; fi
     - git pull:
         pwd: "${theme_dir}"
     - wget "https://github.com/shawnohare/git-directory-deploy/raw/master/deploy.sh"
