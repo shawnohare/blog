@@ -16,21 +16,18 @@ machine:
 
 dependencies:
   pre:
-    - if [[ ! -d "${theme}" ]]; then git clone "${theme_repo}" "${theme}"; fi:
+    # - if [[ ! -d "${theme}" ]]; then git clone "${theme_repo}" "${theme}"; fi:
+    - git clone "${theme_repo}"
         pwd: "${themes_dir}"
-    - git pull:
-        pwd: "${themes_dir}/${theme}"
-    - if [[ ! -d "${publish_repo}" ]]; then git clone "${publish_repo}"; fi
-    - ls
+    - git clone "${publish_repo}"
+    # - if [[ ! -d "${publish_repo}" ]]; then git clone "${publish_repo}"; fi
     - go get -v github.com/spf13/hugo
   cache_directories:
-    - "${themes_dir}" 
-    - "${publish_dir}" 
 
 test:
   override:
     - hugo -v -d "${public_dir}"
-    - cp CNAME "${puplic_dir}/CNAME"
+    - cp CNAME "${public_dir}/CNAME"
 
 deployment:
   production:
@@ -39,7 +36,7 @@ deployment:
       - cp -r "${public_dir}"/* "${publish_dir}" 
       - git add ".":
           pwd: "${public_dir}"
-      - git commit -m "Generated from commit $(git rev-parse HEAD)":
+      - git commit -m "Generated from ${content_dir} commit $(git rev-parse HEAD)":
           pwd: "${public_dir}"
       - git push -f:
           pwd: "${public_dir}"

@@ -25,6 +25,7 @@ fi
 
 hugo -d "${public_dir}"
 cp -r "${public_dir}"/* "${publish_dir}"
+cp "CNAME" "${publish_dir}/CNAME"
 cd "${publish_dir}"
 git add .
 git commit -m "Generated from ${generator} commit ${rev}"
