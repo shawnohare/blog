@@ -17,7 +17,7 @@ machine:
 dependencies:
   pre:
     # - if [[ ! -d "${theme}" ]]; then git clone "${theme_repo}" "${theme}"; fi:
-    - git clone "${theme_repo}"
+    - git clone "${theme_repo}":
         pwd: "${themes_dir}"
     - git clone "${publish_repo}"
     # - if [[ ! -d "${publish_repo}" ]]; then git clone "${publish_repo}"; fi
