@@ -3,39 +3,40 @@ machine:
     theme: "hugo-morphism"
     theme_repo: "https://github.com/shawnohare/hugo-morphism.git"
     themes_dir: "themes"
-    hugo_public_dir: "public"
+    public_dir: "public"
     publish_branch: "master"
     publish_repo: "https://github.com/shawnohare/shawnohare.github.io.git"
     GIT_DEPLOY_USERNAME: "Shawn O'Hare"
     GIT_DEPLOY_EMAIL: "ohare.shawn@gmail.com"
   post:
-    - mkdir -p themes static
+    - mkdir -p "${themes_dir}" 
+    - ls
 
 dependencies:
   pre:
-    - go get -v github.com/spf13/hugo
     - if [[ ! -d "${theme}" ]]; then git clone "${theme_repo}" "${theme}"; fi:
         pwd: "themes"
     - git pull:
-        pwd: "themes/${theme}"
+        pwd: "${themes_dir}/${theme}"
     - if [[ ! -d "${publish_repo}" ]]; then git clone "${publish_repo}"; fi
+    - go get -v github.com/spf13/hugo
   cache_directories:
     - shawnohare.github.io 
     - themes
 
 test:
   override:
-    - hugo -v "--theme=${theme}" -d "${hugo_public_dir}"
-    - cp CNAME "${pub_dir}/CNAME"
+    - hugo -v "--theme=${theme}" -d "${public_dir}"
+    - cp CNAME "${pulicb_dir}/CNAME"
 
 deployment:
   production:
     branch: master
     commands:
-      - cp -r "${hugo_public_dir}"/* "${publish_dir}" 
+      - cp -r "${public_dir}"/* "${publish_dir}" 
       - git add ".":
-          pwd: "${hugo_public_dir}"
+          pwd: "${public_dir}"
       - git commit -m "Generated from commit $(git rev-parse HEAD)":
-          pwd: "${hugo_public_dir}"
+          pwd: "${public_dir}"
       - git push -f:
-          pwd: "${hugo_public_dir}"
+          pwd: "${public_dir}"
