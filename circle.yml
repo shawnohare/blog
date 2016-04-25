@@ -1,5 +1,6 @@
 machine:
   environment:
+    content_dir: "shawnohare.com"
     theme: "hugo-morphism"
     theme_repo: "https://github.com/shawnohare/hugo-morphism.git"
     themes_dir: "themes"
@@ -9,20 +10,22 @@ machine:
     GIT_DEPLOY_USERNAME: "Shawn O'Hare"
     GIT_DEPLOY_EMAIL: "ohare.shawn@gmail.com"
   post:
-    - mkdir -p "${themes_dir}" 
+    - mkdir -p "${themes_dir}":
+        pwd: "${content_dir}"
     - ls
 
 dependencies:
   pre:
     - if [[ ! -d "${theme}" ]]; then git clone "${theme_repo}" "${theme}"; fi:
-        pwd: "themes"
+        pwd: "${content_dir}/${themes_dir}"
     - git pull:
-        pwd: "${themes_dir}/${theme}"
+        pwd: "${content_dir}/${themes_dir}/${theme}"
     - if [[ ! -d "${publish_repo}" ]]; then git clone "${publish_repo}"; fi
+    - ls
     - go get -v github.com/spf13/hugo
   cache_directories:
-    - shawnohare.github.io 
-    - themes
+    - "${content_dir}/${themes_dir}" 
+    - "${content_dir}/${publish_dir}" 
 
 test:
   override:
