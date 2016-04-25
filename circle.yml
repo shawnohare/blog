@@ -17,20 +17,20 @@ machine:
 dependencies:
   pre:
     - if [[ ! -d "${theme}" ]]; then git clone "${theme_repo}" "${theme}"; fi:
-        pwd: "${content_dir}/${themes_dir}"
+        pwd: "${themes_dir}"
     - git pull:
-        pwd: "${content_dir}/${themes_dir}/${theme}"
+        pwd: "${themes_dir}/${theme}"
     - if [[ ! -d "${publish_repo}" ]]; then git clone "${publish_repo}"; fi
     - ls
     - go get -v github.com/spf13/hugo
   cache_directories:
-    - "${content_dir}/${themes_dir}" 
-    - "${content_dir}/${publish_dir}" 
+    - "${themes_dir}" 
+    - "${publish_dir}" 
 
 test:
   override:
-    - hugo -v "--theme=${theme}" -d "${public_dir}"
-    - cp CNAME "${pulicb_dir}/CNAME"
+    - hugo -v -d "${public_dir}"
+    - cp CNAME "${puplic_dir}/CNAME"
 
 deployment:
   production:
