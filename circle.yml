@@ -2,9 +2,10 @@ machine:
   environment:
     theme: "hugo-morphism"
     theme_repo: "https://github.com/shawnohare/hugo-morphism.git"
-    pub_dir: "public"
-    pub_branch: "master"
-    pub_repo: "https://github.com/shawnohare/shawnohare.github.io.git"
+    themes_dir: "themes"
+    hugo_public_dir: "public"
+    publish_branch: "master"
+    publish_repo: "https://github.com/shawnohare/shawnohare.github.io.git"
     GIT_DEPLOY_USERNAME: "Shawn O'Hare"
     GIT_DEPLOY_EMAIL: "ohare.shawn@gmail.com"
   post:
@@ -17,18 +18,24 @@ dependencies:
         pwd: "themes"
     - git pull:
         pwd: "themes/${theme}"
-    - wget "https://github.com/shawnohare/git-directory-deploy/raw/master/deploy.sh"
+    - if [[ ! -d "${publish_repo}" ]]; then git clone "${publish_repo}"; fi
   cache_directories:
-    - bin
+    - shawnohare.github.io 
     - themes
 
 test:
   override:
-    - hugo -v "--theme=${theme}"
+    - hugo -v "--theme=${theme}" -d "${hugo_public_dir}"
     - cp CNAME "${pub_dir}/CNAME"
 
 deployment:
   production:
     branch: master
     commands:
-      - bash deploy.sh "-v" "${pub_dir}" "${pub_branch}" "${pub_repo}"
+      - cp -r "${hugo_public_dir}"/* "${publish_dir}" 
+      - git add ".":
+          pwd: "${hugo_public_dir}"
+      - git commit -m "Generated from commit $(git rev-parse HEAD)":
+          pwd: "${hugo_public_dir}"
+      - git push -f:
+          pwd: "${hugo_public_dir}"
