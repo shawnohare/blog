@@ -14,6 +14,8 @@ machine:
         pwd: "${content_dir}"
     - ls
 
+# Base dir is the repo being watched by circleci, in this case
+# e.g., github.com/shawnohare/shawnohare.com
 dependencies:
   pre:
     # - if [[ ! -d "${theme}" ]]; then git clone "${theme_repo}" "${theme}"; fi:
@@ -33,7 +35,7 @@ deployment:
   production:
     branch: master
     commands:
-      - cp -r "${public_dir}/*" "${publish_dir}" 
+      - ls && cp -r "${public_dir}/*" "${publish_dir}" 
       - git add ".":
           pwd: "${public_dir}"
       - git commit -m "Generated from ${content_dir} commit $(git rev-parse HEAD)":
