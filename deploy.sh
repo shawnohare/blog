@@ -7,6 +7,7 @@ readonly theme_path="${themes_dir}/${theme}"
 readonly generator="shawnohare.com"
 readonly rev=$(git rev-parse HEAD)
 clean="false"
+build_only="false"
 
 
 init() {
@@ -15,6 +16,9 @@ init() {
     echo "Removing existing dirs."
     rm -rf "${public_dir}"
     rm -rf "${theme_path}"
+  fi
+  if [[ "$(git config user.name)" == "" ]] || [[ "$(git config user.email)" == "" ]]; then
+    exit 1
   fi
   return 0
 }
@@ -66,7 +70,9 @@ main() {
   init
   get_theme
   build_site 
-  publish
+  if [[ "${build_only}" == "false" ]]; then
+    publish
+  fi
   cleanup
   return 0
 }
@@ -82,6 +88,11 @@ for i in "$@"; do
       echo "Default mode."
       shift
       ;;
+    -b|--build-only)
+      echo "In build-only mode."
+      build_only=true
+      shift
+      ;;
     *)
       echo "Unknown option. Exiting"
       exit 1
@@ -90,5 +101,4 @@ for i in "$@"; do
 done
 
 main
-
 

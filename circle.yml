@@ -1,22 +1,44 @@
 machine:
   environment:
-    GIT_DEPLOY_USERNAME: "shawnohare"
+    content_dir: "shawnohare.com"
+    theme: "hugo-morphism"
+    theme_repo: "https://github.com/shawnohare/hugo-morphism.git"
+    themes_dir: "themes"
+    public_dir: "public"
+    publish_branch: "master"
+    publish_repo: "https://github.com/shawnohare/shawnohare.github.io.git"
+    GIT_DEPLOY_USERNAME: "Shawn O'Hare"
     GIT_DEPLOY_EMAIL: "ohare.shawn@gmail.com"
+    rev: "$(git rev-parse HEAD)"
   post:
+    - mkdir -p "${themes_dir}":
+        pwd: "${content_dir}"
+    - git config --global user.name  "${GIT_DEPLOY_USERNAME}"
+    - git config --global user.email "${GIT_DEPLOY_EMAIL}"
 
 # Base dir is the repo being watched by circleci, in this case
 # e.g., github.com/shawnohare/shawnohare.com
 dependencies:
   pre:
+    - git clone "${theme_repo}" "${themes_dir}/${theme}"
     - go get -v github.com/spf13/hugo
   cache_directories:
 
 test:
   override:
-    - bash deploy.sh --clean
+    - hugo -v -d "${public_dir}" 
 
 deployment:
   production:
     branch: master
     commands:
-      - ls
+      - git init:
+          pwd: "${public_dir}"
+      - git remote add origin "${publish_repo}":
+          pwd: "${public_dir}"
+      - git add ".":
+          pwd: "${public_dir}"
+      - git commit -m "Generated from ${content_dir} commit ${rev}":
+          pwd: "${public_dir}"
+      - git push -f:
+          pwd: "${public_dir}"
