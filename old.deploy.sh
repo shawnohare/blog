@@ -12,6 +12,13 @@ readonly rev=$(git rev-parse HEAD)
 
 init() {
   echo "Initializing."
+  # Clean public / publish dirs.
+  if [[ -d "${public_dir}" ]]; then
+    rm -rf "${public_dir}"
+  fi
+  if [[ -d "${publish_dir}" ]]; then
+    rm -rf "${publish_dir}"
+  fi
   return 0
 }
 
@@ -26,6 +33,8 @@ get_theme() {
 }
 
 build_site() {
+  # FIXME don't use tmp dir as this just rebuilds the site anyway.
+  # TODO should we delete old public dir here?
   hugo --destination="${public_dir}"
   if [ $? -eq 0 ]; then 
     return 0 
@@ -37,17 +46,25 @@ build_site() {
 }
 
 
-
+# publish copies the necessary files into a new directory that is force
+# pushed to the appropriate GitHub Pages repo. This will completely overwrite
+# the existing repo, so some caution is useful.
 publish() {
+  # NOTE: resync attempt.  Never really used Tue, 26 Apr 2016 10:14:57 -0700 
+  # Resync the old public (built site) with the newly generated one.
+  # if [[ -d "${public_tmp}" ]]; then
+  #   echo "Syncing newly built site to ${public_dir}"
+  #   rsync -aq --delete "${public_tmp}/" "${public_dir}"
+  # fi
   if [[ ! -d "${public_dir}" ]]; then
     echo "No site to publish!"
-    cleanup
-    exit 1
+    return 1
   fi
-  cd "${public_dir}"
-  # Init or re-init a git repo in the public dir hugo just created.
+  mkdir -p "${publish_dir}"
+  cp -r "${public_dir}"/* "${publish_dir}"
+  cd "${publish_dir}"
   git init
-  git remote add origin "${publish_repo}" # this will fail
+  git remote add origin "${publish_repo}"
   git add .
   git commit -m "Generated from ${generator} commit ${rev}"
   git push -f --set-upstream origin master
@@ -56,12 +73,13 @@ publish() {
 
 cleanup() {
   echo "Cleaning up."
+  rm -r "${public_tmp}"
 }
 
 main() {
   init
   get_theme
-  build_site 
+  build_site
   publish
   cleanup
   return 0
