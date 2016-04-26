@@ -40,5 +40,5 @@ deployment:
           pwd: "${public_dir}"
       - git commit -m "Generated from ${content_dir} commit ${rev}":
           pwd: "${public_dir}"
-      - git push -f:
+      - git push -f --set-upstream origin ${publish_branch}:
           pwd: "${public_dir}"

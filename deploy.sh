@@ -1,4 +1,5 @@
 readonly publish_repo="https://github.com/shawnohare/shawnohare.github.io"
+readonly publish_branch="master"
 readonly public_dir="public"
 readonly themes_dir="themes"
 readonly themes_repo="https://github.com/shawnohare/hugo-morphism"
@@ -58,7 +59,7 @@ publish() {
   git remote add origin "${publish_repo}" # this will fail
   git add .
   git commit -m "Generated from ${generator} commit ${rev}"
-  git push -f --set-upstream origin master
+  git push -f --set-upstream origin "${publish_branch}"
   return 0
 }
 
