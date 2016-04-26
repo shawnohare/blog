@@ -9,28 +9,46 @@ readonly theme_path="${themes_dir}/${theme}"
 readonly rev=$(git rev-parse HEAD)
 
 
-mkdir -p "${themes_dir}" 
+init() {
+  # Clean public / publish dirs.
+  rm -rf "${public_dir}"
+  rm -rf "${publish_dir}"
+  mkdir -p "${themes_dir}" "${publish_dir}"
+  return 0
+}
 
-if [[ ! -d "${publish_dir}" ]]; then
-  git clone "${publish_repo}" "${publish_dir}"
-fi
+get_theme() {
+  if [[ ! -d "${theme_path}" ]]; then
+    git clone "${themes_repo}" "${theme_path}"
+  else 
+    # Update the theme.
+    (cd "${theme_path}" && git pull)
+  fi
+  return 0
+}
 
-if [[ ! -d "${theme_path}" ]]; then
-  git clone "${themes_repo}" "${theme_path}"
-else 
-  cd "${theme_path}"
-  git pull
-  cd ../..
-fi
+# publish copies the necessary files into a new directory that is force
+# pushed to the appropriate GitHub Pages repo. This will completely overwrite
+# the existing repo, so some caution is useful.
+publish() {
+  cp -r "$public_dir"/* "${publish_dir}"
+  cp "CNAME" "${publish_dir}/CNAME"
+  cd "${publish_dir}"
+  git init
+  git remote add origin "${publish_repo}"
+  git add .
+  git commit -m "Generated from ${generator} commit ${rev}"
+  git push -f --set-upstream origin master
+  return 0
+}
 
-hugo -d "${public_dir}"
-cp -r "${public_dir}/"* "${publish_dir}"
-cp "CNAME" "${publish_dir}/CNAME"
-cd "${publish_dir}"
-git add .
-git commit -m "Generated from ${generator} commit ${rev}"
-git push -f
-cd ..
+main() {
+  init
+  get_theme
+  publish
+  return 0
+}
 
+main
 
 
