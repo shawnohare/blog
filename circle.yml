@@ -35,7 +35,8 @@ deployment:
   production:
     branch: master
     commands:
-      - ls && cp -r "${public_dir}/*" "${publish_dir}" 
+      - ls
+      - cp -r "${public_dir}/*" "${publish_dir}" 
       - git add ".":
           pwd: "${public_dir}"
       - git commit -m "Generated from ${content_dir} commit $(git rev-parse HEAD)":
