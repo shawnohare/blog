@@ -6,6 +6,7 @@ math = true
 toc = true
 categories = ["mathjax", "latex"]
 tags = ["debug", "sample"]
+series = ["Example Site"]
 
 +++
 
