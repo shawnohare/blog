@@ -15,11 +15,12 @@ machine:
 
 checkout:
   post:
-    -  git clone "${theme_repo}" "${themes_dir}/${theme}"
+
 # Base dir is the repo being watched by circleci, in this case
 # e.g., github.com/shawnohare/shawnohare.com
 dependencies:
   pre:
+    - git clone "${theme_repo}" "${themes_dir}/${theme}"
     - go get -v github.com/spf13/hugo
   cache_directories:
 
