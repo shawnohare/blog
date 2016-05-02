@@ -6,6 +6,11 @@ baseurl = "http://www.smohare.com"
 canonifyurls = true
 theme = "hugo-morphism"
 title = "Morphism"
+copyright = "&copy; 2013-2016 Shawn O'Hare."
+copyright = "© 2013-2016 Shawn O'Hare"
+
+[author]
+  default = "Default Author"
 
 [taxonomies]
   category = "categories" 
