@@ -3,14 +3,16 @@ layoutdir = "layouts"
 publishdir = "public"
 builddrafts = true 
 baseurl = "http://www.smohare.com"
-canonifyurls = true
+canonifyurls = false 
 theme = "hugo-morphism"
-title = "Morphism"
-copyright = "&copy; 2013-2016 Shawn O'Hare."
-copyright = "© 2013-2016 Shawn O'Hare"
+title = "Shawn O'Hare"
+copyright = "© 2013-2016 Shawn O'Hare.  <a href=\"http://creativecommons.org/licenses/by/4.0/\">Some rights reserved</a>."
+editor = "nvim"
+verbose = false 
 
 [author]
-  default = "Default Author"
+  name = "Shawn O'Hare"
+  uri = "www.shawnohare.com"
 
 [taxonomies]
   category = "categories" 
@@ -18,11 +20,14 @@ copyright = "© 2013-2016 Shawn O'Hare"
   series = "series"
   tag = "tags"
 
+[permalinks]
+    post = "/:year/:month/:filename/"
+
 [params]
-  subtitle = "Hugo Theme"
-  copyrightHolder = "Shawn O'Hare"
+  subtitle = "Mostly Mathematical Musings"
   showPoweredBy = true
   listPaginatorLimit = 10000 
+  # greeting = "Hello!  Welcome to my site."
 
 # -----------------------------------------------------------------------
 # Morphism theme navigation menu 
@@ -46,11 +51,11 @@ copyright = "© 2013-2016 Shawn O'Hare"
   identifier = "categories"
   url = "/categories"
 [[menu.nav]]
-  name = "tags"
+  name = "groups"
   pre = ""
   weight = -89 
-  identifier = "tags"
-  url = "/tags"
+  identifier = "groups"
+  url = "/groups"
 [[menu.nav]]
   name = "me"
   pre = ""

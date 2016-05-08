@@ -1,69 +1,133 @@
 +++
-author = "Hiro Protagonist"
 date = "2015-12-09T17:23:10-07:00"
+updated = "2016-05-07T09:55:48-07:00"
 title = "Post with Mathematics"
-math = true
-toc = true
-categories = ["mathjax", "latex"]
-tags = ["debug", "sample"]
-series = ["Example Site"]
-
+description="Showcase some of the blog's features."
+tags = ["sample", "latex", "mathjax"]
+showPostTimes = true
 +++
 
-This post contains some sample mathemematics rendered with MathJax.
-We quite enjoy $\LaTeX$, and this allows us to a continue to write
-mathematical blog posts with this familiar markup language.  As
-example of inline math, we record two of the more beautiful expressions:
-$e^{i \pi} + 1 = 0$ and $\frac{d}{dx}(e^x) = e^x$.
-
-The tensor product construction for bisets induces a bilinear map 
-$$
-  -- \cdot_H -- \colon B(G,H) \times B(H, K) \to B(G, K), \quad ([X], [Y]) \mapsto [X \times_H Y].
-$$
+This post primarily serves as an example post to very specifically test
+how mathematics markup like $\LaTeX$ is rendered.  The treatment of
+LaTeX in markdown does not seem to be uniform across processors.  Our
+hope is that these notes help to tease out edge cases.
 
 <!--more-->
 
-To render the blog above we used:
+# Inline
+Inline math sometimes is wrapped in code tags, but this paragraph contains the
+two beautiful espressions $e^{i \pi} + 1 = 0$ and \\(\frac{d}{dx}(e^x) = e^x\\)
+written in "naked" $\LaTeX$.
+
+The paragraph above in markdown form looked like:
+```latex
+Inline math sometimes is wrapped in code tags, but this paragraph contains the
+two beautiful espressions $e^{i \pi} + 1 = 0$ and \\(\frac{d}{dx}(e^x) = e^x\\)
+written in "naked" $\LaTeX$.
 ```
+
+# Display
+
+Some guides suggest that display math be wrapped in paragraph or div tags.
+This depends heavily on the markdown processor and MathJax configuration.
+Below, we present two ways of rendering display mathematics.
+
+The tensor product construction for bisets induces a bilinear map 
 $$
-  -- \cdot_H -- \colon B(G,H) \times B(H, K) \to B(G, K), \quad ([X], [Y]) \mapsto [X \times_H Y].
+  -- \cdot_H -- \colon B(G,H) \times B(H, K) \to B(G, K),
+  \quad ([X], [Y]) \mapsto [X \times_H Y],
 $$
+between Burnside rings.
+
+The tensor product construction for bisets induces a bilinear map 
+\\[
+  -- \cdot_H -- \colon B(G,H) \times B(H, K) \to B(G, K),
+  \quad ([X], [Y]) \mapsto [X \times_H Y],
+\\]
+between Burnside rings.
+
+These two paragraphs appeared in the markdown source as:
+```latex
+The tensor product construction for bisets induces a bilinear map 
+$$
+  -- \cdot_H -- \colon B(G,H) \times B(H, K) \to B(G, K),
+  \quad ([X], [Y]) \mapsto [X \times_H Y],
+$$
+between Burnside rings.
+
+The tensor product construction for bisets induces a bilinear map 
+\\[
+  -- \cdot_H -- \colon B(G,H) \times B(H, K) \to B(G, K),
+  \quad ([X], [Y]) \mapsto [X \times_H Y],
+\\]
+between Burnside rings.
 ```
+
+# Escaping
+
+In the display math example above we escaped the standard LaTeX display math
+delimiters `\[ ... \]` with an extra `\`. Similar symbols must be escaped.
+Of particular note are curly braces.  For instance,  the even numbers 
+$\\{ z \in \mathbb{Z} \mid z = 0 \mod 2 \\}$ can be written as 
+`\\{ z \in \mathbb{Z} \mid z = 0 \mod 2 \\}`.
+
+The whole paragraph above is rendered from:
+```latex
+In the display math example above we escaped the standard LaTeX display math
+delimiters `\[ ... \]` with an extra `\`. Similar symbols must be escaped.
+Of particular note are curly braces.  For instance,  the even numbers 
+$\\{ z \in \mathbb{Z} \mid z = 0 \mod 2 \\}$ can be written as 
+`\\{ z \in \mathbb{Z} \mid z = 0 \mod 2 \\}`.
+```
+
 
 # Environments 
 
-To use environments, such as the `equation` environment, we must escape the
-initial slash.  So, for instance:
-\\begin{equation}\label{eq:example}
+Most environments render normally. 
+For example, the degree 2 cyclotomic polynomial
+\begin{equation}\label{eq:example}
   x^2 + 1 = 0 \iff x = \pm i
-\\end{equation}
-is typeset via
+\end{equation}
+renders just fine.
+
 ```
-\\begin{equation}\label{eq:example}
+Most environments render normally. 
+For example, the degree 2 cyclotomic polynomial
+\begin{equation}\label{eq:example}
   x^2 + 1 = 0 \iff x = \pm i
-\\end{equation}
+\end{equation}
+renders just fine.
 ```
 
 Suppose we wish to use an `align` environment.  The Hugo markdown processor
 will convert the newline Latex `\\` to `\`.  One work around is to escape
-both slashes.  Hence:
-\\begin{align}
+both slashes.  For example:
+\begin{align}
   x^2 &= 1 \\\\
   x^2 -1 &= 0 \\\\
   (x-1)(x+1) &= 0
-\\end{align}
-is typeset via
+\end{align}
+
 ```
-\\begin{align}
+Suppose we wish to use an `align` environment.  Some markdown processors
+will convert the newline LaTeX `\\` to `\`.  One work around is to escape
+both slashes.  For example:
+\begin{align}
   x^2 &= 1 \\\\
   x^2 -1 &= 0 \\\\
   (x-1)(x+1) &= 0
-\\end{align}
+\end{align}
 ```
 
 # Labels
 
-We can reference  equation \\ref{eq:example}.
+We can reference equation \ref{eq:example} using the usual LaTeX syntax
+of `\ref{eq:example}`.
+
+```
+We can reference equation \ref{eq:example} using the usual LaTeX syntax
+of `\ref{eq:example}`.
+```
 
 # Lists
 
