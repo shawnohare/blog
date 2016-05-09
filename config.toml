@@ -1,7 +1,7 @@
 contentdir = "content"
 layoutdir = "layouts"
 publishdir = "public"
-builddrafts = true 
+builddrafts = false 
 baseurl = "http://www.smohare.com"
 canonifyurls = false 
 theme = "hugo-morphism"

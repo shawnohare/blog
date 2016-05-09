@@ -94,6 +94,10 @@ for i in "$@"; do
       build_only=true
       shift
       ;;
+    -h|--help)
+      echo "Options are --clean to completely rebuild the site and --build-only to not deploy."
+      exit
+      ;;
     *)
       echo "Unknown option. Exiting"
       exit 1
