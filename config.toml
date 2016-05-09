@@ -28,6 +28,7 @@ verbose = false
   showPoweredBy = true
   listPaginatorLimit = 10000 
   # greeting = "Hello!  Welcome to my site."
+  # morphismColorTheme = "dark-midnight-blue"
 
 # -----------------------------------------------------------------------
 # Morphism theme navigation menu 
