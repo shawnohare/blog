@@ -12,7 +12,7 @@ In this post we discuss a standard way to encode a text document as a vector
 using a term frequency-inverse document frequency (tf-idf) score for each 
 word,  with an aim to cluster similar documents in a corpus.
 
-<!-- more -->
+<!--more-->
 
 Suppose we have a corpus of text documents $\mathcal D$.
 Each document $D$ in the set $\mathcal D$ is a bag (multiset) of words.
