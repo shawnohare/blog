@@ -6,7 +6,8 @@ baseurl = "http://www.smohare.com"
 canonifyurls = false 
 theme = "hugo-morphism"
 title = "Shawn O'Hare"
-copyright = "© 2013-2016 Shawn O'Hare.  <a href=\"http://creativecommons.org/licenses/by/4.0/\">Some rights reserved</a>."
+copyright = "© Shawn O'Hare.  <a rel=\"license\" href=\"http://creativecommons.org/licenses/by-sa/4.0/\">Some rights reserved</a>."
+# copyright = "Licensed by Shawn O'Hare under the <a rel=\"license\" href=\"http://creativecommons.org/licenses/by-sa/4.0/\">Creative Commons Attribution-ShareAlike 4.0 International License</a>."
 editor = "nvim"
 verbose = false 
 
