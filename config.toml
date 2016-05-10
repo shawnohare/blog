@@ -45,18 +45,18 @@ verbose = false
   weight = -100 
   identifier = "posts"
   url = "/post"
-[[menu.nav]]
-  name = "categories"
-  pre = ""
-  weight = -90 
-  identifier = "categories"
-  url = "/categories"
-[[menu.nav]]
-  name = "groups"
-  pre = ""
-  weight = -89 
-  identifier = "groups"
-  url = "/groups"
+# [[menu.nav]]
+#   name = "categories"
+#   pre = ""
+#   weight = -90 
+#   identifier = "categories"
+#   url = "/categories"
+# [[menu.nav]]
+#   name = "groups"
+#   pre = ""
+#   weight = -89 
+#   identifier = "groups"
+#   url = "/groups"
 [[menu.nav]]
   name = "me"
   pre = ""
