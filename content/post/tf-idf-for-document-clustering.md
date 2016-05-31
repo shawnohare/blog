@@ -46,7 +46,7 @@ $\mathcal V$ via $D \mapsto \sum_{w \in \mathcal D} w$.
 This simply counts the number of times each word $w \in \mathcal V$ appears 
 in $\mathcal D$.  To conserve memory we can record only sparse vectors if we so desire.
 This naive approach has one immediate problem.
-The documents $D_1$, $D_2$ consisting of "Whale."} and {"Whale. Whale."}
+The documents $D_1$, $D_2$ consisting of {"Whale."} and {"Whale. Whale."}
 have a distance of $2$ in $\mathbb R \mathcal V$ despite the fact they
 contain the same content, more or less.
 To address this we could of course normalize each vectorized document,
