@@ -97,7 +97,7 @@ Now define the inverse-document-frequency by
 \\[  
   idf \colon \mathcal V  \to \mathbb R,
   \quad   w \mapsto \log \left(  \frac{|\mathcal D|}{| \{ E \in \mathcal D \mid w \in E \}|} \right). 
-\] 
+\\] 
 
 Note that if $w$ appears in each document then $idf(w)=\log 1 = 0$.
 If $w$ appears in $10$ documents and there are a hundred total documents, then $idf(w)=1$.

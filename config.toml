@@ -22,7 +22,7 @@ verbose = false
   tag = "tags"
 
 [permalinks]
-    post = "/:year/:month/:filename/"
+    post = "/:section/:year/:month/:filename/"
 
 [params]
   subtitle = "Mostly Mathematical Musings"
@@ -63,7 +63,7 @@ verbose = false
   pre = ""
   weight = -80
   identifier = "me"
-  url = "/page/about/"
+  url = "/info/about/"
 
 # -----------------------------------------------------------------------
 # Morphism theme footer menu 
