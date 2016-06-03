@@ -96,7 +96,7 @@ Now define the inverse-document-frequency by
 
 \\[  
   idf \colon \mathcal V  \to \mathbb R,
-  \quad   w \mapsto \log \left(  \frac{|\mathcal D|}{| \{ E \in \mathcal D \mid w \in E \}|} \right). 
+  \quad   w \mapsto \log \left(  \frac{|\mathcal D|}{| \\{ E \in \mathcal D \mid w \in E \\}|} \right). 
 \\] 
 
 Note that if $w$ appears in each document then $idf(w)=\log 1 = 0$.
