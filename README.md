@@ -1,5 +1,11 @@
 # shawnohare.com
-Content for shawnohare.com.
+Content for my personal blog.
+
+## Init
+
+Clone the repository, create a `themes` dir in the root, clone the desired
+theme repositories (such as github.com/shawnoahre/hugo-morphism), get hugo,
+then build the site.
 
 ## Deployment
 
