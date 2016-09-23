@@ -1,22 +1,21 @@
 contentdir = "content"
 layoutdir = "layouts"
 publishdir = "public"
-builddrafts = false 
+builddrafts = false
 baseurl = "http://www.smohare.com"
-canonifyurls = false 
 theme = "hugo-morphism"
 title = "Shawn O'Hare"
 copyright = "© Shawn O'Hare.  <a rel=\"license\" href=\"http://creativecommons.org/licenses/by-sa/4.0/\">Some rights reserved</a>."
-# copyright = "Licensed by Shawn O'Hare under the <a rel=\"license\" href=\"http://creativecommons.org/licenses/by-sa/4.0/\">Creative Commons Attribution-ShareAlike 4.0 International License</a>."
 editor = "nvim"
-verbose = false 
+verbose = false
+googleAnalytics = "UA-65318243-1"
 
 [author]
   name = "Shawn O'Hare"
-  uri = "www.shawnohare.com"
+	uri = "https://plus.google.com/115904086044687543049"
 
 [taxonomies]
-  category = "categories" 
+  category = "categories"
   group = "groups"
   series = "series"
   tag = "tags"
@@ -26,36 +25,35 @@ verbose = false
 
 [params]
   subtitle = "Mostly Mathematical Musings"
-  showPoweredBy = true
-  listPaginatorLimit = 10000 
-  # greeting = "Hello!  Welcome to my site."
+  # showPoweredBy = true
+  listPaginatorLimit = 1000000
   # morphismColorTheme = "dark-midnight-blue"
 
 # -----------------------------------------------------------------------
-# Morphism theme navigation menu 
+# Morphism theme navigation menu
 # -----------------------------------------------------------------------
 [[menu.nav]]
   name = "home"
   pre = ""
-  weight = -110 
+  weight = -110
   identifier = "home"
   url = "/"
 [[menu.nav]]
   name = "posts"
   pre = ""
-  weight = -100 
+  weight = -100
   identifier = "posts"
   url = "/post"
 # [[menu.nav]]
 #   name = "categories"
 #   pre = ""
-#   weight = -90 
+#   weight = -90
 #   identifier = "categories"
 #   url = "/categories"
 # [[menu.nav]]
 #   name = "groups"
 #   pre = ""
-#   weight = -89 
+#   weight = -89
 #   identifier = "groups"
 #   url = "/groups"
 [[menu.nav]]
@@ -66,29 +64,29 @@ verbose = false
   url = "/info/about/"
 
 # -----------------------------------------------------------------------
-# Morphism theme footer menu 
+# Morphism theme footer menu
 # -----------------------------------------------------------------------
 [[menu.footer]]
   name = "GitHub"
   pre = ""
-  weight = -100 
+  weight = -100
   identifier = "github"
   url = "https://github.com/shawnohare"
 [[menu.footer]]
   name = "Twitter"
   pre = ""
-  weight = -90 
+  weight = -90
   identifier = "twitter"
   url = "https://twitter.com/shawn_ohare"
 [[menu.footer]]
   name = "LinkedIn"
   pre = ""
-  weight = -80 
+  weight = -80
   identifier = "linkedin"
   url = "https://www.linkedin.com/in/shawnohare"
 [[menu.footer]]
   name = "Mail"
   pre = ""
-  weight = -70 
+  weight = -70
   identifier = "mail"
   url = "mailto:ohare.shawn@gmail.com"

@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 readonly publish_repo="https://github.com/shawnohare/shawnohare.github.io"
 readonly publish_branch="master"
 readonly public_dir="public"

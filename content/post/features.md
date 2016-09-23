@@ -1,13 +1,14 @@
 +++
 date = "2015-12-09T17:23:10-07:00"
 updated = "2016-05-07T09:55:48-07:00"
-title = "Post with Mathematics"
+title = "Features"
 description="Showcase some of the blog's features."
 tags = ["sample", "latex", "mathjax"]
 showPostTimes = true
 +++
 
 This post primarily serves as an example post to very specifically test
+the various features provided by blog themes.  In particular,
 how mathematics markup like $\LaTeX$ is rendered.  The treatment of
 LaTeX in markdown does not seem to be uniform across processors.  Our
 hope is that these notes help to tease out edge cases.
@@ -32,14 +33,14 @@ Some guides suggest that display math be wrapped in paragraph or div tags.
 This depends heavily on the markdown processor and MathJax configuration.
 Below, we present two ways of rendering display mathematics.
 
-The tensor product construction for bisets induces a bilinear map 
+The tensor product construction for bisets induces a bilinear map
 $$
   -- \cdot_H -- \colon B(G,H) \times B(H, K) \to B(G, K),
   \quad ([X], [Y]) \mapsto [X \times_H Y],
 $$
 between Burnside rings.
 
-The tensor product construction for bisets induces a bilinear map 
+The tensor product construction for bisets induces a bilinear map
 \\[
   -- \cdot_H -- \colon B(G,H) \times B(H, K) \to B(G, K),
   \quad ([X], [Y]) \mapsto [X \times_H Y],
@@ -48,14 +49,14 @@ between Burnside rings.
 
 These two paragraphs appeared in the markdown source as:
 ```latex
-The tensor product construction for bisets induces a bilinear map 
+The tensor product construction for bisets induces a bilinear map
 $$
   -- \cdot_H -- \colon B(G,H) \times B(H, K) \to B(G, K),
   \quad ([X], [Y]) \mapsto [X \times_H Y],
 $$
 between Burnside rings.
 
-The tensor product construction for bisets induces a bilinear map 
+The tensor product construction for bisets induces a bilinear map
 \\[
   -- \cdot_H -- \colon B(G,H) \times B(H, K) \to B(G, K),
   \quad ([X], [Y]) \mapsto [X \times_H Y],
@@ -67,23 +68,23 @@ between Burnside rings.
 
 In the display math example above we escaped the standard LaTeX display math
 delimiters `\[ ... \]` with an extra `\`. Similar symbols must be escaped.
-Of particular note are curly braces.  For instance,  the even numbers 
-$\\{ z \in \mathbb{Z} \mid z = 0 \mod 2 \\}$ can be written as 
+Of particular note are curly braces.  For instance,  the even numbers
+$\\{ z \in \mathbb{Z} \mid z = 0 \mod 2 \\}$ can be written as
 `\\{ z \in \mathbb{Z} \mid z = 0 \mod 2 \\}`.
 
 The whole paragraph above is rendered from:
 ```latex
 In the display math example above we escaped the standard LaTeX display math
 delimiters `\[ ... \]` with an extra `\`. Similar symbols must be escaped.
-Of particular note are curly braces.  For instance,  the even numbers 
-$\\{ z \in \mathbb{Z} \mid z = 0 \mod 2 \\}$ can be written as 
+Of particular note are curly braces.  For instance,  the even numbers
+$\\{ z \in \mathbb{Z} \mid z = 0 \mod 2 \\}$ can be written as
 `\\{ z \in \mathbb{Z} \mid z = 0 \mod 2 \\}`.
 ```
 
 
-# Environments 
+# Environments
 
-Most environments render normally. 
+Most environments render normally.
 For example, the degree 2 cyclotomic polynomial
 \begin{equation}\label{eq:example}
   x^2 + 1 = 0 \iff x = \pm i
@@ -91,7 +92,7 @@ For example, the degree 2 cyclotomic polynomial
 renders just fine.
 
 ```
-Most environments render normally. 
+Most environments render normally.
 For example, the degree 2 cyclotomic polynomial
 \begin{equation}\label{eq:example}
   x^2 + 1 = 0 \iff x = \pm i
@@ -108,13 +109,31 @@ both slashes.  For example:
   (x-1)(x+1) &= 0
 \end{align}
 
+The source is:
 ```
-Suppose we wish to use an `align` environment.  Some markdown processors
-will convert the newline LaTeX `\\` to `\`.  One work around is to escape
-both slashes.  For example:
 \begin{align}
   x^2 &= 1 \\\\
   x^2 -1 &= 0 \\\\
+  (x-1)(x+1) &= 0
+\end{align}
+```
+
+However, the  `\\\\` escape technique above seems to not work
+with all Markdown processors. A more robust solution is to use
+the technique is to use `\cr`.  Replacing `\\\\` with `\cr` in the source
+above yields:
+
+\begin{align}
+  x^2 &= 1 \cr
+  x^2 -1 &= 0 \cr
+  (x-1)(x+1) &= 0
+\end{align}
+
+The source is:
+```
+\begin{align}
+  x^2 &= 1 \cr
+  x^2 -1 &= 0 \cr
   (x-1)(x+1) &= 0
 \end{align}
 ```
@@ -142,3 +161,7 @@ Below is an example of a list with long items.
 ### Header 3
 #### Header 4
 ##### Header 5
+
+# Languages
+
+初しぐれ猿も小蓑をほしげ也

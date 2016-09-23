@@ -8,7 +8,7 @@ machine:
     publish_branch: "master"
     publish_repo: "https://github.com/shawnohare/shawnohare.github.io.git"
     GIT_DEPLOY_USERNAME: "Shawn O'Hare"
-    GIT_DEPLOY_EMAIL: "ohare.shawn@gmail.com"
+    GIT_DEPLOY_EMAIL: "shawn@ohare.io"
   post:
     - git config --global user.name  "${GIT_DEPLOY_USERNAME}"
     - git config --global user.email "${GIT_DEPLOY_EMAIL}"
