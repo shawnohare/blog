@@ -3,7 +3,7 @@ date = "2015-12-09T17:23:10-07:00"
 updated = "2016-05-07T09:55:48-07:00"
 title = "Features"
 description="Showcase some of the blog's features."
-tags = ["sample", "latex", "mathjax"]
+tags = ["multi word tag", "sample", "latex", "mathjax"]
 showPostTimes = true
 +++
 
@@ -15,7 +15,9 @@ hope is that these notes help to tease out edge cases.
 
 <!--more-->
 
-# Inline
+# Math
+
+## Inline
 Inline math sometimes is wrapped in code tags, but this paragraph contains the
 two beautiful espressions $e^{i \pi} + 1 = 0$ and \\(\frac{d}{dx}(e^x) = e^x\\)
 written in "naked" $\LaTeX$.
@@ -27,44 +29,64 @@ two beautiful espressions $e^{i \pi} + 1 = 0$ and \\(\frac{d}{dx}(e^x) = e^x\\)
 written in "naked" $\LaTeX$.
 ```
 
-# Display
+## Display
 
 Some guides suggest that display math be wrapped in paragraph or div tags.
 This depends heavily on the markdown processor and MathJax configuration.
 Below, we present two ways of rendering display mathematics.
 
 The tensor product construction for bisets induces a bilinear map
+
 $$
   -- \cdot_H -- \colon B(G,H) \times B(H, K) \to B(G, K),
   \quad ([X], [Y]) \mapsto [X \times_H Y],
 $$
+
 between Burnside rings.
 
-The tensor product construction for bisets induces a bilinear map
-\\[
-  -- \cdot_H -- \colon B(G,H) \times B(H, K) \to B(G, K),
-  \quad ([X], [Y]) \mapsto [X \times_H Y],
-\\]
-between Burnside rings.
+Source:
 
-These two paragraphs appeared in the markdown source as:
 ```latex
 The tensor product construction for bisets induces a bilinear map
+
 $$
   -- \cdot_H -- \colon B(G,H) \times B(H, K) \to B(G, K),
   \quad ([X], [Y]) \mapsto [X \times_H Y],
 $$
-between Burnside rings.
+```
 
 The tensor product construction for bisets induces a bilinear map
+
 \\[
   -- \cdot_H -- \colon B(G,H) \times B(H, K) \to B(G, K),
   \quad ([X], [Y]) \mapsto [X \times_H Y],
 \\]
+
+between Burnside rings.
+
+Source:
+
+```
+The tensor product construction for bisets induces a bilinear map
+
+\\[
+  -- \cdot_H -- \colon B(G,H) \times B(H, K) \to B(G, K),
+  \quad ([X], [Y]) \mapsto [X \times_H Y],
+\\]
+
 between Burnside rings.
 ```
 
-# Escaping
+### Long Display
+
+Consider
+
+\\[ 
+   \iiint_{\mathbb R^3} 1 + x + x^2 + x^3 + x^4 + x^5 + x^6 + x^7 + x^8 + x^9 + x^{10}
+   - (1 + x + x^2 + x^3 + x^4 + x^5 + x^6 + x^7 + x^8 + x^9 + x^{10} \ dx
+\\]
+
+## Escaping
 
 In the display math example above we escaped the standard LaTeX display math
 delimiters `\[ ... \]` with an extra `\`. Similar symbols must be escaped.
@@ -82,7 +104,7 @@ $\\{ z \in \mathbb{Z} \mid z = 0 \mod 2 \\}$ can be written as
 ```
 
 
-# Environments
+## Environments (Basic)
 
 Most environments render normally.
 For example, the degree 2 cyclotomic polynomial
@@ -138,7 +160,40 @@ The source is:
 \end{align}
 ```
 
-# Labels
+## Environment (Complicated)
+
+Environments beyond the basic types do not always render propertly.
+For instance, using a label to mark a specific line an equation seems to confuse
+certain markdown processors. Wrapping the environment in
+`<div>` or `<section>` tags helps.
+
+<div>
+\begin{align}
+  E &= \sum_{n=2}^{\infty} n \cdot p_n \cr
+  &= \sum_{n=2}^{\infty} \frac{n}{2^{n-1}} \label{eq:def}.
+\end{align}
+</div>
+
+The source is:
+```
+<div>
+\begin{align}
+  E &= \sum_{n=2}^{\infty} n \cdot p_n \cr
+  &= \sum_{n=2}^{\infty} \frac{n}{2^{n-1}} \label{eq:def}.
+\end{align}
+</div>
+```
+
+
+# Images
+
+Belowa are a few responsive images.  
+
+{{< figure src="/img/mt-fuji-and-sakura.jpg" title="Mt Fuji" >}}
+
+{{< figure src="/img/napoleans-march.png" title="Napolean's march" >}}
+
+## Labels
 
 We can reference equation \ref{eq:example} using the usual LaTeX syntax
 of `\ref{eq:example}`.
@@ -165,3 +220,13 @@ Below is an example of a list with long items.
 # Languages
 
 初しぐれ猿も小蓑をほしげ也
+
+# Quotes
+
+Below is an example of blockquotes.
+
+>  For me, it is far better to grasp the Universe as it really is than to
+>  persist in delusion, however satisfying and reassuring.
+>
+>  Carl Sagan
+

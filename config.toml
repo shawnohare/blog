@@ -4,14 +4,14 @@ publishdir = "public"
 builddrafts = false
 baseurl = "http://www.smohare.com"
 theme = "hugo-morphism"
-title = "Shawn O'Hare"
-copyright = "© Shawn O'Hare.  <a rel=\"license\" href=\"http://creativecommons.org/licenses/by-sa/4.0/\">Some rights reserved</a>."
+title = "Shawn O’Hare (.com)"
+copyright = "© Shawn O’Hare.  <a rel=\"license\" href=\"http://creativecommons.org/licenses/by-sa/4.0/\">Some rights reserved</a>."
 editor = "nvim"
 verbose = false
 googleAnalytics = "UA-65318243-1"
 
 [author]
-  name = "Shawn O'Hare"
+  name = "Shawn O’Hare"
 	uri = "https://plus.google.com/115904086044687543049"
 
 [taxonomies]
@@ -24,10 +24,9 @@ googleAnalytics = "UA-65318243-1"
     post = "/:section/:year/:month/:filename/"
 
 [params]
-  subtitle = "Mostly Mathematical Musings"
-  # showPoweredBy = true
+  subtitle = "Mathematicable Musings"
+  showPoweredBy = true
   listPaginatorLimit = 1000000
-  # morphismColorTheme = "dark-midnight-blue"
 
 # -----------------------------------------------------------------------
 # Morphism theme navigation menu
@@ -56,12 +55,12 @@ googleAnalytics = "UA-65318243-1"
 #   weight = -89
 #   identifier = "groups"
 #   url = "/groups"
-[[menu.nav]]
-  name = "me"
-  pre = ""
-  weight = -80
-  identifier = "me"
-  url = "/info/about/"
+# [[menu.nav]]
+#   name = "me"
+#   pre = ""
+#   weight = -80
+#   identifier = "me"
+#   url = "/info/about/"
 
 # -----------------------------------------------------------------------
 # Morphism theme footer menu
@@ -89,4 +88,4 @@ googleAnalytics = "UA-65318243-1"
   pre = ""
   weight = -70
   identifier = "mail"
-  url = "mailto:ohare.shawn@gmail.com"
+  url = "mailto:shawn@ohare.io"

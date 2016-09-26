@@ -21,6 +21,7 @@ $2^n$ possible sequences of flips, there are only $2$ that satisfy
 the condition that the last two flips are identical and the first $n-1$
 flips are strictly alternating.  For example, if it took us 3 tosses
 then we either observed the sequences HTT or THH.  Thus we have
+
 \\[
   p_n = \frac{2}{2^{n}} = 2^{1-n}.
 \\]
@@ -37,6 +38,7 @@ by definition
   &= \sum_{n=2}^{\infty} \frac{n}{2^{n-1}} \label{eq:def}.
 \end{align}
 </div>
+
 The right-hand expression \eqref{eq:def} can now be split into a series 
 whose terms are themselves geometric series via
 
