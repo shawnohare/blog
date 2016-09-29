@@ -26,7 +26,7 @@ dependencies:
 
 test:
   override:
-    - hugo -v -d "${public_dir}" 
+    - hugo -v -d "${public_dir}"
 
 deployment:
   production:
