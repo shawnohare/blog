@@ -16,4 +16,3 @@ The writings on this site represent an eclectic mixture of my
 interests.  Generally the articles aim to please
 a mathematically sophisticated audience while still being informative
 to a lay reader.
-
