@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+# -------------------------------------------------------------------------
+# Execute in root dir via bin/serve
+# -------------------------------------------------------------------------
+readonly theme="hugo-morphism"
+
+mkdir -p themes
+
+if [[ ! -d "themes/${theme}" ]]; then
+  cd themes
+  git clone https://github.com/shawnohare/"${theme}"
+  cd ..
+fi
+
+hugo server -v

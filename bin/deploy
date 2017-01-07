@@ -28,7 +28,7 @@ init() {
 get_theme() {
   if [[ ! -d "${theme_path}" ]]; then
     git clone "${themes_repo}" "${theme_path}"
-  else 
+  else
     # Update the theme.
     (cd "${theme_path}" && git pull)
   fi
@@ -37,12 +37,12 @@ get_theme() {
 
 build_site() {
   hugo --destination="${public_dir}"
-  if [ $? -eq 0 ]; then 
-    return 0 
-  else 
+  if [ $? -eq 0 ]; then
+    return 0
+  else
     echo "Error building site.  Exiting."
     cleanup
-    exit 1 
+    exit 1
   fi
 }
 
@@ -71,7 +71,7 @@ cleanup() {
 main() {
   init
   get_theme
-  build_site 
+  build_site
   if [[ "${build_only}" == "false" ]]; then
     publish
   fi
