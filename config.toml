@@ -4,7 +4,7 @@ publishdir = "public"
 builddrafts = false
 baseurl = "http://www.smohare.com"
 theme = "hugo-morphism"
-title = "Shawn O’Hare (.com)"
+title = "Shawn O'Hare (.com)"
 copyright = "© Shawn O’Hare.  <a rel=\"license\" href=\"http://creativecommons.org/licenses/by-sa/4.0/\">Some rights reserved</a>."
 editor = "nvim"
 verbose = false
@@ -26,7 +26,7 @@ googleAnalytics = "UA-65318243-1"
 [params]
   subtitle = "Mathematicable Musings"
   showPoweredBy = true
-  listPaginatorLimit = 1000000
+  # listPaginatorLimit = 1000000
 
 # -----------------------------------------------------------------------
 # Morphism theme navigation menu

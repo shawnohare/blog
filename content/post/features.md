@@ -189,9 +189,9 @@ The source is:
 
 Belowa are a few responsive images.  
 
-{{< figure src="/img/mt-fuji-and-sakura.jpg" title="Mt Fuji" >}}
+{{< figure src="/img/post/features/mt-fuji-and-sakura.jpg" title="Mt Fuji" >}}
 
-{{< figure src="/img/napoleans-march.png" title="Napolean's march" >}}
+{{< figure src="/img/post/features/napoleans-march.png" title="Napolean's march" >}}
 
 ## Labels
 

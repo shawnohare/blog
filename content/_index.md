@@ -4,6 +4,8 @@ title = "about"
 +++
 
 
+{{< figure src="/img/shawn.jpg" >}}
+
 My name is 
 [Shawn Michael O'Hare](https://plus.google.com/115904086044687543049)
 and I am a
