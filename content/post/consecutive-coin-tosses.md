@@ -49,11 +49,11 @@ whose terms are themselves geometric series via
   &= \sum_{n=1}^{\infty} \frac{1}{2^{n}}
     + \sum_{n=1}^{\infty} \sum_{j=n}^{\infty} \frac{1}{2^{j}} \\
   & = 1 + \sum_{n=1}^{\infty} \frac{1}{2^{j-1}} \\
-  &= 1 + 2 = 3. \\
+  &= 3. \\
 \end{align*}
 </div>
 
-We have thus proven that the expected number of coin tosses is in fact only 3!
+We have thus proven that the expected number of coin tosses is in fact only 3.
 
 
 
