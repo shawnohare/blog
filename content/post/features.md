@@ -184,15 +184,6 @@ The source is:
 </div>
 ```
 
-# Code
-
-We have seen examples of inline and block code styling in the previous
-examples. Inline styling tends to be minimally intrusive, and utilizes
-`monospace` font and a border to help distinguish it from prose. The
-border is particularly useful longer code snippets, such as
-`cat features.mid | grep Code`.
-
-
 # Images
 
 Belowa are a few responsive images.

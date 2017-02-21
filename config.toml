@@ -24,7 +24,7 @@ googleAnalytics = "UA-65318243-1"
     post = "/:section/:year/:month/:filename/"
 
 [params]
-  subtitle = "Mathematicable Musings"
+  # subtitle = "Mathematical Datamancy"
   showPoweredBy = true
   # listPaginatorLimit = 1000000
 
@@ -55,12 +55,12 @@ googleAnalytics = "UA-65318243-1"
 #   weight = -89
 #   identifier = "groups"
 #   url = "/groups"
-# [[menu.nav]]
-#   name = "me"
-#   pre = ""
-#   weight = -80
-#   identifier = "me"
-#   url = "/info/about/"
+[[menu.nav]]
+  name = "me"
+  pre = ""
+  weight = -80
+  identifier = "me"
+  url = "/page/me"
 
 # -----------------------------------------------------------------------
 # Morphism theme footer menu
