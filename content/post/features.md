@@ -19,13 +19,13 @@ hope is that these notes help to tease out edge cases.
 
 ## Inline
 Inline math sometimes is wrapped in code tags, but this paragraph contains the
-two beautiful espressions $e^{i \pi} + 1 = 0$ and \\(\frac{d}{dx}(e^x) = e^x\\)
+two beautiful expressions $e^{i \pi} + 1 = 0$ and \\(\frac{d}{dx}(e^x) = e^x\\)
 written in "naked" $\LaTeX$.
 
 The paragraph above in markdown form looked like:
 ```latex
 Inline math sometimes is wrapped in code tags, but this paragraph contains the
-two beautiful espressions $e^{i \pi} + 1 = 0$ and \\(\frac{d}{dx}(e^x) = e^x\\)
+two beautiful expressions $e^{i \pi} + 1 = 0$ and \\(\frac{d}{dx}(e^x) = e^x\\)
 written in "naked" $\LaTeX$.
 ```
 
@@ -224,8 +224,8 @@ Below is an example of a list with long items.
 
 Below is an example of blockquotes.
 
->  For me, it is far better to grasp the Universe as it really is than to
->  persist in delusion, however satisfying and reassuring.
+>  "For me, it is far better to grasp the Universe as it really is than to
+>  persist in delusion, however satisfying and reassuring."
 >
 >  Carl Sagan
 
