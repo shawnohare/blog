@@ -4,7 +4,7 @@ publishdir = "public"
 builddrafts = false
 baseurl = "http://www.smohare.com"
 theme = "hugo-morphism"
-title = "ohare.io"
+title = "shawnohare.com"
 copyright = "© Shawn O’Hare.  <a rel=\"license\" href=\"http://creativecommons.org/licenses/by-sa/4.0/\">Some rights reserved</a>."
 editor = "nvim"
 verbose = false
