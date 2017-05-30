@@ -1,188 +1,100 @@
 +++
-date = "2015-12-09T17:23:10-07:00"
-updated = "2016-05-07T09:55:48-07:00"
+date = "2015-12-09"
+updated = "2017-05-29"
 title = "Features"
 description="Showcase some of the blog's features."
 tags = ["multi word tag", "sample", "latex", "mathjax"]
-showPostTimes = true
 +++
 
-This post primarily serves as an example post to very specifically test
-the various features provided by blog themes.  In particular,
-how mathematics markup like $\LaTeX$ is rendered.  The treatment of
-LaTeX in markdown does not seem to be uniform across processors.  Our
-hope is that these notes help to tease out edge cases.
+Herein we test how blog themes render particular content, especially
+mathematics. 
+
 
 <!--more-->
 
 # Math
 
-## Inline
-Inline math sometimes is wrapped in code tags, but this paragraph contains the
-two beautiful expressions $e^{i \pi} + 1 = 0$ and \\(\frac{d}{dx}(e^x) = e^x\\)
-written in "naked" $\LaTeX$.
+In an effort to avoid encountering Markdown processor nuances and
+gotchas, I've decided to instruct Markdown processors to skip all
+mathematical markup. A desirable side effect is that content can include
+unadulterated LaTeX.
 
-The paragraph above in markdown form looked like:
-```latex
-Inline math sometimes is wrapped in code tags, but this paragraph contains the
-two beautiful expressions $e^{i \pi} + 1 = 0$ and \\(\frac{d}{dx}(e^x) = e^x\\)
-written in "naked" $\LaTeX$.
+## Inline and Display
+
+Very simple inline expressions can be included verbatim. For example 
+`$\LaTeX$` renders to $\LaTeX$. More complicated inline expressions and
+all display style mathematics should be included in `inline` and `display`
+shortcodes, respectively. 
+
+For example, {{< inline "`$\sum_{n \in \mathbb{N}} \frac{1}{n^2}$`" >}} 
+is rendered from
 ```
-
-## Display
-
-Some guides suggest that display math be wrapped in paragraph or div tags.
-This depends heavily on the markdown processor and MathJax configuration.
-Below, we present two ways of rendering display mathematics.
-
-The tensor product construction for bisets induces a bilinear map
-
-$$
-  -- \cdot_H -- \colon B(G,H) \times B(H, K) \to B(G, K),
-  \quad ([X], [Y]) \mapsto [X \times_H Y],
-$$
-
-between Burnside rings.
-
-Source:
-
-```latex
-The tensor product construction for bisets induces a bilinear map
-
-$$
-  -- \cdot_H -- \colon B(G,H) \times B(H, K) \to B(G, K),
-  \quad ([X], [Y]) \mapsto [X \times_H Y],
-$$
+{{</* inline "\`$\sum_{n \in \mathbb{N}} \frac{1}{n^2}$\`" */>}}
 ```
 
 The tensor product construction for bisets induces a bilinear map
-
-\\[
-  -- \cdot_H -- \colon B(G,H) \times B(H, K) \to B(G, K),
-  \quad ([X], [Y]) \mapsto [X \times_H Y],
-\\]
-
-between Burnside rings.
-
-Source:
-
+between Burnside rings via:
+{{< display >}}
 ```
-The tensor product construction for bisets induces a bilinear map
-
-\\[
-  -- \cdot_H -- \colon B(G,H) \times B(H, K) \to B(G, K),
+\[
+  - \cdot_H - \colon B(G,H) \times B(H, K) \to B(G, K),
   \quad ([X], [Y]) \mapsto [X \times_H Y],
-\\]
-
-between Burnside rings.
+\]
 ```
+{{< /display >}}
+which is rendered from
+
+    {{</* display */>}}
+    ```
+    \[
+      - \cdot_H - \colon B(G,H) \times B(H, K) \to B(G, K),
+      \quad ([X], [Y]) \mapsto [X \times_H Y],
+    \]
+    ```
+    {{</* /display */>}}
+
+These shortcode snippets inform the Markdown processor to ignore the content
+and also trim the optional wrapping verbatim backticks. These backticks
+can be included to avoid text editor highlighting issues.
+
 
 ### Long Display
 
-Consider
+Below is an example of displayed math that contains a single, long line.
 
-\\[
-   \iiint_{\mathbb R^3} 1 + x + x^2 + x^3 + x^4 + x^5 + x^6 + x^7 + x^8 + x^9 + x^{10}
-   - (1 + x + x^2 + x^3 + x^4 + x^5 + x^6 + x^7 + x^8 + x^9 + x^{10} \ dx
-\\]
-
-## Escaping
-
-In the display math example above we escaped the standard LaTeX display math
-delimiters `\[ ... \]` with an extra `\`. Similar symbols must be escaped.
-Of particular note are curly braces.  For instance,  the even numbers
-$\\{ z \in \mathbb{Z} \mid z = 0 \mod 2 \\}$ can be written as
-`\\{ z \in \mathbb{Z} \mid z = 0 \mod 2 \\}`.
-
-The whole paragraph above is rendered from:
-```latex
-In the display math example above we escaped the standard LaTeX display math
-delimiters `\[ ... \]` with an extra `\`. Similar symbols must be escaped.
-Of particular note are curly braces.  For instance,  the even numbers
-$\\{ z \in \mathbb{Z} \mid z = 0 \mod 2 \\}$ can be written as
-`\\{ z \in \mathbb{Z} \mid z = 0 \mod 2 \\}`.
+{{< display >}}
 ```
+\begin{equation*}
+   \iiint_{\mathbb R^3} 1 + x + x^2 + x^3 + x^4 + x^5 + x^6 + x^7 + x^8 + x^9 + x^{10} + x^{11} + x^{12}
+   - (1 + x + x^2 + x^3 + x^4 + x^5 + x^6 + x^7 + x^8 + x^9 + x^{10}) \ dx
+\end{equation*}
+```
+{{< /display >}}
 
 
-## Environments (Basic)
+## Environments 
 
-Most environments render normally.
+Basic environments and references are a feature of MathJax.
+
 For example, the degree 2 cyclotomic polynomial
+{{< display >}}
 \begin{equation}\label{eq:example}
-  x^2 + 1 = 0 \iff x = \pm i
+  x^2 + 1 = 0 
 \end{equation}
-renders just fine.
+{{< /display >}}
+We can now reference $\eqref{eq:example}$ via `$\eqref{eq:example}$`.
 
+Even `align` environments work as expected:
+{{< display >}}
 ```
-Most environments render normally.
-For example, the degree 2 cyclotomic polynomial
-\begin{equation}\label{eq:example}
-  x^2 + 1 = 0 \iff x = \pm i
-\end{equation}
-renders just fine.
+\begin{align*}
+  x^2 &= 1 \\
+  x^2 -1 &= 0 \\
+  (x-1)(x+1) &= 0.
+\end{align*}
 ```
+{{< /display >}}
 
-Suppose we wish to use an `align` environment.  The Hugo markdown processor
-will convert the newline Latex `\\` to `\`.  One work around is to escape
-both slashes.  For example:
-\begin{align}
-  x^2 &= 1 \\\\
-  x^2 -1 &= 0 \\\\
-  (x-1)(x+1) &= 0
-\end{align}
-
-The source is:
-```
-\begin{align}
-  x^2 &= 1 \\\\
-  x^2 -1 &= 0 \\\\
-  (x-1)(x+1) &= 0
-\end{align}
-```
-
-However, the  `\\\\` escape technique above seems to not work
-with all Markdown processors. A more robust solution is to use
-the technique is to use `\cr`.  Replacing `\\\\` with `\cr` in the source
-above yields:
-
-\begin{align}
-  x^2 &= 1 \cr
-  x^2 -1 &= 0 \cr
-  (x-1)(x+1) &= 0
-\end{align}
-
-The source is:
-```
-\begin{align}
-  x^2 &= 1 \cr
-  x^2 -1 &= 0 \cr
-  (x-1)(x+1) &= 0
-\end{align}
-```
-
-## Environment (Complicated)
-
-Environments beyond the basic types do not always render propertly.
-For instance, using a label to mark a specific line an equation seems to confuse
-certain markdown processors. Wrapping the environment in
-`<div>` or `<section>` tags helps.
-
-<div>
-\begin{align}
-  E &= \sum_{n=2}^{\infty} n \cdot p_n \cr
-  &= \sum_{n=2}^{\infty} \frac{n}{2^{n-1}} \label{eq:def}.
-\end{align}
-</div>
-
-The source is:
-```
-<div>
-\begin{align}
-  E &= \sum_{n=2}^{\infty} n \cdot p_n \cr
-  &= \sum_{n=2}^{\infty} \frac{n}{2^{n-1}} \label{eq:def}.
-\end{align}
-</div>
-```
 
 # Images
 
@@ -191,16 +103,6 @@ Belowa are a few responsive images.
 {{< figure src="/img/post/features/mt-fuji-and-sakura.jpg" title="Mt Fuji" >}}
 
 {{< figure src="/img/post/features/napoleans-march.png" title="Napolean's march" >}}
-
-## Labels
-
-We can reference equation \ref{eq:example} using the usual LaTeX syntax
-of `\ref{eq:example}`.
-
-```
-We can reference equation \ref{eq:example} using the usual LaTeX syntax
-of `\ref{eq:example}`.
-```
 
 # Lists
 
