@@ -45,12 +45,10 @@ between Burnside rings via:
 which is rendered from
 
     {{</* display */>}}
-    ```
     \[
       - \cdot_H - \colon B(G,H) \times B(H, K) \to B(G, K),
       \quad ([X], [Y]) \mapsto [X \times_H Y],
     \]
-    ```
     {{</* /display */>}}
 
 These shortcode snippets inform the Markdown processor to ignore the content
@@ -94,6 +92,15 @@ Even `align` environments work as expected:
 \end{align*}
 ```
 {{< /display >}}
+
+# Highlighting
+
+Below is an example of some Python code highlighted using the builtin
+`highlight` shortcode.
+{{< highlight >}}
+    def f(x, h):
+        return x + y
+{{< /highlight >}}
 
 
 # Images
