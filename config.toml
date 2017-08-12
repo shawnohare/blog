@@ -71,12 +71,12 @@ googleAnalytics = "UA-65318243-1"
   weight = -100
   identifier = "github"
   url = "https://github.com/shawnohare"
-[[menu.footer]]
-  name = "Twitter"
-  pre = ""
-  weight = -90
-  identifier = "twitter"
-  url = "https://twitter.com/shawn_ohare"
+# [[menu.footer]]
+#   name = "Twitter"
+#   pre = ""
+#   weight = -90
+#   identifier = "twitter"
+#   url = "https://twitter.com/shawn_ohare"
 [[menu.footer]]
   name = "LinkedIn"
   pre = ""

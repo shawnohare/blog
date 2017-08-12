@@ -21,7 +21,7 @@ checkout:
 dependencies:
   pre:
     - git clone "${theme_repo}" "${themes_dir}/${theme}"
-    - go get -v github.com/spf13/hugo
+    - go get -v github.com/gohugoio/hugo
   cache_directories:
 
 test:

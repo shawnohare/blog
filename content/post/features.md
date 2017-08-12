@@ -97,7 +97,7 @@ Even `align` environments work as expected:
 
 Below is an example of some Python code highlighted using the builtin
 `highlight` shortcode.
-{{< highlight >}}
+{{< highlight python >}}
     def f(x, h):
         return x + y
 {{< /highlight >}}
