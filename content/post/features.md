@@ -3,6 +3,8 @@ date = "2015-12-09"
 updated = "2017-05-29"
 title = "Features"
 description="Showcase some of the blog's features."
+math = true
+toc = true
 tags = ["multi word tag", "sample", "latex", "mathjax"]
 +++
 
@@ -26,11 +28,9 @@ Very simple inline expressions can be included verbatim. For example
 all display style mathematics should be included in `inline` and `display`
 shortcodes, respectively. 
 
-For example, {{< inline "`$\sum_{n \in \mathbb{N}} \frac{1}{n^2}$`" >}} 
+For example, {{< inline "$\sum_{n \in \mathbb{N}} \frac{1}{n^2}$" >}} 
 is rendered from
-```
-{{</* inline "\`$\sum_{n \in \mathbb{N}} \frac{1}{n^2}$\`" */>}}
-```
+`{{</* inline "$\sum_{n \in \mathbb{N}} \frac{1}{n^2}$" */>}}`
 
 The tensor product construction for bisets induces a bilinear map
 between Burnside rings via:

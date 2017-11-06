@@ -4,7 +4,6 @@ date = 2013-09-12T13:18:00Z
 updated = 2013-09-12T13:18:01Z
 showPostTimes = true
 blogimport = true 
-math = true
 categories = ["programming"]
 groups = ["python"]
 tags = ["matplotlib", "graphing"]

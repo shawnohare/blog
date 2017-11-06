@@ -25,6 +25,7 @@ googleAnalytics = "UA-65318243-1"
 
 [params]
   # subtitle = "Mathematical Datamancy"
+  showFooter = false
   showPoweredBy = true
   # listPaginatorLimit = 1000000
 
@@ -32,13 +33,14 @@ googleAnalytics = "UA-65318243-1"
 # Morphism theme navigation menu
 # -----------------------------------------------------------------------
 [[menu.nav]]
-  name = "home"
+  name = "&#x1F3E0;"
   pre = ""
   weight = -110
   identifier = "home"
   url = "/"
 [[menu.nav]]
-  name = "posts"
+  # name = "&#x1f4dc;"
+  name = "Posts"
   pre = ""
   weight = -100
   identifier = "posts"
@@ -56,7 +58,8 @@ googleAnalytics = "UA-65318243-1"
 #   identifier = "groups"
 #   url = "/groups"
 [[menu.nav]]
-  name = "me"
+  # name = "&#x1f471;"
+  name = "About"
   pre = ""
   weight = -80
   identifier = "me"

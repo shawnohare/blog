@@ -1,1 +1,1 @@
-Welcome to the homepage of Shawn O'Hare.
+Welcome to Shawn O'Hare's homepage.

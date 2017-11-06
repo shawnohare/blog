@@ -5,7 +5,7 @@ categories = ["data science"]
 groups = ["nlp", "clustering"]
 tags = ["tf-idf"]
 blogimport = true 
-notoc = true
+math = true
 +++
 
 In this post we discuss a standard way to encode a text document as a vector
@@ -47,7 +47,7 @@ That is,
 Since $\mathcal V$ is a set, all duplicate words are ignored.
 We can now naively embed $\mathcal D$ into the $\mathbb R$-span of 
 $\mathcal V$ via 
-{{< inline "`$D \mapsto \sum_{w \in \mathcal D} w$`">}}.
+{{< inline "$D \mapsto \sum_{w \in \mathcal D} w$">}}.
 This simply counts the number of times each word $w \in \mathcal V$ appears 
 in $\mathcal D$.  To conserve memory we can record only sparse vectors if we so desire.
 This naive approach has one immediate problem.
@@ -85,7 +85,7 @@ That is,
 \[  
    \chi_D(w) = 
    \begin{cases}   
-     1 & \text{if $w \in D$,} \\\\   
+     1 & \text{if $w \in D$,} \\   
      0 & \text{if $w \notin D$.}  
    \end{cases} 
 \] 
@@ -95,11 +95,15 @@ That is,
 For a real number $k \in [0,1]$, the $k$-augmented term frequency 
 function is 
 
-\\[  
+{{< display >}}
+```
+\[  
   tf_k \colon \mathcal V \times \mathcal D \to \mathbb R,
   \quad  (w,D) \mapsto k \cdot \chi_D(w) +  
-  \frac{(1-k) f(w,D)}{ \max \left\\{ f(v,D) \mid v \in D \right\\}}.
-\\] 
+  \frac{(1-k) f(w,D)}{ \max \left \{ f(v,D) \mid v \in D \right\}}.
+\] 
+```
+{{< /display >}}
 
 Typically $k=0.5$. In this case, a word receives a weight of $0.5$ if it 
 appears in the document at all an an additional weight for how frequently 
@@ -111,10 +115,10 @@ Now define the inverse-document-frequency by
 ```
 \[  
   idf \colon \mathcal V  \to \mathbb R,
-  \quad   w \mapsto \log \left(  \frac{|\mathcal D|}{| \\{ E \in \mathcal D \mid w \in E \\}|} \right). 
+  \quad   w \mapsto \log \left(  \frac{|\mathcal D|}{| \{ E \in \mathcal D \mid w \in E \}|} \right). 
 \] 
 ```
-{{< display >}}
+{{< /display >}}
 
 Note that if $w$ appears in each document then $idf(w)=\log 1 = 0$.
 If $w$ appears in $10$ documents and there are a hundred total documents, then $idf(w)=1$.
@@ -130,7 +134,7 @@ The desired embedding of $\mathcal D$ into $\mathbb R \mathcal V$ is
 \land w \in D}} (tf_k (w,D) \cdot idf(w,D)) \cdot w 
 \] 
 ```
-{{< display >}}
+{{< /display >}}
 
 Now $\mathbf v( \mathcal D)$ is a subset of $\mathbb R \mathcal V$,
 and we can cluster the documents using any technique that works well in a 
