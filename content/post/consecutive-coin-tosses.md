@@ -1,9 +1,7 @@
 +++
 date = "2016-06-05T11:36:21-07:00"
 description = "An exercise about expectation."
-nomath = false
-nometa = false
-notoc = true 
+math =  true
 categories = ["probability"]
 tags = ["exercise", "expectation"]
 title = "Expected number of coin tosses for consecutive heads or tails"
