@@ -1,3 +1,4 @@
+#! /usr/bin/env bash
 readonly publish_repo="https://github.com/shawnohare/shawnohare.github.io"
 readonly publish_dir="shawnohare.github.io"
 readonly generator="shawnohare.com"
