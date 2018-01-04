@@ -21,40 +21,48 @@ def fmt(content: str):
     """
 
 
-    display_re = re.compile(r'\\begin{(equation|align)\*?}.+?\\end{(equation|align)\*?}')
-    label_re = re.compile(r'\\label{(.*?)}')
+    # NOTE: Best to keep it simple, with fewever regexs where possible.
+    # inline_dollars_re = re.compile(r'\$.+?\$')
+    # inline_parens_re = re.compile(r'\\\(|\\\)')
+    re_begin = re.compile(r'\\begin{(equation|align)\*?}')
+    re_end = re.compile(r'\\end{(equation|align)\*?}')
+    # display_re = re.compile(r'\\begin{(equation|align)\*?}.+?\\end{(equation|align)\*?}')
+    # label_re = re.compile(r'\\label{(.*?)}')
     # We never use $$ to delimit display nor do we use $ in latex ,
     # so $...$ always wraps inline math.
-    inline_re = re.compile(r'\$.+?\$')
 
-    content = (
-        inline_re.sub(lambda m: r'\(' + m.group()[1:-1] + '\)', content)
+    cnt = (
+        content
         .replace('blogimport = true', 'markup = "mmark"\nblogimport = true')
-        .replace('&lt', '<')
-        .replace('&gt', '>')
+        # < and > in latex will cause issues with highlighting. Use \lt.
+        .replace('&lt;', '<')
+        .replace('&gt;', '>')
         .replace('``', '"')
         .replace("''", '"')
+        # .replace(r'\\', '\\\\\n')  # Causes mmark to render code instead of math
         .replace(r'\hat', r'\widehat')  # \hat renders oddly in mathjax
         .replace(r'&amp;', r'&')
         .replace(r'amp;', r'&')
         .replace(r'&nbsp;', ' ')
-        .replace(r"<a name='more'></a>", '\n\n<!--more-->\n\n')
-        .replace(r'<br />', '\n')
-        .replace(r'\[', r'\begin{equation*}')
-        .replace(r'\]', r'\end{equation*}')
-        # .replace(r'\(', '<span class="math"> $$')
-        # .replace(r'\)', '$$ </span>')
+        .replace('$', '$$')
         .replace(r'\(', '$$')
         .replace(r'\)', '$$')
+        .replace(r'\[', r'\begin{equation*}')
+        .replace(r'\]', r'\end{equation*}')
+        .replace(r"<a name='more'></a>", '\n\n<!--more-->\n\n')
+        .replace(r'<br />', '\n')
         .replace(
             '[author]\n\tname = "Shawn O\'Hare"\n\turi = "https://plus.google.com/115904086044687543049"',
             '')
     )
-    content = display_re.sub(
-        lambda m: '\n\n<pre class="math">\n' + m.group() + '\n</pre>\n\n', content)
-    content = label_re.sub(lambda m: m.group() + '\n', content)
+    # cnt = inline_dollars_re.sub(lambda m: r'$' + m.group() + '$', cnt)
+    # cnt = inline_parens_re.sub(r'$$', cnt)
+    # cnt = display_re.sub(lambda m: '\n\n$$' + m.group() + '$$\n\n', cnt)
+    cnt = re_begin.sub(lambda m: '\n\n$$' + m.group() + '\n', cnt)
+    cnt = re_end.sub(lambda m: '\n' + m.group() + '$$\n\n', cnt)
+    # cnt = label_re.sub(lambda m: m.group() + '\n', cnt)
 
-    return content
+    return cnt
 
 
 def fmt_file(path: str, tar: str):

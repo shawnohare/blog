@@ -1,6 +1,6 @@
 ---
 date: "2017-11-25T11:15:01"
-title:  "LaTeX in Markdown"
+title:  "Math (LaTeX) in Markdown"
 subtitle: "Rendering mathematics for the web"
 description: "Showcase some mathematics in markdown."
 math:  true
@@ -82,30 +82,24 @@ $$2 := \{0, 1\} = \{\emptyset, \{\emptyset \}\}$$ is rendered from:
 $$2 := \{0, 1\} = \{\emptyset, \{\emptyset \}\}$$
 ```
 
-For display mathematics, I prefer to use explicit environments wrapped in
-`<pre>` tags (rather than overloading `$$`), the contents of which most
-markdown processors skip. For example,
+For display mathematics, I prefer to use explicit environments, which must
+themselves be wrapped in `$$` tags.
 
-<pre class="math">
-\begin{equation*}
+$$\begin{equation*}
 \mathfrak C_n := \left\{ \xi^0, \xi^1, \xi^2, \dots, \xi^{n-1} \right\}
-\end{equation*}
-</pre>
+\end{equation*}$$
 
 is rendered from :
 
 ```
-<pre class="math">
-\begin{equation*}
+$$\begin{equation*}
 \mathfrak C_n := \left\{ \xi^0, \xi^1, \xi^2, \dots, \xi^{n-1} \right\}
-\end{equation*}
-</pre>
+\end{equation*}$$
 ```
 
-The advantage with this approach is that `$$...$$` 
-and `<pre class="math">...</pre>` 
-always delimit inline and display mathematics, respectively. This
-simplifies source transformation.
+The advantage with this approach is that `$$...$$` and
+`$$\begin{*}...\end{*}$$` always delimit inline and display mathematics,
+respectively. This simplifies source transformation.
 
 
 # hugo
@@ -132,40 +126,28 @@ markup:  "mmark"
 
 Some mathematical expressions:
 
-<pre class="math">
-\begin{equation*}
+$$\begin{equation*}
 \left( \sum_{k=1}^n a_k b_k \right)^{2} \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right) 
-\end{equation*}
-</pre>
+\end{equation*}$$
 
-<pre class="math">
-\begin{equation*}
+$$\begin{equation*}
  \mathbf{V}_1 \times \mathbf{V}_2 = \begin{vmatrix} \mathbf{i} & \mathbf{j} & \mathbf{k} \newline \frac{\partial X}{\partial u} & \frac{\partial Y}{\partial u} & 0 \newline \frac{\partial X}{\partial v} & \frac{\partial Y}{\partial v} & 0 \newline \end{vmatrix}
-\end{equation*}
-</pre>
+\end{equation*}$$
 
-<pre class="math">
-\begin{equation*}
+$$\begin{equation*}
 \frac{1}{(\sqrt{\phi \sqrt{5}}-\phi) e^{\frac25 \pi}} = 1+\frac{e^{-2\pi}} {1+\frac{e^{-4\pi}} {1+\frac{e^{-6\pi}} {1+\frac{e^{-8\pi}} {1+\ldots} } } }
-\end{equation*}
-</pre>
+\end{equation*}$$
 
-<pre class="math">
-\begin{equation*}
-1 + \frac{q^2}{(1-q)}+\frac{q^6}{(1-q)(1-q^2)}+\cdots = \prod_{j=0}^{\infty}\frac{1}{(1-q^{5j+2})(1-q^{5j+3})}, \quad\quad \text{for $|q|<1$}.
-\end{equation*}
-</pre>
+$$\begin{equation*}
+1 + \frac{q^2}{(1-q)}+\frac{q^6}{(1-q)(1-q^2)}+\cdots = \prod_{j=0}^{\infty}\frac{1}{(1-q^{5j+2})(1-q^{5j+3})}, \quad\quad \text{for $|q| \lt 1$}.
+\end{equation*}$$
 
-<pre class="math">
-\begin{align} 
+$$\begin{align} 
 \nabla \times \vec{\mathbf{B}} -, \frac1c, \frac{\partial\vec{\mathbf{E}}}{\partial t} & = \frac{4\pi}{c}\vec{\mathbf{j}} \newline \nabla \cdot \vec{\mathbf{E}} & = 4 \pi \rho \newline \nabla \times \vec{\mathbf{E}}, +, \frac1c, \frac{\partial\vec{\mathbf{B}}}{\partial t} & = \vec{\mathbf{0}} \newline \nabla \cdot \vec{\mathbf{B}} & = 0
-\end{align}
-</pre>
+\end{align}$$
 
-<pre class="math">
-\begin{equation} \label{eq:showcase}
+$$\begin{equation} \label{eq:showcase}
 x(t) = e^{\int_{t_0}^tp(s)ds}\Bigg(\int_{t_0}^t\Big(q(s)e^{-\int_{t_0}^sp(\tau)d\tau}\Big)ds + x_0\Bigg). 
-\end{equation}
-</pre>
+\end{equation}$$
 
 We can even reference equation $$\eqref{eq:showcase}$$.

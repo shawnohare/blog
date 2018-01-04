@@ -1,3 +1,5 @@
 public
 shawnohare.github.io
 themes
+__pycache__
+*.pyc
