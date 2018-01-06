@@ -1,13 +1,15 @@
-+++
-title = "Ring Endomorphisms of the Reals"
-date = 2014-04-24T14:05:00Z
-updated = 2014-04-24T14:05:18Z
-tags = ["math"]
-markup = "mmark"
-blogimport = true 
-math = true
+---
+blogimport: true
+date: 2014-04-24T14:05:00Z
+markup: mmark
+math: true
+tags:
+- math
+title: Ring Endomorphisms of the Reals
+updated: 2014-04-24T14:05:18Z
+slug: 980b9501-945b-459f-ad8f-3d2d54dbb2ba
 
-+++
+---
 
 Today we present a (mostly) algebraic proof that the only field endomorphism of the real numbers $$\mathbb R$$ is the identity map.  Many arguments of this fact invoke continuity, which we particularly try to avoid.  To be clear, we require in this discussion that ring morphisms fix the multiplicative identity.    First we recall that any characteristic $$0$$ field has a prime subfield isomorphic to the rationals $$\mathbb Q$$, so we will always assume characteristic $$0$$ fields contain $$\mathbb Q$$.
 

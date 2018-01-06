@@ -1,13 +1,17 @@
-+++
-date = "2016-06-05T11:36:21-07:00"
-description = "An exercise about expectation."
-math = true
-categories = ["probability"]
-tags = ["exercise", "expectation"]
-title = "Expected number of coin tosses for consecutive heads or tails"
-markup = "mmark"
+---
+categories:
+- probability
+date: 2016-06-05T11:36:21-07:00
+description: An exercise about expectation.
+markup: mmark
+math: true
+tags:
+- exercise
+- expectation
+title: Expected number of coin tosses for consecutive heads or tails
+slug: e48c5542-899b-4cb2-bfc3-f5ff20ecfc22
 
-+++
+---
 
 A fun elementary exercise involving expectation is to compute the number of
 times we expect to toss a coin before seeing consecutive heads or tails.

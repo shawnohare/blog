@@ -1,15 +1,17 @@
-+++
-title = "All Horses Are the Same Color"
-date = 2013-03-29T16:32:00Z
-updated = 2013-03-30T12:27:15Z
-categories= ["math"]
-tags = ["proof"]
-markup = "mmark"
-blogimport = true 
-math = true
+---
+blogimport: true
+categories:
+  - math
+date: 2013-03-29T16:32:00Z
+markup: mmark
+math: true
+tags:
+  - proof
+title: All Horses Are the Same Color
+subtitle: Why base cases mattern in proof by induction
+slug: 04edd874-9774-424b-a1e4-d66769b0fb54
 
-+++
-
+---
 
 I was fortunate to TA UCSC's introductory proofs course three times.  One of the exercises I like to pose to my students is the following fallacious induction proof that all horses are the same color.
 

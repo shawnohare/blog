@@ -1,13 +1,15 @@
-+++
-title = "Sums of Consecutive Integers"
-date = 2013-03-29T16:47:00Z
-updated = 2013-03-29T16:47:46Z
-tags = ["math"]
-markup = "mmark"
-blogimport = true
-math = true
+---
+blogimport: true
+date: 2013-03-29T16:47:00Z
+markup: mmark
+math: true
+tags:
+- math
+title: Sums of Consecutive Integers
+updated: 2013-03-29T16:47:46Z
+slug: ea00f41c-bf92-4c88-a74a-38e384935ac1
 
-+++
+---
 
 A fun fact I recently learned about is the following.
 

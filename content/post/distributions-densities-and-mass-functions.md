@@ -1,13 +1,15 @@
-+++
-title = "Distributions, Densities, and Mass Functions"
-date = 2014-07-01T16:52:00Z
-updated = 2014-09-26T11:26:10Z
-tags = ["probability"]
-markup = "mmark"
-blogimport = true 
-math = true
+---
+blogimport: true
+date: 2014-07-01T16:52:00Z
+markup: mmark
+math: true
+tags:
+- probability
+title: Distributions, Densities, and Mass Functions
+updated: 2014-09-26T11:26:10Z
+slug: febc494a-ad7c-4a13-8441-10c19f8b1fa2
 
-+++
+---
 
 One unfortunate aspect of probability theory is that common measure theoretic
 constructions are given different, often conflated, names.  The technical

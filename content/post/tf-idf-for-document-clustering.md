@@ -1,12 +1,18 @@
-+++
-title = "TF-IDF for Document Clustering"
-date = 2013-12-10T19:56:00Z
-categories = ["data science"]
-groups = ["nlp", "clustering"]
-tags = ["tf-idf"]
-blogimport = true 
-math = true
-+++
+---
+blogimport: true
+categories:
+- data science
+date: 2013-12-10T19:56:00Z
+groups:
+- nlp
+- clustering
+math: true
+tags:
+- tf-idf
+title: TF-IDF for Document Clustering
+slug: be46c1b0-3ed0-457b-a135-5887680c17b6
+
+---
 
 In this post we discuss a standard way to encode a text document as a vector
 using a term frequency-inverse document frequency (tf-idf) score for each 

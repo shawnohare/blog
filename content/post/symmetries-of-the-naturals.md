@@ -1,14 +1,14 @@
-+++
-title = "Symmetries of the Naturals"
-date = 2013-03-29T17:23:00Z
-updated = 2013-03-31T09:25:42Z
-tags = ["math"]
-markup = "mmark"
-blogimport = true 
-math = true
+---
+blogimport: true
+date: 2013-03-29T17:23:00Z
+markup: mmark
+math: true
+tags:
+  - math
+title: Symmetries of the Naturals
+slug: cae61396-547e-4b42-94ad-64f49430d3ce
 
-+++
-
+---
 
 This was a little problem I thought about while backpacking a few years ago.
 

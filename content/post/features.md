@@ -1,13 +1,18 @@
-+++
-date = "2015-12-09"
-updated = "2017-05-29"
-title = "Feature Sandbox"
-description="Showcase some of the site's features."
-math = true
-toc = true
-tags = ["multi word tag", "sample", "latex", "mathjax"]
-markup = "mmark"
-+++
+---
+date: 2015-12-09
+description: Showcase some of the site's features.
+markup: mmark
+math: true
+tags:
+- multi word tag
+- sample
+- latex
+- mathjax
+title: Feature Sandbox
+toc: true
+slug: a912191e-8eb3-4440-8897-6083fd03395a
+
+---
 
 # Introduction 
 

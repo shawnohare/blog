@@ -1,13 +1,15 @@
-+++
-title = "Linear Models"
-date = 2013-10-11T17:59:00Z
-updated = 2013-10-11T18:04:07Z
-tags = ["statistics"]
-markup = "mmark"
-blogimport = true 
-math = true
+---
+blogimport: true
+date: 2013-10-11T17:59:00Z
+markup: mmark
+math: true
+tags:
+- statistics
+title: Linear Models
+updated: 2013-10-11T18:04:07Z
+slug: f2a88cf3-334d-4ad2-b572-9be51bfd57f9
 
-+++
+---
 
 Suppose we think that a random variable $$Y$$ (the response) is linearly dependent on random variables $$X_1, \dots, X_p$$, where $$p$$ is some integer.    We can model this by assuming that 
 

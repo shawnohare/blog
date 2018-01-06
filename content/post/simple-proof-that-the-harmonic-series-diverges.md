@@ -1,13 +1,15 @@
-+++
-title = "A Simple Proof that the Harmonic Series Diverges"
-date = 2013-11-02T15:11:00Z
-updated = 2013-11-02T15:11:45Z
-tags = ["math"]
-markup = "mmark"
-blogimport = true
-math = true
+---
+blogimport: true
+date: 2013-11-02T15:11:00Z
+markup: mmark
+math: true
+tags:
+- math
+title: A Simple Proof that the Harmonic Series Diverges
+updated: 2013-11-02T15:11:45Z
+slug: 62d4e7ec-dd8a-4c4c-b31f-cdbaba92bafc
 
-+++
+---
 
 One usually encounters the harmonic series
 

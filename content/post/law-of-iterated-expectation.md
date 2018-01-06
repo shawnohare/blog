@@ -1,13 +1,15 @@
-+++
-title = "Law of Iterated Expectation"
-date = 2014-07-07T20:56:00Z
-updated = 2014-07-08T08:15:56Z
-tags = ["probability"]
-markup = "mmark"
-blogimport = true
-math = true
+---
+blogimport: true
+date: 2014-07-07T20:56:00Z
+markup: mmark
+math: true
+tags:
+- probability
+title: Law of Iterated Expectation
+updated: 2014-07-08T08:15:56Z
+slug: 13814340-1ac1-4393-b547-1a2acc6d379d
 
-+++
+---
 
 Let $$X$$ and $$Y$$ denote continuous, random, real-valued variables with joint
 probability density function $$f(X, Y)$$.  The marginal density function of

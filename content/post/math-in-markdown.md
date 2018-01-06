@@ -1,14 +1,20 @@
 ---
-date: "2017-11-25T11:15:01"
-title:  "Math (LaTeX) in Markdown"
-subtitle: "Rendering mathematics for the web"
-description: "Showcase some mathematics in markdown."
-math:  true
-tags:  ["latex", "mathjax", "markdown", "commonmark", "hugo"]
-markup:  "mmark"
+date: 2017-11-25T11:15:01
+description: Showcase some mathematics in markdown.
+markup: mmark 
+math: true
+
+slug: AE8073E5-FAAD-4768-AA20-153731F16DE6
+subtitle: Rendering mathematics for the web
+tags:
+- latex
+- mathjax
+- markdown
+- commonmark
+- hugo
+title: Math (LaTeX) in Markdown
 
 ---
-
 
 # Introduction
 
@@ -125,6 +131,10 @@ markup:  "mmark"
 # Showcase
 
 Some mathematical expressions:
+
+$$\begin{equation*}
+\mathfrak G \mathrel{\vcenter{:}}= \coprod_{i=1}^{\infty} \widehat{\mathbb X}_{\{ j \lt i \}}
+\end{equation*}$$
 
 $$\begin{equation*}
 \left( \sum_{k=1}^n a_k b_k \right)^{2} \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right) 

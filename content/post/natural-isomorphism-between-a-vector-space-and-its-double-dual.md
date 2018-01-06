@@ -1,12 +1,13 @@
-+++
-title = "A natural isomorphism between a vector space and its double dual."
-date = 2013-07-27T17:27:00Z
-updated = 2013-07-27T17:31:31Z
-markup = "mmark"
-blogimport = true 
-math = true
+---
+blogimport: true
+date: 2013-07-27T17:27:00Z
+markup: mmark
+math: true
+title: A natural isomorphism between a vector space and its double dual.
+updated: 2013-07-27T17:31:31Z
+slug: 4e11d870-63b1-4d04-8f52-05eefd53a9ce
 
-+++
+---
 
 Soon after one begins a study of abstract vector spaces, they are confronted with the fact that a finite dimensional vector space is naturally (or canonically) isomorphic to its double dual space.  Intuitively, this means that the isomorphism is somehow independent of any particular choice of basis.  This notion is made rigorous  with the notion of natural transformations of functors between categories.
 

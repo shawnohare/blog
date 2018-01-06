@@ -1,13 +1,16 @@
-+++
-title = "Categorical Limits and Colimits"
-date = 2014-01-12T14:43:00Z
-updated = 2014-09-08T15:06:47Z
-tags = ["category theory", "math"]
-markup = "mmark"
-blogimport = true
-math = true
+---
+blogimport: true
+date: 2014-01-12T14:43:00Z
+markup: mmark
+math: true
+tags:
+- category theory
+- math
+title: Categorical Limits and Colimits
+updated: 2014-09-08T15:06:47Z
+slug: a140ae29-896b-4813-9ded-eb6a9e211f59
 
-+++
+---
 
 Many types of universal constructions that appear in a wide variety of mathematical contexts can be realized as categorical limits and colimits.  To define a limit we first need the notion of a cone of a diagram.   A diagram of type $$J$$ in a category $$\mathcal C$$ is a simply a functor $$F \colon J \to \mathcal C$$.   We imagine $$J$$ as an indexing for the objects and morphisms in $$\mathcal C$$ under consideration. When $$J$$ is a finite category it can be visualized as a directed graph.
 

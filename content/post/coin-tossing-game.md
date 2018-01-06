@@ -1,13 +1,16 @@
-+++
-title = "A Coin Tossing Game"
-date = 2013-08-06T21:51:00Z
-tags = ["probability"]
-markup = "mmark"
-blogimport = true 
-math = true
-[author]
-	name = "Shawn O'Hare"
-+++
+---
+author:
+  name: Shawn O'Hare
+blogimport: true
+date: 2013-08-06T21:51:00Z
+markup: mmark
+math: true
+tags:
+- probability
+title: A Coin Tossing Game
+slug: e4bd28d7-4295-4c3d-9d17-1c2223812541
+
+---
 
 As an example of the law of total probabilities, I'm going to explore a slightly generalized variant of an interview question I recently encountered.  
 The basic scenario is to imagine two players, let's say Amanda and Bill, both of who have a weighted coin. They take turns tossing their coin and whoever obtains the first heads wins. 

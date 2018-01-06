@@ -1,13 +1,15 @@
-+++
-title = "The Continuum Hypothesis and Weird Probabilities"
-date = 2013-12-05T22:40:00Z
-updated = 2014-09-26T11:12:22Z
-tags = ["math"]
-markup = "mmark"
-blogimport = true
-math = true
+---
+blogimport: true
+date: 2013-12-05T22:40:00Z
+markup: mmark
+math: true
+tags:
+- math
+title: The Continuum Hypothesis and Weird Probabilities
+updated: 2014-09-26T11:12:22Z
+slug: 835b517b-caa4-48ad-b5c4-b9c19d6d363e
 
-+++
+---
 
 I recently heard of an interesting "proof" that $$(0,1)$$ does not have cardinality $$\aleph_1$$.  This would disprove the Continuum Hypothesis  ($$\textbf{CH}$$), which asserts that any subset of $$(0,1)$$ is either countable or has the same cardinality as $$(0,1)$$.   More precisely, $$\textbf{CH}$$ states that  if $$\omega_0$$ denotes the first countable ordinal (i.e., the set of natural numbers) and $$\omega_1$$ denotes the first uncountable ordinal, then   $$| \omega_1| = | 2^{\omega_0}|$$.  Here $$2^{\omega_0}$$ is the set of all binary-valued functions $$f \colon \omega_0 \to \{ 0, 1\}$$, which has the same cardinality as the power set of $$\omega_0$$ and as $$(0,1)$$.
 

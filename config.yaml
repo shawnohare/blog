@@ -1,0 +1,116 @@
+contentdir: content
+layoutdir: layouts
+publishdir: public
+builddrafts: false
+baseurl: http://www.smohare.com
+theme: hugo-morphism
+title: "Shawn M. O'Hare"
+copyright: "© Shawn M. O’Hare.  <a rel=\"license\" href=\"http://creativecommons.org/licenses/by-sa/4.0/\">Some rights reserved</a>."
+editor: nvim
+verbose: true
+metaDataFormat: yaml
+# googleAnalytics: "UA-65318243-1"
+
+author:
+  name: "Shawn O’Hare"
+  uri: "https://www.shawnohare.com"
+
+taxonomies:
+  category: categories
+  group: groups
+  series: series
+  tag: tags
+
+permalinks:
+  # NOTE: Default is :section/:slug
+  # post: "/:section/:year/:month/:filename/"
+  # post: :slug
+  # page: :slug
+
+params:
+  subtitle: "Mathematical Datamancy"
+  # footerMessage: "Some message goes here"
+  # listPaginatorLimit: 1000000
+
+# -----------------------------------------------------------------------
+# Morphism theme navigation menu
+# -----------------------------------------------------------------------
+menu:
+  nav:
+    - name: home
+      pre: ""
+      weight: -110
+      identifier: home
+      url: "/"
+
+    - name: "posts"
+      pre: ""
+      weight: -100
+      identifier: "posts"
+      url: "/post"
+
+    - name: "about"
+      pre: ""
+      weight: -80
+      identifier: "about"
+      url: "/page/about"
+
+# NOTE: If used, convert to yaml
+# [[menu.index]]
+#   # name: "&#x1F3E0;"
+#   name: "Source"
+#   pre: ""
+#   weight: -109
+#   identifier: "src"
+#   url: "https://github.com/shawnohare/blog"
+# [[menu.index]]
+#   # name: "&#x1f4dc;"
+#   name: "Posts"
+#   pre: ""
+#   weight: -100
+#   identifier: "posts"
+#   url: "/post"
+# [[menu.index]]
+#   name: "GitHub"
+#   pre: ""
+#   weight: -91
+#   identifier: "github"
+#   url: "https://github.com/shawnohare"
+# [[menu.index]]
+#   # name: "&#x1f471;"
+#   name: "About"
+#   pre: ""
+#   weight: -80
+#   identifier: "about"
+#   url: "/page/about"
+# [[menu.index]]
+#   name: "Mail"
+#   pre: ""
+#   weight: -70
+#   identifier: "mail"
+#   url: "mailto:shawn@shawnohare.com"
+
+# [[menu.footer]]
+#   name: "GitHub"
+#   pre: ""
+#   weight: -100
+#   identifier: "github"
+#   url: "https://github.com/shawnohare"
+# [[menu.footer]]
+#   name: "Twitter"
+#   pre: ""
+#   weight: -90
+#   identifier: "twitter"
+#   url: "https://twitter.com/shawn_ohare"
+# [[menu.footer]]
+#   name: "LinkedIn"
+#   pre: ""
+#   weight: -80
+#   identifier: "linkedin"
+#   url: "https://www.linkedin.com/in/shawnohare"
+# [[menu.footer]]
+#   name: "Mail"
+#   pre: ""
+#   weight: -70
+#   identifier: "mail"
+#   url: "mailto:shawn@ohare.io"

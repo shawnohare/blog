@@ -1,13 +1,21 @@
-+++
-categories = ["site"]
-date = "2016-05-08T08:48:39-07:00"
-description = "Migrating to Hugo"
-series = ["Migrating to Hugo"]
-tags = ["hugo", "golang", "hakyll", "blogger"]
-title = "Migrating to Hugo - Part I"
-subtitle = "Finding a Home"
-markup = "mmark"
-+++
+---
+categories:
+- site
+date: 2016-05-08T08:48:39-07:00
+description: Migrating to Hugo
+markup: mmark
+series:
+- Migrating to Hugo
+subtitle: Finding a Home
+tags:
+- hugo
+- golang
+- hakyll
+- blogger
+title: Migrating to Hugo - Part I
+slug: 949f15a7-5103-4127-ae16-9b6a04bf6afd
+
+---
 
 Over the years I've tried a number of blogging services, but only Wordpress
 and Blogger with any seriousness.  Roughly a year ago I made

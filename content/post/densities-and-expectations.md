@@ -1,12 +1,13 @@
-+++
-title = "Densities and Expectations"
-date = 2013-06-24T11:40:00Z
-updated = 2014-07-07T20:01:13Z
-markup = "mmark"
-blogimport = true 
-math = true
+---
+blogimport: true
+date: 2013-06-24T11:40:00Z
+markup: mmark
+math: true
+title: Densities and Expectations
+updated: 2014-07-07T20:01:13Z
+slug: 22130f0c-9527-428f-96ea-dbf1f3dd6905
 
-+++
+---
 
 For the layperson, it's probably most helpful to think of the density function $$f$$ associated to a random variable $$X$$ as the function you integrate to compute probabilities.  Similarly, the expected value $$E(X)$$ is thought of as the average value that $$X$$ takes.  Often $$E(X)$$ is defined already in terms of the density function, and it's not clear to the beginner why $$\int_{\mathbb R} x f(x) \ dx$$ should compute the expected value of $$X$$.  What should be perhaps a bit more obvious is that if you integrate $$X$$ over the entire probability space, with respect to the given probability measure, then you obtain the average value of $$X$$.  This is indeed how the expectation of $$X$$ is typically defined in a more analytical setting.
 

@@ -1,12 +1,14 @@
-+++
-title = "Complex Numbers as Matrices"
-date = 2013-06-09T14:43:00Z
-updated = 2013-06-10T10:15:43Z
-markup = "mmark"
-blogimport = true 
-math = true
+---
+blogimport: true
+date: 2013-06-09T14:43:00Z
+markup: mmark
+math: true
+title: Complex Numbers as Matrices
+updated: 2013-06-10T10:15:43Z
 
-+++
+slug: af8449db-b351-4ae6-a367-805ce666ee2f
+
+---
 
 Many people take exception with the complex number field $$\mathbb C$$ because the equality 
 

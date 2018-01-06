@@ -1,10 +1,9 @@
-+++
-title = "About Shawn M. O'Hare"
-ignoreMeta = true
+---
+ignoreMeta: true
+title: About Shawn M. O'Hare
+slug: about 
 
-
-+++
-
+---
 
 I am a mathematician, [data scientist](https://en.wikipedia.org/wiki/Data_science), and
 [skeptic](https://en.wikipedia.org/wiki/Skeptical_movement).  Broadly, I am
@@ -20,8 +19,6 @@ to a lay reader.
 # Contact
 
 - [GitHub](https://www.github.com/shawnohare)
-- [Google+](https://plus.google.com/u/1/+ShawnOHare)
-- [LinkedIn](https://www.linkedin.com/in/shawnohare)
 - [email](mailto:contact@shawnohare.com)
 
 
