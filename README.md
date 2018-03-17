@@ -1,4 +1,3 @@
-# shawnohare.com
 Content for my personal blog.
 
 ## Init
