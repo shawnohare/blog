@@ -2,13 +2,15 @@ contentdir: content
 layoutdir: layouts
 publishdir: public
 builddrafts: false
-baseurl: http://www.smohare.com
+baseurl: https://shawnohare.com
 theme: hugo-morphism
 title: "Shawn M. O'Hare"
 copyright: "© Shawn M. O’Hare.  <a rel=\"license\" href=\"http://creativecommons.org/licenses/by-sa/4.0/\">Some rights reserved</a>."
 editor: nvim
-verbose: true
+# verbose: true
 metaDataFormat: yaml
+# AWS S3 with CloudFront needs ugly urls
+# uglyURLS: true
 # googleAnalytics: "UA-65318243-1"
 
 author:
@@ -21,6 +23,12 @@ taxonomies:
   series: series
   tag: tags
 
+outputFormats:
+  HTML:
+    mediaType: text/html
+    suffix: ''
+    delimeter: ''
+
 permalinks:
   # NOTE: Default is :section/:slug
   # post: "/:section/:year/:month/:filename/"
@@ -29,11 +37,13 @@ permalinks:
 
 params:
   subtitle: "Mathematical Datamancy"
-  # footerMessage: "Some message goes here"
   # listPaginatorLimit: 1000000
+  # footerMessage: "Some message goes here"
+
 
 # -----------------------------------------------------------------------
 # Morphism theme navigation menu
+# The ugly URLs here are required when the site is served via AWS S3.
 # -----------------------------------------------------------------------
 menu:
   nav:
@@ -47,13 +57,13 @@ menu:
       pre: ""
       weight: -100
       identifier: "posts"
-      url: "/post"
+      url: "/post.html"
 
     - name: "about"
       pre: ""
       weight: -80
       identifier: "about"
-      url: "/page/about"
+      url: "/page/about.html"
 
 # NOTE: If used, convert to yaml
 # [[menu.index]]

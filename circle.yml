@@ -1,6 +1,7 @@
+# NOTE: Deprecated 2018-01-08. Preserved for historical interest only.
 machine:
   environment:
-    content_dir: "shawnohare.com"
+    content_dir: "site"
     theme: "hugo-morphism"
     theme_repo: "https://github.com/shawnohare/hugo-morphism.git"
     themes_dir: "themes"

@@ -16,8 +16,12 @@ slug: a912191e-8eb3-4440-8897-6083fd03395a
 
 # Introduction 
 
-Herein we test how blog themes render particular content. For a more detailed
-discussion of mathematics [confer this post]({{< ref "math-in-markdown.md" >}})
+Herein we test how blog themes render particular content. 
+
+# Mathematics 
+
+Confer [here]({{< ref "math-in-markdown.md" >}}) for a more detailed
+discussion.
 
 <!--more-->
 
