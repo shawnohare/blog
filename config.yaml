@@ -10,7 +10,7 @@ editor: nvim
 # verbose: true
 metaDataFormat: yaml
 # AWS S3 with CloudFront needs ugly urls
-# uglyURLS: true
+uglyURLS: false
 # googleAnalytics: "UA-65318243-1"
 
 author:
@@ -31,7 +31,7 @@ outputFormats:
 
 permalinks:
   # NOTE: Default is :section/:slug
-  # post: "/:section/:year/:month/:filename/"
+  post: "/:section/:year/:month/:slug/"
   # post: :slug
   # page: :slug
 
@@ -57,13 +57,13 @@ menu:
       pre: ""
       weight: -100
       identifier: "posts"
-      url: "/post.html"
+      url: "/post"
 
     - name: "about"
       pre: ""
       weight: -80
       identifier: "about"
-      url: "/page/about.html"
+      url: "/page/about"
 
 # NOTE: If used, convert to yaml
 # [[menu.index]]
