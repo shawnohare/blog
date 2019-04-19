@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Shawn M. O&#39;Hare</title>
+    <link>https://www.shawnohare.com/</link>
+    <description>Recent content on Shawn M. O&#39;Hare</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>© Shawn M. O’Hare.  &lt;a rel=&#34;license&#34; href=&#34;http://creativecommons.org/licenses/by-sa/4.0/&#34;&gt;Some rights reserved&lt;/a&gt;.</copyright>
+    <lastBuildDate>Sat, 25 Nov 2017 11:15:01 +0000</lastBuildDate>
+    
+	<atom:link href="https://www.shawnohare.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Math (LaTeX) in Markdown</title>
+      <link>https://www.shawnohare.com/post/2017/11/ae8073e5-faad-4768-aa20-153731f16de6/</link>
+      <pubDate>Sat, 25 Nov 2017 11:15:01 +0000</pubDate>
+      
+      <guid>https://www.shawnohare.com/post/2017/11/ae8073e5-faad-4768-aa20-153731f16de6/</guid>
+      <description>&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
+
+&lt;p&gt;When writing mathematics in markdown, I prefer a combination of syntactically
+pure but robust LaTeX, portability with respect to markdown processors, and
+aesthetically pleasing in-editor highlighting. Unfortunately, the first two
+constraints often conflict.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Expected number of coin tosses for consecutive heads or tails</title>
+      <link>https://www.shawnohare.com/post/2016/06/e48c5542-899b-4cb2-bfc3-f5ff20ecfc22/</link>
+      <pubDate>Sun, 05 Jun 2016 11:36:21 -0700</pubDate>
+      
+      <guid>https://www.shawnohare.com/post/2016/06/e48c5542-899b-4cb2-bfc3-f5ff20ecfc22/</guid>
+      <description>&lt;p&gt;A fun elementary exercise involving expectation is to compute the number of
+times we expect to toss a coin before seeing consecutive heads or tails.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Migrating to Hugo - Part I</title>
+      <link>https://www.shawnohare.com/post/2016/05/949f15a7-5103-4127-ae16-9b6a04bf6afd/</link>
+      <pubDate>Sun, 08 May 2016 08:48:39 -0700</pubDate>
+      
+      <guid>https://www.shawnohare.com/post/2016/05/949f15a7-5103-4127-ae16-9b6a04bf6afd/</guid>
+      <description>&lt;p&gt;Over the years I&#39;ve tried a number of blogging services, but only Wordpress
+and Blogger with any seriousness.  Roughly a year ago I made
+the decision to try a few static site generators.  In hindsight, this proved
+to be a bold decision.  This post will chronicle some aspects
+of this journey.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Feature Sandbox</title>
+      <link>https://www.shawnohare.com/post/2015/12/a912191e-8eb3-4440-8897-6083fd03395a/</link>
+      <pubDate>Wed, 09 Dec 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.shawnohare.com/post/2015/12/a912191e-8eb3-4440-8897-6083fd03395a/</guid>
+      <description>&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
+
+&lt;p&gt;Herein we test how blog themes render particular content.&lt;/p&gt;
+
+&lt;h1 id=&#34;mathematics&#34;&gt;Mathematics&lt;/h1&gt;
+
+&lt;p&gt;Confer &lt;a href=&#34;https://www.shawnohare.com/post/2017/11/ae8073e5-faad-4768-aa20-153731f16de6/&#34;&gt;here&lt;/a&gt; for a more detailed
+discussion.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Law of Iterated Expectation</title>
+      <link>https://www.shawnohare.com/post/2014/07/13814340-1ac1-4393-b547-1a2acc6d379d/</link>
+      <pubDate>Mon, 07 Jul 2014 20:56:00 +0000</pubDate>
+      
+      <guid>https://www.shawnohare.com/post/2014/07/13814340-1ac1-4393-b547-1a2acc6d379d/</guid>
+      <description>Let \(X\) and \(Y\) denote continuous, random, real-valued variables with joint probability density function \(f(X, Y)\). The marginal density function of \(Y\) is \(f_Y(y) := \int_{x \in \mathbb R} f(x, y) dx\). The expectation \(E(Y)\) of \(Y\) can be recovered by integrating against the marginal density function. In particular,
+\[\begin{equation} \label{eq:E(Y)} E(Y)=\int_{y \in \mathbb R} y f_Y(y) dy = \int_{y \in \mathbb R} \int_{x \in \mathbb R} y f(x, y) \ dx \ dy.</description>
+    </item>
+    
+    <item>
+      <title>Distributions, Densities, and Mass Functions</title>
+      <link>https://www.shawnohare.com/post/2014/07/febc494a-ad7c-4a13-8441-10c19f8b1fa2/</link>
+      <pubDate>Tue, 01 Jul 2014 16:52:00 +0000</pubDate>
+      
+      <guid>https://www.shawnohare.com/post/2014/07/febc494a-ad7c-4a13-8441-10c19f8b1fa2/</guid>
+      <description>&lt;p&gt;One unfortunate aspect of probability theory is that common measure theoretic
+constructions are given different, often conflated, names.  The technical
+definitions of the probability distribution, probability density function, and
+probability mass function for a random variable are all related to each other,
+as this post hopes to make clear.&lt;/p&gt;
+
+&lt;p&gt;We begin with some general measure theoretic constructions. Let &lt;span  class=&#34;math&#34;&gt;\((A, \mathcal
+A)\)&lt;/span&gt; and &lt;span  class=&#34;math&#34;&gt;\((B, \mathcal B)\)&lt;/span&gt; be measurable spaces and suppose that &lt;span  class=&#34;math&#34;&gt;\(\mu\)&lt;/span&gt; is a
+measure on &lt;span  class=&#34;math&#34;&gt;\((A, \mathcal A)\)&lt;/span&gt;.   Any &lt;span  class=&#34;math&#34;&gt;\((\mathcal A, \mathcal B)\)&lt;/span&gt;-measurable
+function &lt;span  class=&#34;math&#34;&gt;\(X \colon A \to B\)&lt;/span&gt; induces a push-forward measure
+&lt;span  class=&#34;math&#34;&gt;\(X_*(\mu)\)&lt;/span&gt; on &lt;span  class=&#34;math&#34;&gt;\((B, \mathcal B)\)&lt;/span&gt; via:&lt;/p&gt;
+
+&lt;p&gt;&lt;span  class=&#34;math&#34;&gt;\[\begin{equation*}
+[X_*(\mu)](S \in \mathcal B):= \mu(X^{-1} (S)). 
+\end{equation*}\]&lt;/span&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Ring Endomorphisms of the Reals</title>
+      <link>https://www.shawnohare.com/post/2014/04/980b9501-945b-459f-ad8f-3d2d54dbb2ba/</link>
+      <pubDate>Thu, 24 Apr 2014 14:05:00 +0000</pubDate>
+      
+      <guid>https://www.shawnohare.com/post/2014/04/980b9501-945b-459f-ad8f-3d2d54dbb2ba/</guid>
+      <description>&lt;p&gt;Today we present a (mostly) algebraic proof that the only field endomorphism of the real numbers &lt;span  class=&#34;math&#34;&gt;\(\mathbb R\)&lt;/span&gt; is the identity map.  Many arguments of this fact invoke continuity, which we particularly try to avoid.  To be clear, we require in this discussion that ring morphisms fix the multiplicative identity.    First we recall that any characteristic &lt;span  class=&#34;math&#34;&gt;\(0\)&lt;/span&gt; field has a prime subfield isomorphic to the rationals &lt;span  class=&#34;math&#34;&gt;\(\mathbb Q\)&lt;/span&gt;, so we will always assume characteristic &lt;span  class=&#34;math&#34;&gt;\(0\)&lt;/span&gt; fields contain &lt;span  class=&#34;math&#34;&gt;\(\mathbb Q\)&lt;/span&gt;.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Categorical Limits and Colimits</title>
+      <link>https://www.shawnohare.com/post/2014/01/a140ae29-896b-4813-9ded-eb6a9e211f59/</link>
+      <pubDate>Sun, 12 Jan 2014 14:43:00 +0000</pubDate>
+      
+      <guid>https://www.shawnohare.com/post/2014/01/a140ae29-896b-4813-9ded-eb6a9e211f59/</guid>
+      <description>&lt;p&gt;Many types of universal constructions that appear in a wide variety of mathematical contexts can be realized as categorical limits and colimits.  To define a limit we first need the notion of a cone of a diagram.   A diagram of type &lt;span  class=&#34;math&#34;&gt;\(J\)&lt;/span&gt; in a category &lt;span  class=&#34;math&#34;&gt;\(\mathcal C\)&lt;/span&gt; is a simply a functor &lt;span  class=&#34;math&#34;&gt;\(F \colon J \to \mathcal C\)&lt;/span&gt;.   We imagine &lt;span  class=&#34;math&#34;&gt;\(J\)&lt;/span&gt; as an indexing for the objects and morphisms in &lt;span  class=&#34;math&#34;&gt;\(\mathcal C\)&lt;/span&gt; under consideration. When &lt;span  class=&#34;math&#34;&gt;\(J\)&lt;/span&gt; is a finite category it can be visualized as a directed graph.&lt;/p&gt;
+
+&lt;p&gt;A cone of &lt;span  class=&#34;math&#34;&gt;\(F\)&lt;/span&gt; is a pair &lt;span  class=&#34;math&#34;&gt;\((N, \Psi)\)&lt;/span&gt; where &lt;span  class=&#34;math&#34;&gt;\(N\)&lt;/span&gt; is an object of &lt;span  class=&#34;math&#34;&gt;\(\mathcal C\)&lt;/span&gt; and &lt;span  class=&#34;math&#34;&gt;\(\Psi\)&lt;/span&gt; is a collection of &lt;span  class=&#34;math&#34;&gt;\(\mathcal C\)&lt;/span&gt;-morphisms  &lt;span  class=&#34;math&#34;&gt;\(\Psi_X \colon N \to F(X) \)&lt;/span&gt; (one for each object &lt;span  class=&#34;math&#34;&gt;\(X\)&lt;/span&gt; in &lt;span  class=&#34;math&#34;&gt;\(J\)&lt;/span&gt;)  such that &lt;span  class=&#34;math&#34;&gt;\(\Psi_Y = F(f) \circ \Psi_X\)&lt;/span&gt; for every &lt;span  class=&#34;math&#34;&gt;\(J\)&lt;/span&gt;-morphism &lt;span  class=&#34;math&#34;&gt;\(f \colon X \to Y\)&lt;/span&gt;.  Given two cones &lt;span  class=&#34;math&#34;&gt;\((N, \Psi)\)&lt;/span&gt; and &lt;span  class=&#34;math&#34;&gt;\((M, \Phi)\)&lt;/span&gt; we call a &lt;span  class=&#34;math&#34;&gt;\(\mathcal C\)&lt;/span&gt;-morphism  &lt;span  class=&#34;math&#34;&gt;\(u \colon N \to M\)&lt;/span&gt; a cone morphism from &lt;span  class=&#34;math&#34;&gt;\((N, \Psi)\)&lt;/span&gt; to &lt;span  class=&#34;math&#34;&gt;\((M, \Phi)\)&lt;/span&gt; provided that &lt;span  class=&#34;math&#34;&gt;\(u\)&lt;/span&gt; respects the cone property, which is to say that for every object &lt;span  class=&#34;math&#34;&gt;\(X\)&lt;/span&gt; in &lt;span  class=&#34;math&#34;&gt;\(J\)&lt;/span&gt; the morphism &lt;span  class=&#34;math&#34;&gt;\(\Psi_X\)&lt;/span&gt; factors through &lt;span  class=&#34;math&#34;&gt;\(u\)&lt;/span&gt;, i.e., &lt;span  class=&#34;math&#34;&gt;\(\Psi_X = \Phi_X \circ u\)&lt;/span&gt;.  We will write &lt;span  class=&#34;math&#34;&gt;\(u \colon (N, \Psi) \to (M, \Phi)\)&lt;/span&gt; to denote that &lt;span  class=&#34;math&#34;&gt;\(u\)&lt;/span&gt; is a cone morphism.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>TF-IDF for Document Clustering</title>
+      <link>https://www.shawnohare.com/post/2013/12/be46c1b0-3ed0-457b-a135-5887680c17b6/</link>
+      <pubDate>Tue, 10 Dec 2013 19:56:00 +0000</pubDate>
+      
+      <guid>https://www.shawnohare.com/post/2013/12/be46c1b0-3ed0-457b-a135-5887680c17b6/</guid>
+      <description>&lt;p&gt;In this post we discuss a standard way to encode a text document as a vector
+using a term frequency-inverse document frequency (tf-idf) score for each
+word,  with an aim to cluster similar documents in a corpus.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>The Continuum Hypothesis and Weird Probabilities</title>
+      <link>https://www.shawnohare.com/post/2013/12/835b517b-caa4-48ad-b5c4-b9c19d6d363e/</link>
+      <pubDate>Thu, 05 Dec 2013 22:40:00 +0000</pubDate>
+      
+      <guid>https://www.shawnohare.com/post/2013/12/835b517b-caa4-48ad-b5c4-b9c19d6d363e/</guid>
+      <description>&lt;p&gt;I recently heard of an interesting &amp;quot;proof&amp;quot; that &lt;span  class=&#34;math&#34;&gt;\((0,1)\)&lt;/span&gt; does not have cardinality &lt;span  class=&#34;math&#34;&gt;\(\aleph_1\)&lt;/span&gt;.  This would disprove the Continuum Hypothesis  (&lt;span  class=&#34;math&#34;&gt;\(\textbf{CH}\)&lt;/span&gt;), which asserts that any subset of &lt;span  class=&#34;math&#34;&gt;\((0,1)\)&lt;/span&gt; is either countable or has the same cardinality as &lt;span  class=&#34;math&#34;&gt;\((0,1)\)&lt;/span&gt;.   More precisely, &lt;span  class=&#34;math&#34;&gt;\(\textbf{CH}\)&lt;/span&gt; states that  if &lt;span  class=&#34;math&#34;&gt;\(\omega_0\)&lt;/span&gt; denotes the first countable ordinal (i.e., the set of natural numbers) and &lt;span  class=&#34;math&#34;&gt;\(\omega_1\)&lt;/span&gt; denotes the first uncountable ordinal, then   &lt;span  class=&#34;math&#34;&gt;\(| \omega_1| = | 2^{\omega_0}|\)&lt;/span&gt;.  Here &lt;span  class=&#34;math&#34;&gt;\(2^{\omega_0}\)&lt;/span&gt; is the set of all binary-valued functions &lt;span  class=&#34;math&#34;&gt;\(f \colon \omega_0 \to \{ 0, 1\}\)&lt;/span&gt;, which has the same cardinality as the power set of &lt;span  class=&#34;math&#34;&gt;\(\omega_0\)&lt;/span&gt; and as &lt;span  class=&#34;math&#34;&gt;\((0,1)\)&lt;/span&gt;.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Simple Divisibility Tests</title>
+      <link>https://www.shawnohare.com/post/2013/11/540d6737-0759-475b-9a99-7bdbba2d03dd/</link>
+      <pubDate>Tue, 12 Nov 2013 12:14:00 +0000</pubDate>
+      
+      <guid>https://www.shawnohare.com/post/2013/11/540d6737-0759-475b-9a99-7bdbba2d03dd/</guid>
+      <description>&lt;p&gt;In this post we will justify some common divisibility tests that most school children are familiar with.  Recall that a number such as &lt;span  class=&#34;math&#34;&gt;\(111\)&lt;/span&gt; is divisible by &lt;span  class=&#34;math&#34;&gt;\(3\)&lt;/span&gt; if and only if the sum of the digits is  divisible by &lt;span  class=&#34;math&#34;&gt;\(3\)&lt;/span&gt;.  Since &lt;span  class=&#34;math&#34;&gt;\(1+1+1=3\)&lt;/span&gt; is divisible by &lt;span  class=&#34;math&#34;&gt;\(3\)&lt;/span&gt;,  we see that &lt;span  class=&#34;math&#34;&gt;\(111\)&lt;/span&gt; is divisible by three.&lt;/p&gt;
+
+&lt;p&gt;More generally, an integer &lt;span  class=&#34;math&#34;&gt;\(N\)&lt;/span&gt; is divisible by &lt;span  class=&#34;math&#34;&gt;\(3\)&lt;/span&gt; if and only if the sum of the digits appearing in &lt;span  class=&#34;math&#34;&gt;\(N\)&lt;/span&gt; is divisible by &lt;span  class=&#34;math&#34;&gt;\(3\)&lt;/span&gt;. &lt;div&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>A Simple Proof that the Harmonic Series Diverges</title>
+      <link>https://www.shawnohare.com/post/2013/11/62d4e7ec-dd8a-4c4c-b31f-cdbaba92bafc/</link>
+      <pubDate>Sat, 02 Nov 2013 15:11:00 +0000</pubDate>
+      
+      <guid>https://www.shawnohare.com/post/2013/11/62d4e7ec-dd8a-4c4c-b31f-cdbaba92bafc/</guid>
+      <description>&lt;p&gt;One usually encounters the harmonic series&lt;/p&gt;
+
+&lt;p&gt;&lt;span  class=&#34;math&#34;&gt;\[\begin{equation*}
+  \sum_{k=1}^{\infty} \frac{1}{k}
+\end{equation*}\]&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;as an example of a series that diverges for non-obvious reasons. With &lt;span  class=&#34;math&#34;&gt;\(H_n\)&lt;/span&gt; defined to be the partial sum &lt;span  class=&#34;math&#34;&gt;\(H_n:=\sum_{k=1}^n \frac{1}{k}\)&lt;/span&gt;,  a typical way to prove divergence is to observe that&lt;/p&gt;
+
+&lt;p&gt;&lt;span  class=&#34;math&#34;&gt;\[\begin{align*}
+  H_{2n} &amp;= H_n + \frac{1}{n+1} + \dots + \frac{1}{2n} \\  &amp; \geq H_n + \underbrace{\frac{1}{2n} + \dots + \frac{1}{2n}}_{n \text{ terms}} \\  &amp; = H_n + \frac{1}{2}.
+\end{align*}\]&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;In particular, &lt;span  class=&#34;math&#34;&gt;\(H_{2^n} \geq 1 + \frac{n}{2}\)&lt;/span&gt;, so the sequence of partial sums of the harmonic series has an unbounded subsequence, whence the series diverges.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Sample Covariance Matrix</title>
+      <link>https://www.shawnohare.com/post/2013/10/6e1ecf39-cf3c-459f-b4bd-74551fcba229/</link>
+      <pubDate>Tue, 15 Oct 2013 15:54:00 +0000</pubDate>
+      
+      <guid>https://www.shawnohare.com/post/2013/10/6e1ecf39-cf3c-459f-b4bd-74551fcba229/</guid>
+      <description>Suppose \(X_1, \dots, X_p\) are random variables and \(X:=(X_1, \dots, X_p)\) is the random vector of said random variables. Given a sample \(\mathbf x_1, \dots \mathbf x_N\) of \(X\), how do we obtain an estimate for the covariance matrix \(\text{Cov}(X)\)? To this end, let \(\mathbf X=( \mathbf X_{ij})\) denote the \(N \times p\) data matrix whose \(k\)th row is \(\mathbf x_k\) and let \(\bar x_i\) denote the sample mean of \(X_i\).</description>
+    </item>
+    
+    <item>
+      <title>Linear Models</title>
+      <link>https://www.shawnohare.com/post/2013/10/f2a88cf3-334d-4ad2-b572-9be51bfd57f9/</link>
+      <pubDate>Fri, 11 Oct 2013 17:59:00 +0000</pubDate>
+      
+      <guid>https://www.shawnohare.com/post/2013/10/f2a88cf3-334d-4ad2-b572-9be51bfd57f9/</guid>
+      <description>&lt;p&gt;Suppose we think that a random variable &lt;span  class=&#34;math&#34;&gt;\(Y\)&lt;/span&gt; (the response) is linearly dependent on random variables &lt;span  class=&#34;math&#34;&gt;\(X_1, \dots, X_p\)&lt;/span&gt;, where &lt;span  class=&#34;math&#34;&gt;\(p\)&lt;/span&gt; is some integer.    We can model this by assuming that&lt;/p&gt;
+
+&lt;p&gt;&lt;span  class=&#34;math&#34;&gt;\[\begin{equation*}
+  Y =\underbrace{ \beta_0 + \sum_{j=1}^p \beta_j X_j}_{\widehat Y} + \epsilon,  
+\end{equation*}\]&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;where &lt;span  class=&#34;math&#34;&gt;\(\beta = (\beta_0, \dots, \beta_p)\)&lt;/span&gt; is the parameter vector for said model and &lt;span  class=&#34;math&#34;&gt;\(\epsilon\)&lt;/span&gt; is a distribution for the residual error between the true value of &lt;span  class=&#34;math&#34;&gt;\(Y\)&lt;/span&gt; and the linear prediction &lt;span  class=&#34;math&#34;&gt;\(\widehat Y\)&lt;/span&gt;.  We assume that &lt;span  class=&#34;math&#34;&gt;\(\epsilon\)&lt;/span&gt; has mean &lt;span  class=&#34;math&#34;&gt;\(0\)&lt;/span&gt;. Letting &lt;span  class=&#34;math&#34;&gt;\(\mathbf x\)&lt;/span&gt; denote the random vector &lt;span  class=&#34;math&#34;&gt;\((1,X_1, \dots, X_p)\)&lt;/span&gt;, this model can be rewritten&lt;/p&gt;
+
+&lt;p&gt;&lt;span  class=&#34;math&#34;&gt;\[\begin{equation*}
+  Y = \mathbf x \cdot \beta + \epsilon,   \quad \text{or} \quad   y(\mathbf x ) = \mathbf x \cdot \beta + \epsilon, 
+\end{equation*}\]&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;where &lt;span  class=&#34;math&#34;&gt;\(- \cdot -\)&lt;/span&gt; represents the standard inner product on &lt;span  class=&#34;math&#34;&gt;\(\mathbb R^{p+1}\)&lt;/span&gt;.    One often assumes, as we do now, that &lt;span  class=&#34;math&#34;&gt;\(\epsilon\)&lt;/span&gt; has a Gaussian distribution.  The probability density function &lt;span  class=&#34;math&#34;&gt;\(p\)&lt;/span&gt; for &lt;span  class=&#34;math&#34;&gt;\(Y\)&lt;/span&gt; then becomes&lt;/p&gt;
+
+&lt;p&gt;&lt;span  class=&#34;math&#34;&gt;\[\begin{equation*}
+  p(y \mid \mathbf x, \beta) = \mathcal N(y \mid \mu (\mathbf x), \sigma^2 (\mathbf x)) 
+\end{equation*}\]&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;where &lt;span  class=&#34;math&#34;&gt;\(\mu(\mathbf x)  = \mathbf x \cdot \beta\)&lt;/span&gt;.  We will assume that the variance &lt;span  class=&#34;math&#34;&gt;\(\sigma^2(\mathbf x)\)&lt;/span&gt; is a constant &lt;span  class=&#34;math&#34;&gt;\(\sigma^2\)&lt;/span&gt;.   Suppose we make the &lt;span  class=&#34;math&#34;&gt;\(N\)&lt;/span&gt; observations that &lt;span  class=&#34;math&#34;&gt;\(Y = y^{(i)}\)&lt;/span&gt; when &lt;span  class=&#34;math&#34;&gt;\(X_j = x^{(i)}_j\)&lt;/span&gt; for &lt;span  class=&#34;math&#34;&gt;\(j=1, \dots, p\)&lt;/span&gt; and &lt;span  class=&#34;math&#34;&gt;\(i = 1, \dots, N\)&lt;/span&gt;.  Let &lt;span  class=&#34;math&#34;&gt;\(\mathbf x^{(i)}\)&lt;/span&gt; denote the &lt;span  class=&#34;math&#34;&gt;\(i\)&lt;/span&gt;th feature vector.  Further, let &lt;span  class=&#34;math&#34;&gt;\(\mathbf y:=(y^{(1)}, \dots, y^{(N)})\)&lt;/span&gt; denote the vector of responses.  For mathematical convenience we assume that each feature vector &lt;span  class=&#34;math&#34;&gt;\(\mathbf x^{(i)}\)&lt;/span&gt; is a &lt;span  class=&#34;math&#34;&gt;\(p+1\)&lt;/span&gt;-vector with first entry equal to &lt;span  class=&#34;math&#34;&gt;\(1\)&lt;/span&gt;.   Finally, let &lt;span  class=&#34;math&#34;&gt;\(\mathbf X\)&lt;/span&gt; denote the &lt;span  class=&#34;math&#34;&gt;\(N \times (p+1)\)&lt;/span&gt; feature matrix whose &lt;span  class=&#34;math&#34;&gt;\(i\)&lt;/span&gt;th row is just the feature vector &lt;span  class=&#34;math&#34;&gt;\(\mathbf x^{(i)}\)&lt;/span&gt;.     Given the data above, how can we find &lt;span  class=&#34;math&#34;&gt;\(\beta\)&lt;/span&gt; such that &lt;span  class=&#34;math&#34;&gt;\(\widehat Y\)&lt;/span&gt; is best fit, in some sense? One standard way to do this is to minimize the residual sum square error&lt;/p&gt;
+
+&lt;p&gt;&lt;span  class=&#34;math&#34;&gt;\[\begin{equation*}
+  \text{RSS}(\beta) := \| \mathbf y - \mathbf X \beta \|^2   =(\mathbf y - \mathbf X \beta ) \cdot ( \mathbf y - \mathbf X \beta )   = \sum_{i=1}^N ( y^{(i)} - \mathbf x^{(i)} \cdot \beta)^2. 
+\end{equation*}\]&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;Here &lt;span  class=&#34;math&#34;&gt;\(\mathbf X \beta\)&lt;/span&gt; denotes the usual matrix multiplication.  We can find all minimums in the usual analytical way by computing the partials of &lt;span  class=&#34;math&#34;&gt;\(\text{RSS}(\beta)\)&lt;/span&gt; with respect to the variables &lt;span  class=&#34;math&#34;&gt;\(\beta_j\)&lt;/span&gt; for &lt;span  class=&#34;math&#34;&gt;\(j=0, \dots, p\)&lt;/span&gt;.  Letting &lt;span  class=&#34;math&#34;&gt;\(\mathbf X_j\)&lt;/span&gt; denote the &lt;span  class=&#34;math&#34;&gt;\(j\)&lt;/span&gt;th column of &lt;span  class=&#34;math&#34;&gt;\(\mathbf X\)&lt;/span&gt;, we see that&lt;/p&gt;
+
+&lt;p&gt;&lt;span  class=&#34;math&#34;&gt;\[\begin{align*}
+  \frac{\partial \text{RSS}}{\partial \beta_j} &amp; = 2 \sum_{i=1}^N ( y^{(i)} - \beta_j x^{(i)}_j) x^{(i)}_j \\  &amp;= 2 (\mathbf y - \beta_j \mathbf X_j) \cdot \mathbf X_j 
+\end{align*}\]&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;and so &lt;span  class=&#34;math&#34;&gt;\(\text{RSS}(\beta)\)&lt;/span&gt; is minimized when&lt;/p&gt;
+
+&lt;p&gt;&lt;span  class=&#34;math&#34;&gt;\[\begin{equation*}
+  \mathbf X^T ( \mathbf y - \mathbf X \beta) = 0. 
+\end{equation*}\]&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;In the case that &lt;span  class=&#34;math&#34;&gt;\(\mathbf X^T \mathbf X\)&lt;/span&gt; is not singular the unique solution is&lt;/p&gt;
+
+&lt;p&gt;&lt;span  class=&#34;math&#34;&gt;\[\begin{equation*}
+  \widehat \beta =  (\mathbf X^T \mathbf X)^{-1} \mathbf X^T \mathbf y. 
+\end{equation*}\]&lt;/span&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Counting Inversions in Python</title>
+      <link>https://www.shawnohare.com/post/2013/08/ff4465ed-549e-4ff4-a095-ff258f923605/</link>
+      <pubDate>Mon, 19 Aug 2013 20:26:00 +0000</pubDate>
+      
+      <guid>https://www.shawnohare.com/post/2013/08/ff4465ed-549e-4ff4-a095-ff258f923605/</guid>
+      <description>Below is an O(n log(n)) algorithm for counting the number of inversions in an array of distinct positive integers. We call the index pair (i,j) of an array A an inversion provided that i &amp;lt; j and A[i] &amp;gt; A[j]. The idea is to break the array A into a left half L:=A[:n] and a right half R:=A[:n] and then count the number of inversions in L, in R, and the number of split inversions (i,j) where i is less than n and j is greater than or equal to n.</description>
+    </item>
+    
+    <item>
+      <title>A Coin Tossing Game</title>
+      <link>https://www.shawnohare.com/post/2013/08/e4bd28d7-4295-4c3d-9d17-1c2223812541/</link>
+      <pubDate>Tue, 06 Aug 2013 21:51:00 +0000</pubDate>
+      
+      <guid>https://www.shawnohare.com/post/2013/08/e4bd28d7-4295-4c3d-9d17-1c2223812541/</guid>
+      <description>&lt;p&gt;As an example of the law of total probabilities, I&#39;m going to explore a slightly generalized variant of an interview question I recently encountered.&lt;br&gt;
+The basic scenario is to imagine two players, let&#39;s say Amanda and Bill, both of who have a weighted coin. They take turns tossing their coin and whoever obtains the first heads wins.
+Amanda&#39;s coin comes up heads with probability &lt;span  class=&#34;math&#34;&gt;\(\theta\)&lt;/span&gt; and Bill&#39;s with probability &lt;span  class=&#34;math&#34;&gt;\(\psi\)&lt;/span&gt;.
+If Amanda tosses first, what&#39;s the probability she will win?&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>A natural isomorphism between a vector space and its double dual.</title>
+      <link>https://www.shawnohare.com/post/2013/07/4e11d870-63b1-4d04-8f52-05eefd53a9ce/</link>
+      <pubDate>Sat, 27 Jul 2013 17:27:00 +0000</pubDate>
+      
+      <guid>https://www.shawnohare.com/post/2013/07/4e11d870-63b1-4d04-8f52-05eefd53a9ce/</guid>
+      <description>&lt;p&gt;Soon after one begins a study of abstract vector spaces, they are confronted with the fact that a finite dimensional vector space is naturally (or canonically) isomorphic to its double dual space.  Intuitively, this means that the isomorphism is somehow independent of any particular choice of basis.  This notion is made rigorous  with the notion of natural transformations of functors between categories.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Densities and Expectations</title>
+      <link>https://www.shawnohare.com/post/2013/06/22130f0c-9527-428f-96ea-dbf1f3dd6905/</link>
+      <pubDate>Mon, 24 Jun 2013 11:40:00 +0000</pubDate>
+      
+      <guid>https://www.shawnohare.com/post/2013/06/22130f0c-9527-428f-96ea-dbf1f3dd6905/</guid>
+      <description>&lt;p&gt;For the layperson, it&#39;s probably most helpful to think of the density function &lt;span  class=&#34;math&#34;&gt;\(f\)&lt;/span&gt; associated to a random variable &lt;span  class=&#34;math&#34;&gt;\(X\)&lt;/span&gt; as the function you integrate to compute probabilities.  Similarly, the expected value &lt;span  class=&#34;math&#34;&gt;\(E(X)\)&lt;/span&gt; is thought of as the average value that &lt;span  class=&#34;math&#34;&gt;\(X\)&lt;/span&gt; takes.  Often &lt;span  class=&#34;math&#34;&gt;\(E(X)\)&lt;/span&gt; is defined already in terms of the density function, and it&#39;s not clear to the beginner why &lt;span  class=&#34;math&#34;&gt;\(\int_{\mathbb R} x f(x) \ dx\)&lt;/span&gt; should compute the expected value of &lt;span  class=&#34;math&#34;&gt;\(X\)&lt;/span&gt;.  What should be perhaps a bit more obvious is that if you integrate &lt;span  class=&#34;math&#34;&gt;\(X\)&lt;/span&gt; over the entire probability space, with respect to the given probability measure, then you obtain the average value of &lt;span  class=&#34;math&#34;&gt;\(X\)&lt;/span&gt;.  This is indeed how the expectation of &lt;span  class=&#34;math&#34;&gt;\(X\)&lt;/span&gt; is typically defined in a more analytical setting.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Complex Numbers as Matrices</title>
+      <link>https://www.shawnohare.com/post/2013/06/af8449db-b351-4ae6-a367-805ce666ee2f/</link>
+      <pubDate>Sun, 09 Jun 2013 14:43:00 +0000</pubDate>
+      
+      <guid>https://www.shawnohare.com/post/2013/06/af8449db-b351-4ae6-a367-805ce666ee2f/</guid>
+      <description>&lt;p&gt;Many people take exception with the complex number field &lt;span  class=&#34;math&#34;&gt;\(\mathbb C\)&lt;/span&gt; because the equality&lt;/p&gt;
+
+&lt;p&gt;&lt;span  class=&#34;math&#34;&gt;\[\begin{equation}
+\label{eq:neg1}  i^2 = -1 
+\end{equation}\]&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;rankles them in some way.  I suspect that the layperson&#39;s distaste for this identity is their wont to interpret &lt;span  class=&#34;math&#34;&gt;\(i\)&lt;/span&gt; as a real number, since they have the most experience with the arithmetic of real numbers.  Surely our convention of calling numbers such as &lt;span  class=&#34;math&#34;&gt;\(\sqrt 2\)&lt;/span&gt;, &lt;span  class=&#34;math&#34;&gt;\(\pi\)&lt;/span&gt;, and &lt;span  class=&#34;math&#34;&gt;\(e\)&lt;/span&gt; real but &lt;span  class=&#34;math&#34;&gt;\(-2i\)&lt;/span&gt; &amp;quot;purely imaginary&amp;quot; doesn&#39;t help.&lt;/p&gt;
+
+&lt;p&gt;Identities of the form in \eqref{eq:neg1} abound in the wild.  For instance, within the ring &lt;span  class=&#34;math&#34;&gt;\(M_2(\mathbb R)\)&lt;/span&gt; of &lt;span  class=&#34;math&#34;&gt;\(2 \times 2\)&lt;/span&gt;-matrices with real entries, the rotation by &lt;span  class=&#34;math&#34;&gt;\(90^{\circ}\)&lt;/span&gt; matrix &lt;span  class=&#34;math&#34;&gt;\(R\)&lt;/span&gt; defined by&lt;/p&gt;
+
+&lt;p&gt;&lt;span  class=&#34;math&#34;&gt;\[\begin{equation}
+\label{eq:matrix}  R := \begin{pmatrix}   0 &amp; -1 \\   1 &amp; 0  \end{pmatrix} 
+\end{equation}\]&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;satisfies &lt;span  class=&#34;math&#34;&gt;\(R^2 = -\mathbf{1}\)&lt;/span&gt;.  Here &lt;span  class=&#34;math&#34;&gt;\(\mathbf{1}\)&lt;/span&gt; signifies the identity matrix&lt;/p&gt;
+
+&lt;p&gt;&lt;span  class=&#34;math&#34;&gt;\[\begin{equation*}
+  \mathbf{1}:=\begin{pmatrix}   1 &amp; 0 \\   0 &amp; 1  \end{pmatrix}, 
+\end{equation*}\]&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;which is the multiplicative identity in &lt;span  class=&#34;math&#34;&gt;\(M_2(\mathbb R)\)&lt;/span&gt;.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Non-linear Additive Maps</title>
+      <link>https://www.shawnohare.com/post/2013/03/c7b5f3e2-7b55-4a84-84b8-9ea6f91f84f0/</link>
+      <pubDate>Fri, 29 Mar 2013 17:27:00 +0000</pubDate>
+      
+      <guid>https://www.shawnohare.com/post/2013/03/c7b5f3e2-7b55-4a84-84b8-9ea6f91f84f0/</guid>
+      <description>&lt;p&gt;While teaching an introductory linear algebra course, a colleague noticed that most of the examples of additive maps he gave turned out to be linear.  He asked whether I could think of a map which was additive, but not linear.  In a general context, the question was to find a ring &lt;span  class=&#34;math&#34;&gt;\(R\)&lt;/span&gt;, &lt;span  class=&#34;math&#34;&gt;\(R\)&lt;/span&gt;-modules &lt;span  class=&#34;math&#34;&gt;\( V\)&lt;/span&gt; and &lt;span  class=&#34;math&#34;&gt;\( W\)&lt;/span&gt;, and a map &lt;span  class=&#34;math&#34;&gt;\( f \colon V \to W\)&lt;/span&gt; such that &lt;span  class=&#34;math&#34;&gt;\( f \)&lt;/span&gt; is a group homomorphism, but not an &lt;span  class=&#34;math&#34;&gt;\( R\)&lt;/span&gt;-module morphism, i.e, &lt;span  class=&#34;math&#34;&gt;\( f(x+y)=f(x)+f(y)\)&lt;/span&gt; for all &lt;span  class=&#34;math&#34;&gt;\( x,y \in V,\)&lt;/span&gt; but there is some &lt;span  class=&#34;math&#34;&gt;\( r \in R\)&lt;/span&gt; and &lt;span  class=&#34;math&#34;&gt;\( z \in V\)&lt;/span&gt; such that &lt;span  class=&#34;math&#34;&gt;\( f(r \cdot z) \neq r \cdot f(z)\)&lt;/span&gt;.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Symmetries of the Naturals</title>
+      <link>https://www.shawnohare.com/post/2013/03/cae61396-547e-4b42-94ad-64f49430d3ce/</link>
+      <pubDate>Fri, 29 Mar 2013 17:23:00 +0000</pubDate>
+      
+      <guid>https://www.shawnohare.com/post/2013/03/cae61396-547e-4b42-94ad-64f49430d3ce/</guid>
+      <description>&lt;p&gt;This was a little problem I thought about while backpacking a few years ago.&lt;/p&gt;
+
+&lt;p&gt;We define a symmetry of the natural numbers to be any bijective function &lt;span  class=&#34;math&#34;&gt;\( f \colon \mathbb{N} \to \mathbb{N}\)&lt;/span&gt;.  Let &lt;span  class=&#34;math&#34;&gt;\( S\)&lt;/span&gt; denote the set of symmetries of &lt;span  class=&#34;math&#34;&gt;\( \mathbb N\)&lt;/span&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;Claim&lt;/b&gt;.  &lt;span  class=&#34;math&#34;&gt;\( S\)&lt;/span&gt; has the cardinality of the continuum.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Sums of Consecutive Integers</title>
+      <link>https://www.shawnohare.com/post/2013/03/ea00f41c-bf92-4c88-a74a-38e384935ac1/</link>
+      <pubDate>Fri, 29 Mar 2013 16:47:00 +0000</pubDate>
+      
+      <guid>https://www.shawnohare.com/post/2013/03/ea00f41c-bf92-4c88-a74a-38e384935ac1/</guid>
+      <description>&lt;p&gt;A fun fact I recently learned about is the following.&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;Claim &lt;/b&gt;.  A natural number can be written as the sum of at least two
+consecutive positive integers if and only if it is not a power of 2.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>All Horses Are the Same Color</title>
+      <link>https://www.shawnohare.com/post/2013/03/04edd874-9774-424b-a1e4-d66769b0fb54/</link>
+      <pubDate>Fri, 29 Mar 2013 16:32:00 +0000</pubDate>
+      
+      <guid>https://www.shawnohare.com/post/2013/03/04edd874-9774-424b-a1e4-d66769b0fb54/</guid>
+      <description>&lt;p&gt;I was fortunate to TA UCSC&#39;s introductory proofs course three times.  One of the exercises I like to pose to my students is the following fallacious induction proof that all horses are the same color.&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;The &amp;quot;Proof&amp;quot;&lt;/b&gt;&lt;/p&gt;
+
+&lt;p&gt;As a base case, it&#39;s clear that any horse is the same color as itself.  Assume as an inductive hypothesis that any collection of n horses are the same color, where n is some fixed natural number.  Given any collection of n+1 horses, we may select a subset consisting of all but a single horse.  By the inductive hypothesis, all the horses in this subset are the same color.  Now regroup the horses and select another n horse subset, but this time we pick the horse that left out of the first selection.  Again all the horses in this subset are the same color, so all the horses in the original set are the same color.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>About Shawn M. O&#39;Hare</title>
+      <link>https://www.shawnohare.com/page/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.shawnohare.com/page/about/</guid>
+      <description>I am a mathematician, data scientist, and skeptic. Broadly, I am interested in the applications of mathematics&amp;mdash;specifically abstract algebra&amp;mdash;to machine learning, statistics, and artificial intelligence.
+The writings on this site represent an eclectic mixture of my interests. Generally the articles aim to please a mathematically sophisticated audience while still being informative to a lay reader.
+Contact  GitHub email  Site This site is powered by the static site generater Hugo and the hugo-morphism theme.</description>
+    </item>
+    
+  </channel>
+</rss>

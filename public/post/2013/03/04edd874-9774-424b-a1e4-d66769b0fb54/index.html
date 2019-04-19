@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> All Horses Are the Same Color | Shawn M. O&#39;Hare</title>
+
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="author" content="Shawn O’Hare">
+<meta name="generator" content="Hugo 0.54.0" />
+
+<link rel="stylesheet" href="https://www.shawnohare.com/css/main.css">
+<link rel="stylesheet" href="https://www.shawnohare.com/css/override.css">
+
+
+<script type="text/javascript" src="https://www.shawnohare.com/js/mathjax.js"></script>
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS_CHTML-full">
+</script>
+
+
+</head>
+
+<body>
+<nav id="site" class="ui">
+  <ul>
+    
+    <li><a href="/">home</a></li>
+    
+    <li><a href="/post">posts</a></li>
+    
+    <li><a href="/page/about">about</a></li>
+    
+  </ul>
+</nav>
+
+<header>
+<section class="title">
+<h1>All Horses Are the Same Color</h1>
+<h2>Why base cases mattern in proof by induction</h2>
+</section>
+
+
+</header>
+<main>
+  <section id="content-meta">
+  
+<section class="content-meta ui">
+<section class="date">29 March, 2013</section>
+
+
+
+<section class="author">By <a href="https://www.shawnohare.com">Shawn O’Hare</a></section>
+
+
+
+
+
+
+<section class="tags">
+
+<a href="/tags/">Tags</a>:
+
+<a  href="https://www.shawnohare.com/tags/proof">proof&nbsp;</a>
+
+</section>
+
+
+
+
+</section>
+
+
+  
+
+  </section>
+  <section class="content-main"><p>I was fortunate to TA UCSC's introductory proofs course three times.  One of the exercises I like to pose to my students is the following fallacious induction proof that all horses are the same color.</p>
+
+<p><b>The &quot;Proof&quot;</b></p>
+
+<p>As a base case, it's clear that any horse is the same color as itself.  Assume as an inductive hypothesis that any collection of n horses are the same color, where n is some fixed natural number.  Given any collection of n+1 horses, we may select a subset consisting of all but a single horse.  By the inductive hypothesis, all the horses in this subset are the same color.  Now regroup the horses and select another n horse subset, but this time we pick the horse that left out of the first selection.  Again all the horses in this subset are the same color, so all the horses in the original set are the same color.</p>
+
+<p><b>What's wrong?</b></p>
+
+<p>A bit of thought shows that the inductive argument above only works when n+1 is at least 3, so a separate argument is necessary for the case of two horses.  Of course, one would be hard pressed to prove that any two horses are the same color as one another.  The proof presented above tries to intentionally obscure its reliance on there being sufficiently many horses.  It might be worth examining the essence of the statement and proof by way of abstraction.</p>
+
+<p><b>A generalization</b></p>
+
+<p>Really, the statement that all horses are the same color amounts to the following claim about set relations.</p>
+
+<p>Proposition.  Every equivalence relation on a non-empty, finite (or indeed, inductive) set is total, i.e., there is only one equivalence class.</p>
+
+<p>This is certainly false, for if <span  class="math">\( A\)</span> is any non-empty set with at least two elements then the diagonal relation <span  class="math">\( \Delta(A):=\{ (a,a) \in A \times A \mid a \in A\}\)</span> is an equivalence relation but each equivalence class is a singleton set.  Let's examine the fallacious proof that all horses are the same color in this more general contex.</p>
+
+<p>&quot;Proof&quot; of the Proposition.  As a base case for induction, note that any equivalence relation on a singleton set is reflexive, and hence non-empty, so is total.  Assume then that any equivalence relation on a finite set with <span  class="math">\( n \geq 2\)</span> elements is total.  Let <span  class="math">\( A=\{ a_1, \dots, a_{n+1} \}\)</span> be any set with<span  class="math">\( n+1\)</span> elements and suppose <span  class="math">\( R\)</span> is an equivalence relation on <span  class="math">\( A\)</span>.  Set <span  class="math">\( B:=\{ a_1, \dots, a_n \}\)</span> and <span  class="math">\( C:=\{ a_2, \dots, a_{n+1} \}\)</span>.  By the inductive hypothesis, the restrictions <span  class="math">\( R|_B := R \cap (B \times B)\)</span> and <span  class="math">\( R|_C := R \cap (C \times C)\)</span> are total relations on <span  class="math">\( B\)</span> and <span  class="math">\( C\)</span>, respectively.  To conclude that <span  class="math">\( R\)</span> is total on <span  class="math">\( A\)</span> it remains to show that <span  class="math">\( (a_1, a_{n+1}) \in R\)</span>.  Since <span  class="math">\( a_2 \in B \cap C\)</span>, we have <span  class="math">\( (a_1, a_2) \in R\)</span> and <span  class="math">\( (a_2, a_{n+1}) \in R\)</span> so <span  class="math">\( (a_1, a_{n+1}) \in R\)</span>, as desired. <span  class="math">\(\square\)</span></p>
+
+<p><b>Conclusion</b></p>
+
+<p>As we can see, to relate the first element to the last element we needed an intermediate element, and so our inductive argument relies on there being at least three elements in the set.  The upshot is that it's important to establish all of your bases, so to speak.</p></section>
+</main>
+
+<footer class="ui" id="site">
+  <ul>
+    
+  </ul>
+
+  
+  <section id="copyright">© Shawn M. O’Hare.  <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Some rights reserved</a>.</section>
+</footer>
+</body>
+</html>

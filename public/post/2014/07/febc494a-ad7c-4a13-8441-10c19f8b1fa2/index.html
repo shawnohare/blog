@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Distributions, Densities, and Mass Functions | Shawn M. O&#39;Hare</title>
+
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="author" content="Shawn O’Hare">
+<meta name="generator" content="Hugo 0.54.0" />
+
+<link rel="stylesheet" href="https://www.shawnohare.com/css/main.css">
+<link rel="stylesheet" href="https://www.shawnohare.com/css/override.css">
+
+
+<script type="text/javascript" src="https://www.shawnohare.com/js/mathjax.js"></script>
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS_CHTML-full">
+</script>
+
+
+</head>
+
+<body>
+<nav id="site" class="ui">
+  <ul>
+    
+    <li><a href="/">home</a></li>
+    
+    <li><a href="/post">posts</a></li>
+    
+    <li><a href="/page/about">about</a></li>
+    
+  </ul>
+</nav>
+
+<header>
+<section class="title">
+<h1>Distributions, Densities, and Mass Functions</h1>
+
+</section>
+
+
+</header>
+<main>
+  <section id="content-meta">
+  
+<section class="content-meta ui">
+<section class="date">01 July, 2014</section>
+
+
+
+<section class="author">By <a href="https://www.shawnohare.com">Shawn O’Hare</a></section>
+
+
+
+
+
+
+<section class="tags">
+
+<a href="/tags/">Tags</a>:
+
+<a  href="https://www.shawnohare.com/tags/probability">probability&nbsp;</a>
+
+</section>
+
+
+
+
+</section>
+
+
+  
+
+  </section>
+  <section class="content-main"><p>One unfortunate aspect of probability theory is that common measure theoretic
+constructions are given different, often conflated, names.  The technical
+definitions of the probability distribution, probability density function, and
+probability mass function for a random variable are all related to each other,
+as this post hopes to make clear.</p>
+
+<p>We begin with some general measure theoretic constructions. Let <span  class="math">\((A, \mathcal
+A)\)</span> and <span  class="math">\((B, \mathcal B)\)</span> be measurable spaces and suppose that <span  class="math">\(\mu\)</span> is a
+measure on <span  class="math">\((A, \mathcal A)\)</span>.   Any <span  class="math">\((\mathcal A, \mathcal B)\)</span>-measurable
+function <span  class="math">\(X \colon A \to B\)</span> induces a push-forward measure
+<span  class="math">\(X_*(\mu)\)</span> on <span  class="math">\((B, \mathcal B)\)</span> via:</p>
+
+<p><span  class="math">\[\begin{equation*}
+[X_*(\mu)](S \in \mathcal B):= \mu(X^{-1} (S)). 
+\end{equation*}\]</span></p>
+
+<p>Any function <span  class="math">\(f \colon A \to [0, \infty)\)</span> induces a measure <span  class="math">\(\mu\)</span> on <span  class="math">\((A,
+2^A)\)</span> via integration against the counting measure <span  class="math">\(\nu\)</span>. This can be seen
+as a converse to the Lebesgue-Radon-Nikodym theorem. More specifically,</p>
+
+<p><span  class="math">\[\begin{equation*}
+\mu(S \subseteq A)
+:=\int_S f d \nu
+:= \sup_{R \subseteq S, |S| \lt \infty} \sum_{r \in R} f(r)
+=: \sum_{s \in S} f(s). 
+\end{equation*}\]</span></p>
+
+<p>A probability space is simply a measure space <span  class="math">\((A, \mathcal A, P)\)</span> such that
+<span  class="math">\(P(A)=1\)</span>.   Often <span  class="math">\(A\)</span> is called the sample space, <span  class="math">\(\mathcal A\)</span> the
+event space and <span  class="math">\(P\)</span> the probability measure. An <span  class="math">\((\mathcal A,
+\mathcal B)\)</span>-measurable function <span  class="math">\(X\)</span> is called a random variable and
+the push-forward probability measure <span  class="math">\(X_*(P)\)</span> on <span  class="math">\((B, \mathcal B)\)</span> is
+called the distribution of <span  class="math">\(X\)</span>.  The probability density function
+<span  class="math">\(f\)</span> of <span  class="math">\(X\)</span> with respect to a measure <span  class="math">\(\mu\)</span> on <span  class="math">\((B, \mathcal B)\)</span> is
+a Radon-Nikodym derivative <span  class="math">\(d X_*(P)/ d \mu\)</span>, provided it exists.  Therefor
+<span  class="math">\(f\)</span> satisfies</p>
+
+<p><span  class="math">\[\begin{equation*}
+P(X \in S) := P(X^{-1}(S)) = \int_{X^{-1}(A)} dP = \int_A f d \mu 
+\end{equation*}\]</span></p>
+
+<p>for all <span  class="math">\(\mathcal B\)</span>-measurable sets <span  class="math">\(S\)</span>.</p>
+
+<p>The waters are slightly muddied by the fact that these general constructions
+often go by different names in the discrete case. We say a measurable space
+<span  class="math">\((A, \mathcal A)\)</span> is discrete provided that <span  class="math">\(A\)</span> is a countable set, and a
+random variable <span  class="math">\(X \colon A \to B\)</span> is a discrete random variable provided
+that the image of <span  class="math">\(X\)</span> is countable and the pre-images of singleton sets are
+measurable.  When the <span  class="math">\(\sigma\)</span>-algebra <span  class="math">\(\mathcal B\)</span> on <span  class="math">\(B\)</span> is
+discrete---which simply means that <span  class="math">\(\mathcal B\)</span> is the power set of <span  class="math">\(B\)</span>---
+then <span  class="math">\(X\)</span> is discrete provided its image is countable, since <span  class="math">\(X\)</span> is
+measurable.</p>
+
+<p>A probability mass function <span  class="math">\(f_X \colon B \to [0, \infty]\)</span>  of a discrete
+random variable <span  class="math">\(X \colon A \to B\)</span> is typically defined to be a  function
+such that <span  class="math">\(P(X=b):=P(X^{-1}(b))=f_X(b)\)</span> for all <span  class="math">\(b \in B\)</span>.   It's possible
+to view a probability mass function as both a restriction of a distribution of
+<span  class="math">\(X\)</span> and as a probability density function of <span  class="math">\(X\)</span> with respect to the
+counting measure.  To see the former, recall that the distribution of <span  class="math">\(X\)</span> is
+just the push-forward measure <span  class="math">\(X_*(P)\)</span> on <span  class="math">\((B, \mathcal B)\)</span>.  If <span  class="math">\(\mathcal
+B\)</span> is in fact the discrete <span  class="math">\(\sigma\)</span>-algebra, then for all <span  class="math">\(b \in B\)</span> we
+have</p>
+
+<p><span  class="math">\[\begin{equation*}
+P(X = b):=P(X^{-1}(b))=[X_*(P)] (\{b\}). 
+\end{equation*}\]</span></p>
+
+<p>Defining <span  class="math">\(f \colon B \to \mathbb R\)</span> to be the restriction of the distribution
+<span  class="math">\(X_*(P)\)</span> to singleton sets, in the sense that  <span  class="math">\(f(b):=[X_*(P)] (\{b\})\)</span>,
+clearly yields a probability mass function for <span  class="math">\(X\)</span>.</p>
+
+<p>Now further assume that the the density function <span  class="math">\(f\)</span> of <span  class="math">\(X\)</span> with respect to the counting measure <span  class="math">\(\nu\)</span> on <span  class="math">\((B, \mathcal B)\)</span> exists.   Then for all <span  class="math">\(b \in B\)</span> we have</p>
+
+<p><span  class="math">\[\begin{equation*}
+f(b)
+= \sum_{x \in \{b\}} f(x)
+= \int_{\{b\}} f d \nu 
+= \int_{X^{-1}(b)} dP
+= P(X^{-1}(b)). 
+\end{equation*}\]</span></p>
+
+<p>This density function then is nothing other than a probability mass function.</p>
+
+<p>Let's put some of this into a specific context.  Suppose we toss <span  class="math">\(n\)</span> coins
+that are all weighted to come up heads with probability <span  class="math">\(\theta\)</span>. If all
+these coins are tossed, what's the probability we see <span  class="math">\(k \leq n\)</span> heads? It's
+fairly easy to see that this is given by the binomial distribution <span  class="math">\(f_{\theta,
+n}(k):= \binom{n}{k}\theta^k (1-\theta)^{n-k}\)</span>.  Is <span  class="math">\(f_{\theta, n}\)</span> actually
+a distribution of some random variable?</p>
+
+<p>As a sample space for this experiment we can take the set of all <span  class="math">\(n\)</span> coin
+tosses, which mathematically is just the set of length <span  class="math">\(n\)</span> binary strings.
+So define <span  class="math">\(A:=\{0, 1 \}^n\)</span> and let <span  class="math">\((A, 2^A)\)</span>, <span  class="math">\((\mathbb N, 2^{\mathbb
+N})\)</span> denote discrete measurable spaces with discrete <span  class="math">\(\sigma\)</span>-algebras.
+Further, let <span  class="math">\((\mathbb R, \mathcal B)\)</span> denote <span  class="math">\(\mathbb R\)</span> equipped with the
+usual Borel <span  class="math">\(\sigma\)</span>-algebra. Any function from <span  class="math">\(A\)</span> to the naturals is
+<span  class="math">\((2^A, 2^{\mathbb N})\)</span>-measurable, and similarly any function <span  class="math">\(\mathbb N \to
+\mathbb R\)</span> is <span  class="math">\((2^{\mathbb N}, \mathcal B)\)</span>-measurable.  In particular the
+summation function <span  class="math">\(Y \colon A \to \mathbb N\)</span> defined</p>
+
+<p><span  class="math">\[\begin{equation*}
+Y((a_1, a_2, \dots, a_n)) := \sum_{i=1}^n a_i 
+\end{equation*}\]</span></p>
+
+<p>is measurable as is the function <span  class="math">\(Y' \colon \mathbb N \to \mathbb R\)</span> defined
+by <span  class="math">\(Y'(k)=\theta^k (1-\theta)^{n-k}\)</span>.  The composition <span  class="math">\(X := Y' \circ Y\)</span> is
+a measurable function and since it's  always non-negative it induces a measure
+<span  class="math">\(P\)</span>  on <span  class="math">\((A, 2^A)\)</span> defined by</p>
+
+<p><span  class="math">\[\begin{equation*}
+P(S \subseteq A):=\sum_{s \in S} X(s) = \sum_{s \in S}.  
+\end{equation*}\]</span></p>
+
+<p>This measure generalizes the counting measure.  Now</p>
+
+<p><span  class="math">\[\begin{align*}
+P(A) &= \sum_{a \in A} X(a) \\     &= \sum_{a \in A} \theta^{Y(a)}(1-\theta)^{Y(a)} \\     & = (\theta + (1- \theta))^n \\     & = 1, 
+\end{align*}\]</span></p>
+
+<p>so in fact the measure <span  class="math">\(P\)</span> is a probability measure.  The push-forward
+measure <span  class="math">\(Y_*(P)\)</span> on <span  class="math">\((\mathbb N, 2^{\mathbb N})\)</span> satisfies, for each <span  class="math">\(k
+\in \mathbb N\)</span>,</p>
+
+<p><span  class="math">\[\begin{align*}
+[Y_*(P)](\{k\}) & = P(Y^{-1}(k)) \\     & = \sum_{a \in Y^{-1}(k)} X(a) \\     & = \sum_{a \in Y^{-1}(k)} \theta^k (1-\theta)^{n-k} \\     & = \binom{n}{k} \theta^k (1-\theta)^{n-k} \\     & = f_{\theta, n}(k). 
+\end{align*}\]</span></p>
+
+<p>This indeed shows that the binomial distribution  <span  class="math">\(f_{\theta, n}\)</span> is the
+ restriction of the distribution  (with respect to <span  class="math">\(P\)</span>) of the number of
+ heads random variable <span  class="math">\(Y\)</span>.</p>
+
+<p>Initially we started only with a sample space, some random variable <span  class="math">\(Y\)</span> of
+interest, and a method of assigning probabilities to individual elements in the
+sample space via this random variable, and a parameter <span  class="math">\(\theta\)</span>.  We did not
+need to initially specify a probability measure on the sample space, since this
+was later induced by <span  class="math">\(\theta\)</span> and <span  class="math">\(Y\)</span>.</p>
+
+<p>Very often the underlying sample space is ignored completely, and only a
+density function <span  class="math">\(f \colon B \subseteq \mathbb R \to [0, \infty)\)</span> for a
+random variable is specified.   This is because we can recover the distribution
+(push-forward) of a random variable from its density function alone. For
+simplicity suppose that <span  class="math">\((A, \mathcal A)\)</span> and <span  class="math">\((B \subseteq \mathbb R,
+\mathcal B)\)</span> are measurable spaces and that <span  class="math">\(X \colon A \to B\)</span> is a random
+variable.  If <span  class="math">\(X\)</span> is discrete, take <span  class="math">\(\mathcal B:=2^B\)</span>, <span  class="math">\(\mathcal A:=2^A\)</span>,
+and let <span  class="math">\(\nu\)</span> denote the counting measure.  Otherwise, let <span  class="math">\((B, \mathcal
+B)\)</span> denote the reals together with the Borel <span  class="math">\(\sigma\)</span>-algebra and let
+<span  class="math">\(\nu\)</span> denote the Lebesgue measure.  We obtain a measure <span  class="math">\(\mu\)</span> on <span  class="math">\((B,
+\mathcal B)\)</span> by integrating <span  class="math">\(f\)</span> against <span  class="math">\(\nu\)</span>:</p>
+
+<p><span  class="math">\[\begin{equation*}
+\mu(S \in \mathcal B):=\int_S f d \nu. 
+\end{equation*}\]</span></p>
+
+<p>Now <span  class="math">\(\nu\)</span> is always a <span  class="math">\(\sigma\)</span>-finite measure and if <span  class="math">\(f\)</span> is suitably nice
+(as probability densities are required to be) then <span  class="math">\(\mu\)</span> is also
+<span  class="math">\(\sigma\)</span>-finite and <span  class="math">\(\mu\)</span> is absolutely continuous with respect to <span  class="math">\(\nu\)</span>,
+so <span  class="math">\(f\)</span> is in fact a Radon-Nikodym derivative of <span  class="math">\(\mu\)</span>.</p></section>
+</main>
+
+<footer class="ui" id="site">
+  <ul>
+    
+  </ul>
+
+  
+  <section id="copyright">© Shawn M. O’Hare.  <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Some rights reserved</a>.</section>
+</footer>
+</body>
+</html>

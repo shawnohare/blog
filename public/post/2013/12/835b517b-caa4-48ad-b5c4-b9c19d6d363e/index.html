@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> The Continuum Hypothesis and Weird Probabilities | Shawn M. O&#39;Hare</title>
+
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="author" content="Shawn O’Hare">
+<meta name="generator" content="Hugo 0.54.0" />
+
+<link rel="stylesheet" href="https://www.shawnohare.com/css/main.css">
+<link rel="stylesheet" href="https://www.shawnohare.com/css/override.css">
+
+
+<script type="text/javascript" src="https://www.shawnohare.com/js/mathjax.js"></script>
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS_CHTML-full">
+</script>
+
+
+</head>
+
+<body>
+<nav id="site" class="ui">
+  <ul>
+    
+    <li><a href="/">home</a></li>
+    
+    <li><a href="/post">posts</a></li>
+    
+    <li><a href="/page/about">about</a></li>
+    
+  </ul>
+</nav>
+
+<header>
+<section class="title">
+<h1>The Continuum Hypothesis and Weird Probabilities</h1>
+
+</section>
+
+
+</header>
+<main>
+  <section id="content-meta">
+  
+<section class="content-meta ui">
+<section class="date">05 December, 2013</section>
+
+
+
+<section class="author">By <a href="https://www.shawnohare.com">Shawn O’Hare</a></section>
+
+
+
+
+
+
+<section class="tags">
+
+<a href="/tags/">Tags</a>:
+
+<a  href="https://www.shawnohare.com/tags/math">math&nbsp;</a>
+
+</section>
+
+
+
+
+</section>
+
+
+  
+
+  </section>
+  <section class="content-main"><p>I recently heard of an interesting &quot;proof&quot; that <span  class="math">\((0,1)\)</span> does not have cardinality <span  class="math">\(\aleph_1\)</span>.  This would disprove the Continuum Hypothesis  (<span  class="math">\(\textbf{CH}\)</span>), which asserts that any subset of <span  class="math">\((0,1)\)</span> is either countable or has the same cardinality as <span  class="math">\((0,1)\)</span>.   More precisely, <span  class="math">\(\textbf{CH}\)</span> states that  if <span  class="math">\(\omega_0\)</span> denotes the first countable ordinal (i.e., the set of natural numbers) and <span  class="math">\(\omega_1\)</span> denotes the first uncountable ordinal, then   <span  class="math">\(| \omega_1| = | 2^{\omega_0}|\)</span>.  Here <span  class="math">\(2^{\omega_0}\)</span> is the set of all binary-valued functions <span  class="math">\(f \colon \omega_0 \to \{ 0, 1\}\)</span>, which has the same cardinality as the power set of <span  class="math">\(\omega_0\)</span> and as <span  class="math">\((0,1)\)</span>.</p>
+
+<p>Before we launch into the so-called proof, we should mention a few things about the ordinal numbers.  By definition <span  class="math">\(\omega_1\)</span> is the limit ordinal of all the countable ordinals, so in particular it is the set of all countable ordinals.  The well-ordering of <span  class="math">\(\omega_1\)</span> is induced from set membership.  This means that given <span  class="math">\(a, b \in \omega_1\)</span>, we have <span  class="math">\(a \lt b\)</span> if and only if <span  class="math">\(a \in b\)</span>.  As a consequence, the set <span  class="math">\(M(b):=\{ a \in \omega_1 \mid a \lt b \}\)</span> is just <span  class="math">\(b\)</span> itself, which we recall is countable.</p>
+
+<p><b>Proof.</b>  Assume for the sake of a contradiction that  <span  class="math">\(I=(0,1)\)</span> has a well-ordering of length <span  class="math">\(\omega_1\)</span>. What this means is that we well-order <span  class="math">\(I\)</span> in a way such that there is a poset isomorphism between <span  class="math">\(I\)</span> and <span  class="math">\(\omega_1\)</span>.  In other words, we are assuming that <span  class="math">\(\textbf{CH}\)</span> is true.   From now on when we write <span  class="math">\(x \lt y\)</span> we mean with respect to this well-ordering, not the usual &quot;less than or equal to&quot; ordering of the reals.</p>
+
+<p>You and I play a game. We both throw darts (randomly) at the interval <span  class="math">\((0,1)\)</span>. Yours lands first at a number <span  class="math">\(x\)</span> and then mine lands at a number <span  class="math">\(y\)</span>.  Since <span  class="math">\(M(x)\)</span> is a countable set it has probability <span  class="math">\(0\)</span>, so <span  class="math">\(x \lt y\)</span> with probability <span  class="math">\(1\)</span>.  That is, I almost always win!  Of course, the real number line has no way to know which dart hit first, so we could just as well argue that <span  class="math">\(y \lt x\)</span> with probability <span  class="math">\(1\)</span>, showing that you should almost always win.  These two outcomes are incongruent, and so we cannot possibly have a well-ordering of <span  class="math">\((0,1)\)</span> with length <span  class="math">\(\omega_1\)</span>, whence <span  class="math">\(\textbf{CH}\)</span> is disproved.  QED.</p>
+
+<p>G\&quot;{o}del and Cohen proved that <span  class="math">\(\textbf{CH}\)</span> is independent from the usual ZFC axioms of set theory, which means that it cannot be proved or disproved using these axioms.  Our argument above does not rely on anything outside of ZFC, so it cannot possibly be a disproof of <span  class="math">\(\textbf{CH}\)</span>.</p>
+
+<p>It's rather difficult to see what is amiss with the argument in its present form. In what follows we attempt to formalize the above proof a bit and explain why it breaks down.  The main idea is that reasoning with probabilities becomes a bit dodgy when constructing sets by invoking the Axiom of Choice, which we do when we well-order a set in light of the fact that the Axiom of Choice is equivalent to the Well-Ordering Principle. Basically, sets constructed in such manners are quite likely to be non-measurable.</p>
+
+<p><b>More formal proof.</b>For a fixed <span  class="math">\(x \in (0,1)\)</span>, the set <span  class="math">\(M(x):=\{ y \in I \mid y \lt x \}\)</span> is countable, as argued above. It follows that almost all <span  class="math">\(y \in (0,1)\)</span> satisfy <span  class="math">\(x \lt y\)</span>.   This then implies (here is the rub) that that almost all pairs <span  class="math">\((x,y) \in I^2\)</span> satisfy <span  class="math">\(x\lt y\)</span>,  so <span  class="math">\(A:=\{ (x,y) \in I^2 \mid x \lt y \}\)</span> has measure <span  class="math">\(1\)</span>.  But due to symmetry, almost all pairs <span  class="math">\((x,y)\)</span> should  satisfy <span  class="math">\(y \lt x\)</span>, so <span  class="math">\(B:=\{ (x,y) \in I^2 \mid y \lt x \}\)</span> should also have measure <span  class="math">\(1\)</span>.   But <span  class="math">\(B\)</span> is contained in the compliment of <span  class="math">\(A\)</span>, so it must have measure <span  class="math">\(0\)</span>.  This is a contradiction.  QED.</p>
+
+<p>The paradox has similarities to the Banach-Tarski paradox. Certain care is needed since the sets <span  class="math">\(A\)</span> and <span  class="math">\(B\)</span> are constructed with respect to the well-ordering of <span  class="math">\((0,1)\)</span> and so it's not immediately clear whether that they are in fact measurable.  The proof fails if <span  class="math">\(A\)</span> and <span  class="math">\(B\)</span> are not measurable.</p>
+
+<p>We  claim that <span  class="math">\(A\)</span> is non-measurable.  The horizontal sections of <span  class="math">\(A\)</span> are countable while the vertical sections are  co-countable.  If <span  class="math">\(A\)</span> were measurable, the Fubini-Tonelli theorem would imply that that the measure of <span  class="math">\(A\)</span> was both <span  class="math">\(1\)</span> and <span  class="math">\(0\)</span>.  Hence <span  class="math">\(A\)</span> is not in fact measurable.</p>
+
+<p>To see this last part in more detail, let  <span  class="math">\(\chi_A \colon I^2 \to \mathbb R\)</span> denote the indicator function for <span  class="math">\(A\)</span>.  If <span  class="math">\(y\)</span> is fixed then <span  class="math">\(\chi_A(x,y)\)</span> is supported on a countable subset of <span  class="math">\(I\)</span>.  On the other hand, if <span  class="math">\(x\)</span> is fixed then <span  class="math">\(\chi_A(x,y)\)</span> is supported on a co-countable subset of <span  class="math">\(I\)</span>.   Were <span  class="math">\(A\)</span> measurable we would have</p>
+
+<p><span  class="math">\[\begin{align*}
+  \mu(A)&=\iint_{I^2}  \chi_A (x,y) \ d(x,y) = \int_I \left( \int_I  \chi_A (x,y) \ dx\right) dy = \int_I 0 \ dy= 0 \quad \text{and} \\  \mu(A) &=\iint_{I^2}  \chi_A (x,y) \ d(x,y) = \int_I \left(  \int_I \chi_A (x,y) \ dy \right) dx =\int_I dx = 1,
+\end{align*}\]</span></p>
+
+<p>where <span  class="math">\(\mu\)</span> denotes the standard Lebesgue measure on <span  class="math">\(\mathbb R^2\)</span>.  This shows that <span  class="math">\(A\)</span> is not in fact measurable, and so the &quot;proof&quot; above is flawed.</p></section>
+</main>
+
+<footer class="ui" id="site">
+  <ul>
+    
+  </ul>
+
+  
+  <section id="copyright">© Shawn M. O’Hare.  <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Some rights reserved</a>.</section>
+</footer>
+</body>
+</html>

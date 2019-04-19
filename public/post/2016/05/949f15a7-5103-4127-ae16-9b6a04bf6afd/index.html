@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Migrating to Hugo - Part I | Shawn M. O&#39;Hare</title>
+
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<meta name="description" content="Migrating to Hugo">
+<meta name="keywords" content="">
+<meta name="author" content="Shawn O’Hare">
+<meta name="generator" content="Hugo 0.54.0" />
+
+<link rel="stylesheet" href="https://www.shawnohare.com/css/main.css">
+<link rel="stylesheet" href="https://www.shawnohare.com/css/override.css">
+
+
+
+</head>
+
+<body>
+<nav id="site" class="ui">
+  <ul>
+    
+    <li><a href="/">home</a></li>
+    
+    <li><a href="/post">posts</a></li>
+    
+    <li><a href="/page/about">about</a></li>
+    
+  </ul>
+</nav>
+
+<header>
+<section class="title">
+<h1>Migrating to Hugo - Part I</h1>
+<h2>Finding a Home</h2>
+</section>
+
+
+</header>
+<main>
+  <section id="content-meta">
+  
+<section class="content-meta ui">
+<section class="date">08 May, 2016</section>
+
+
+
+<section class="author">By <a href="https://www.shawnohare.com">Shawn O’Hare</a></section>
+
+
+
+
+
+
+<section class="tags">
+
+<a href="/tags/">Tags</a>:
+
+<a  href="https://www.shawnohare.com/tags/hugo">hugo&nbsp;</a>
+
+<a  href="https://www.shawnohare.com/tags/golang">golang&nbsp;</a>
+
+<a  href="https://www.shawnohare.com/tags/hakyll">hakyll&nbsp;</a>
+
+<a  href="https://www.shawnohare.com/tags/blogger">blogger&nbsp;</a>
+
+</section>
+
+
+
+<section class="series">
+Part of the <a href="/series/">series</a>:
+
+
+<a  href="https://www.shawnohare.com/series/migrating-to-hugo">
+  Migrating to Hugo
+  </a>
+
+</section>
+
+
+</section>
+
+
+  
+
+  </section>
+  <section class="content-main"><p>Over the years I've tried a number of blogging services, but only Wordpress
+and Blogger with any seriousness.  Roughly a year ago I made
+the decision to try a few static site generators.  In hindsight, this proved
+to be a bold decision.  This post will chronicle some aspects
+of this journey.</p>
+
+<h1 id="history">History</h1>
+
+<h2 id="dawn">Dawn</h2>
+
+<p>I take a relatively optimistic view of the Web, particularly as a vehicle
+for information.  When I was exposed to it for the first time many years ago
+I did what many technically inclined individuals did: create ugly websites
+using pure HTML.  Some of these were more niche than others, but usually
+the batch contained some version of a personal home page for yours truly.</p>
+
+<p>Wordcraft, digital archives, and content ownership are all long-standing
+interests of mine, whence my desire to create an online journal that I
+had some measure of control over.  Since my writing often includes a
+fair bit of mathematics, my needs are not necessarily served by
+existing solutions such as <a href="https://medium.com">Medium</a>.</p>
+
+<h2 id="wordpress-and-blogger">Wordpress and Blogger</h2>
+
+<p>One of my favorite mathematicians, <a href="https://terrytao.wordpress.com">Terry Tao</a>
+writes a popular blog on research mathematics.  It is powered by Wordpress, so
+when I decided to write about more math related topics, I first tried
+Wordpress.  I found its rendering of LaTeX to be poor, and quickly ditched
+it in favor of Google's Blogger around 2012.</p>
+
+<p>After spending some time configuring <a href="https://www.mathjax.org">MathJax</a> to work
+with Blogger, I had a functional but already dated looking site.  While my
+experience with Blogger proved satisfactory, the editing process itself was not
+to my liking.  Indeed, at the time many Google products had somewhat arcane
+user interfaces.  Moreover, I wanted my writing to be in a more portable
+format.  Enter the static site generators.</p>
+
+<h1 id="static-site-generators">Static Site Generators</h1>
+
+<p>A static site generator typically takes content written in a minimally
+stylized format (such as Markdown) and produces a collection of
+organized HTML files that consitute the site.  The site is static, in that
+pages are not dynamically generated when someone visits.</p>
+
+<p>To say that there are many static site generators is a bit of an
+understatement.  One of the most popular is <a href="http://jekyllrb.com">Jekyll</a>,
+written in Ruby.  It's tight integration with
+<a href="https://pages.github.com">GitHub Pages</a> makes it extremely popular.</p>
+
+<h2 id="hakyll">Hakyll</h2>
+
+<p>The first static site generator I explored in any depth was
+<a href="https://jaspervdj.be/hakyll/">Hakyll</a>, partially because it served
+as an excuse to learn some Haskell.  By utilizing the DSL provided by
+Hakyll, you effectively create your own static site generator.  Since
+Hakyll uses the Haskell document converter
+<a href="http://pandoc.org">Pandoc</a>, which handles LaTeX in markdown fairly well,
+I was eager to try it out.  After looking for inspiration from a few
+Hakyll-generated sites, I ended up with a basic setup that automatically
+deployed itself with <a href="https://circleci.com">CircleCI</a>.</p>
+
+<h2 id="hugo">Hugo</h2>
+
+<p>Shortly after getting a basic Hakyll site with MathJax support up and running,
+I decided to check out <a href="https://gohugo.io">Hugo</a>, written in Go.
+My desire was partly sparked by the fact that at this point much of my
+work-related programming was in Go.  With Hugo it is easy to initialize
+a basic site and apply themes.  The chance to easily apply nice looking
+themes intrigued me, so I spent some time fiddling with a Hugo
+configuration for my site.</p>
+
+<h1 id="theming">Theming</h1>
+
+<p>Since I need my site to support MathJax, many of the pre-built themes for
+Hugo did not really fit my needs.  Moreover, my personality is such that
+I like to tinker and configure, perhaps to the point of distraction.  I
+ended up investing a considerable amount of time creating the
+Hugo <a href="https://github.com/shawnohare/hugo-morphism">Morphism</a> theme
+that, despite the work, produces a very minimalist blog.</p>
+
+<p>The maintenance costs associated with personalized configurations and projects
+are very real.  These costs are exacerbated further by the fact that I
+am not, nor pretend to be, very adept at web development.  Fortunatelly,
+Hugo lets you do quite a bit with a little CSS, and HTML has come a long way
+since the days of my first site.</p>
+
+<h1 id="conclusion">Conclusion</h1>
+
+<p>So here we stand today.  A statically generated site powered by a pretty
+good site generator and a custom theme.  Much of the time I would
+have otherwise spent writing I have spent creating the Morphism theme.
+I suspect it is relatively stable, but this depends somewhat on my
+desire to try new Hugo features.  In any case, I hope to write anew
+with a greater frequency.</p></section>
+</main>
+
+<footer class="ui" id="site">
+  <ul>
+    
+  </ul>
+
+  
+  <section id="copyright">© Shawn M. O’Hare.  <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Some rights reserved</a>.</section>
+</footer>
+</body>
+</html>

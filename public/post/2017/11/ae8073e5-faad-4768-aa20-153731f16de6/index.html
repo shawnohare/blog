@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Math (LaTeX) in Markdown | Shawn M. O&#39;Hare</title>
+
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<meta name="description" content="Showcase some mathematics in markdown.">
+<meta name="keywords" content="">
+<meta name="author" content="Shawn O’Hare">
+<meta name="generator" content="Hugo 0.54.0" />
+
+<link rel="stylesheet" href="https://www.shawnohare.com/css/main.css">
+<link rel="stylesheet" href="https://www.shawnohare.com/css/override.css">
+
+
+<script type="text/javascript" src="https://www.shawnohare.com/js/mathjax.js"></script>
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS_CHTML-full">
+</script>
+
+
+</head>
+
+<body>
+<nav id="site" class="ui">
+  <ul>
+    
+    <li><a href="/">home</a></li>
+    
+    <li><a href="/post">posts</a></li>
+    
+    <li><a href="/page/about">about</a></li>
+    
+  </ul>
+</nav>
+
+<header>
+<section class="title">
+<h1>Math (LaTeX) in Markdown</h1>
+<h2>Rendering mathematics for the web</h2>
+</section>
+
+
+</header>
+<main>
+  <section id="content-meta">
+  
+<section class="content-meta ui">
+<section class="date">25 November, 2017</section>
+
+
+
+<section class="author">By <a href="https://www.shawnohare.com">Shawn O’Hare</a></section>
+
+
+
+
+
+
+<section class="tags">
+
+<a href="/tags/">Tags</a>:
+
+<a  href="https://www.shawnohare.com/tags/latex">latex&nbsp;</a>
+
+<a  href="https://www.shawnohare.com/tags/mathjax">mathjax&nbsp;</a>
+
+<a  href="https://www.shawnohare.com/tags/markdown">markdown&nbsp;</a>
+
+<a  href="https://www.shawnohare.com/tags/commonmark">commonmark&nbsp;</a>
+
+<a  href="https://www.shawnohare.com/tags/hugo">hugo&nbsp;</a>
+
+</section>
+
+
+
+
+</section>
+
+
+  
+
+  </section>
+  <section class="content-main"><h1 id="introduction">Introduction</h1>
+
+<p>When writing mathematics in markdown, I prefer a combination of syntactically
+pure but robust LaTeX, portability with respect to markdown processors, and
+aesthetically pleasing in-editor highlighting. Unfortunately, the first two
+constraints often conflict.</p>
+
+<p>With the exception of <a href="https://pandoc.org"><code>pandoc</code></a>, most markdown processors
+do not cater to highly mathematical documents. In particular, they tend to
+render <code>$</code> rather than treat it as a math delimiter or will inadvertently
+process raw LaTeX, requiring excessive escapes for common LaTeX syntax such as
+the set delimiter <code>\{</code>.  That there is no canonical math delimiter in the
+markdown specification is a gross oversight in the standard, but that's a topic
+in its own right. (Hopefully the work at <a href="http://commonmark.org">CommonMark</a>
+will lead to satisfactory math extension).</p>
+
+<p>As it currently stands, those wishing to inject LaTeX into their markdown are
+subject to unfortunate contortions. Confer
+<a href="https://github.com/cben/mathdown/wiki/math-in-markdown">math in markdown</a>.</p>
+
+<h1 id="mathjax">MathJax</h1>
+
+<p><a href="https://mathjax.org">MathJax</a> is a JavaScript display engine for rendering
+mathematics in web browsers. It supports relatiely sophisticated
+LaTeX, such as <code>align</code> environments and equation references. I currently
+use it to render all mathematics on this site.</p>
+
+<p>The following MathJax config is included in the <code>&lt;head&gt;</code> of each page
+containing LaTeX.</p>
+
+<pre><code class="language-html">&lt;script type=&quot;text/x-mathjax-config&quot;&gt;
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\\[','\\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    processRefs: true,
+    menuSettings: { zoom: &quot;Double-Click&quot; },
+    processClass: &quot;math&quot;,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+  },
+  TeX: {
+    equationNumbers: { autoNumber: &quot;AMS&quot; },
+    extensions: [&quot;AMSmath.js&quot;, &quot;AMSsymbols.js&quot;],
+  },
+});
+&lt;/script&gt;
+
+&lt;script type=&quot;text/javascript&quot; async
+  src=&quot;https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS_HTML-full&quot;&gt;
+&lt;/script&gt;
+</code></pre>
+
+<h1 id="kramdown-mmark-and-the--delimiter">kramdown, mmark, and the <code>$$</code> delimiter</h1>
+
+<p>The <code>kramdown</code> markdown processor (and its derivatives such as <code>mmark</code>)
+utilize <code>$$</code> as the singular delimiter for mathematics, both inline and display.
+Since no further processing occurs inside the <code>$$</code> delimiters, one is free to
+write essentially pure latex.</p>
+
+<p>The inline expression
+<span  class="math">\(2 := \{0, 1\} = \{\emptyset, \{\emptyset \}\}\)</span> is rendered from:</p>
+
+<pre><code class="language-latex">$$2 := \{0, 1\} = \{\emptyset, \{\emptyset \}\}$$
+</code></pre>
+
+<p>For display mathematics, I prefer to use explicit environments, which must
+themselves be wrapped in <code>$$</code> tags.</p>
+
+<p><span  class="math">\[\begin{equation*}
+\mathfrak C_n := \left\{ \xi^0, \xi^1, \xi^2, \dots, \xi^{n-1} \right\}
+\end{equation*}\]</span></p>
+
+<p>is rendered from :</p>
+
+<pre><code>$$\begin{equation*}
+\mathfrak C_n := \left\{ \xi^0, \xi^1, \xi^2, \dots, \xi^{n-1} \right\}
+\end{equation*}$$
+</code></pre>
+
+<p>The advantage with this approach is that <code>$$...$$</code> and
+<code>$$\begin{*}...\end{*}$$</code> always delimit inline and display mathematics,
+respectively. This simplifies source transformation.</p>
+
+<h1 id="hugo">hugo</h1>
+
+<p>Presently I employ <code>hugo</code> to generate this site from markdown content. One
+nice feature of <code>hugo</code> is that it supports <code>mmark</code> automatically by
+either utilizing the <code>.mmark</code> file extension or explicitly specifying <code>mmark</code>
+as the processor in the page metadata. For example, this page's metadata is:</p>
+
+<pre><code class="language-yaml">---
+date: &quot;2017-11-25&quot;
+title:  &quot;Mathematics (LaTeX) in Markdown&quot;
+description: &quot;Showcase some mathematics in markdown.&quot;
+math:  true
+tags:  [&quot;latex&quot;, &quot;mathjax&quot;, &quot;markdown&quot;, &quot;commonmark&quot;, &quot;hugo&quot;]
+markup:  &quot;mmark&quot;
+
+---
+</code></pre>
+
+<h1 id="showcase">Showcase</h1>
+
+<p>Some mathematical expressions:</p>
+
+<p><span  class="math">\[\begin{equation*}
+\mathfrak G \mathrel{\vcenter{:}}= \coprod_{i=1}^{\infty} \widehat{\mathbb X}_{\{ j \lt i \}}
+\end{equation*}\]</span></p>
+
+<p><span  class="math">\[\begin{equation*}
+\left( \sum_{k=1}^n a_k b_k \right)^{2} \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right) 
+\end{equation*}\]</span></p>
+
+<p><span  class="math">\[\begin{equation*}
+ \mathbf{V}_1 \times \mathbf{V}_2 = \begin{vmatrix} \mathbf{i} & \mathbf{j} & \mathbf{k} \newline \frac{\partial X}{\partial u} & \frac{\partial Y}{\partial u} & 0 \newline \frac{\partial X}{\partial v} & \frac{\partial Y}{\partial v} & 0 \newline \end{vmatrix}
+\end{equation*}\]</span></p>
+
+<p><span  class="math">\[\begin{equation*}
+\frac{1}{(\sqrt{\phi \sqrt{5}}-\phi) e^{\frac25 \pi}} = 1+\frac{e^{-2\pi}} {1+\frac{e^{-4\pi}} {1+\frac{e^{-6\pi}} {1+\frac{e^{-8\pi}} {1+\ldots} } } }
+\end{equation*}\]</span></p>
+
+<p><span  class="math">\[\begin{equation*}
+1 + \frac{q^2}{(1-q)}+\frac{q^6}{(1-q)(1-q^2)}+\cdots = \prod_{j=0}^{\infty}\frac{1}{(1-q^{5j+2})(1-q^{5j+3})}, \quad\quad \text{for $|q| \lt 1$}.
+\end{equation*}\]</span></p>
+
+<p><span  class="math">\[\begin{align} 
+\nabla \times \vec{\mathbf{B}} -, \frac1c, \frac{\partial\vec{\mathbf{E}}}{\partial t} & = \frac{4\pi}{c}\vec{\mathbf{j}} \newline \nabla \cdot \vec{\mathbf{E}} & = 4 \pi \rho \newline \nabla \times \vec{\mathbf{E}}, +, \frac1c, \frac{\partial\vec{\mathbf{B}}}{\partial t} & = \vec{\mathbf{0}} \newline \nabla \cdot \vec{\mathbf{B}} & = 0
+\end{align}\]</span></p>
+
+<p><span  class="math">\[\begin{equation} \label{eq:showcase}
+x(t) = e^{\int_{t_0}^tp(s)ds}\Bigg(\int_{t_0}^t\Big(q(s)e^{-\int_{t_0}^sp(\tau)d\tau}\Big)ds + x_0\Bigg). 
+\end{equation}\]</span></p>
+
+<p>We can even reference equation <span  class="math">\(\eqref{eq:showcase}\)</span>.</p></section>
+</main>
+
+<footer class="ui" id="site">
+  <ul>
+    
+  </ul>
+
+  
+  <section id="copyright">© Shawn M. O’Hare.  <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Some rights reserved</a>.</section>
+</footer>
+</body>
+</html>

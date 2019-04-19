@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Sample Covariance Matrix | Shawn M. O&#39;Hare</title>
+
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="author" content="Shawn O’Hare">
+<meta name="generator" content="Hugo 0.54.0" />
+
+<link rel="stylesheet" href="https://www.shawnohare.com/css/main.css">
+<link rel="stylesheet" href="https://www.shawnohare.com/css/override.css">
+
+
+<script type="text/javascript" src="https://www.shawnohare.com/js/mathjax.js"></script>
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS_CHTML-full">
+</script>
+
+
+</head>
+
+<body>
+<nav id="site" class="ui">
+  <ul>
+    
+    <li><a href="/">home</a></li>
+    
+    <li><a href="/post">posts</a></li>
+    
+    <li><a href="/page/about">about</a></li>
+    
+  </ul>
+</nav>
+
+<header>
+<section class="title">
+<h1>Sample Covariance Matrix</h1>
+
+</section>
+
+
+</header>
+<main>
+  <section id="content-meta">
+  
+<section class="content-meta ui">
+<section class="date">15 October, 2013</section>
+
+
+
+<section class="author">By <a href="https://www.shawnohare.com">Shawn O’Hare</a></section>
+
+
+
+
+
+
+<section class="tags">
+
+<a href="/tags/">Tags</a>:
+
+<a  href="https://www.shawnohare.com/tags/statistics">statistics&nbsp;</a>
+
+</section>
+
+
+
+
+</section>
+
+
+  
+
+  </section>
+  <section class="content-main"><p>Suppose <span  class="math">\(X_1, \dots, X_p\)</span> are random variables and <span  class="math">\(X:=(X_1, \dots, X_p)\)</span> is the random vector of said random variables.  Given a sample <span  class="math">\(\mathbf x_1, \dots \mathbf x_N\)</span> of <span  class="math">\(X\)</span>, how do we obtain an estimate for the covariance matrix <span  class="math">\(\text{Cov}(X)\)</span>?  <br><br> To this end, let <span  class="math">\(\mathbf X=( \mathbf X_{ij})\)</span> denote the <span  class="math">\(N \times p\)</span> data matrix whose <span  class="math">\(k\)</span>th row is <span  class="math">\(\mathbf x_k\)</span> and let <span  class="math">\(\bar x_i\)</span> denote the sample mean of <span  class="math">\(X_i\)</span>.  That is, <span  class="math">\(\bar x_i\)</span> is the mean of the <span  class="math">\(i\)</span>th column of <span  class="math">\(\mathbf X\)</span>.  Then the sample covariance matrix <span  class="math">\(Q = (Q_{ij})\)</span> is defined by</p>
+
+<p><span  class="math">\[\begin{equation*}
+  Q_{ij} := \frac{1}{N-1} \sum_{k=1}^{N} (\mathbf X_{ki} - \bar x_i)(\mathbf X_{kj} - \bar x_j). 
+\end{equation*}\]</span></p>
+
+<p>We can write this a bit more compactly if we introduce yet more notation.  Let <span  class="math">\(\bar{\mathbf x}:=(\bar x_1, \dots, \bar x_p)\)</span> denote the sample mean vector and <span  class="math">\(M\)</span> the <span  class="math">\(N \times p\)</span> matrix with all rows equal to <span  class="math">\(\bar{\mathbf x}\)</span>. The matrix <span  class="math">\(N:=\mathbf X - M\)</span> is the data matrix that has been centered about the sample means, and we quickly see that</p>
+
+<p><span  class="math">\[\begin{equation*}
+  Q = N^T N. 
+\end{equation*}\]</span></p>
+</section>
+</main>
+
+<footer class="ui" id="site">
+  <ul>
+    
+  </ul>
+
+  
+  <section id="copyright">© Shawn M. O’Hare.  <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Some rights reserved</a>.</section>
+</footer>
+</body>
+</html>

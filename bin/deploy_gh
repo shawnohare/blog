@@ -1,13 +1,11 @@
 #!/usr/bin/env bash
+# Run from project run via bin/deploy_sh.
 set -ex
 
 readonly gh="https://github.com/shawnohare"
 readonly rev=$(git rev-parse HEAD)
 
-# Sync git with generated site to avoid pushing
-if [ !  -d public ]; then
-  git clone "${gh}/shawnohare.github.io" public
-fi
+# Sync git with generated site to ensure removed files are deleted from build.
 cd public && rm -rf $(ls) && cd ..
 hugo && cd public
 
@@ -18,12 +16,34 @@ if [ ! -z "$(git status --porcelain)" ]; then
   # Uncomment to allow squashing with previous commits.
   git commit -m "tmp"
   git reset --soft HEAD~2
-  git commit -m "Generated from shawnohare.com ${rev}"
+  git commit -m "Rebuilt from ${rev}"
   git push origin master --force
 else
   echo "Nothing to sync."
 fi
 
+# Version below assumes that built site is not a submodule.
+# Sync git with generated site to avoid pushing
+# if [ !  -d public ]; then
+#   git clone "${gh}/shawnohare.github.io" public
+# fi
+# cd public && rm -rf $(ls) && cd ..
+# hugo && cd public
+
+# #  Check if there are any changes. If so commit and override the last
+# # non-initial commit. Requires at least one previous non-initial commit.
+# if [ ! -z "$(git status --porcelain)" ]; then
+#   git add --all
+#   # Uncomment to allow squashing with previous commits.
+#   git commit -m "tmp"
+#   git reset --soft HEAD~2
+#   git commit -m "Rebuilt `date` ${rev}"
+#   git push origin master --force
+# else
+#   echo "Nothing to sync."
+# fi
+
+# Version
 # Simple version that pushes excess files. Site repo has a single commit.
 # rm -rf public
 # hugo

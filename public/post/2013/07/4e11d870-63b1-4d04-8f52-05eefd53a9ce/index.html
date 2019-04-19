@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> A natural isomorphism between a vector space and its double dual. | Shawn M. O&#39;Hare</title>
+
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="author" content="Shawn O’Hare">
+<meta name="generator" content="Hugo 0.54.0" />
+
+<link rel="stylesheet" href="https://www.shawnohare.com/css/main.css">
+<link rel="stylesheet" href="https://www.shawnohare.com/css/override.css">
+
+
+<script type="text/javascript" src="https://www.shawnohare.com/js/mathjax.js"></script>
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS_CHTML-full">
+</script>
+
+
+</head>
+
+<body>
+<nav id="site" class="ui">
+  <ul>
+    
+    <li><a href="/">home</a></li>
+    
+    <li><a href="/post">posts</a></li>
+    
+    <li><a href="/page/about">about</a></li>
+    
+  </ul>
+</nav>
+
+<header>
+<section class="title">
+<h1>A natural isomorphism between a vector space and its double dual.</h1>
+
+</section>
+
+
+</header>
+<main>
+  <section id="content-meta">
+  
+<section class="content-meta ui">
+<section class="date">27 July, 2013</section>
+
+
+
+<section class="author">By <a href="https://www.shawnohare.com">Shawn O’Hare</a></section>
+
+
+
+
+
+
+
+
+
+</section>
+
+
+  
+
+  </section>
+  <section class="content-main"><p>Soon after one begins a study of abstract vector spaces, they are confronted with the fact that a finite dimensional vector space is naturally (or canonically) isomorphic to its double dual space.  Intuitively, this means that the isomorphism is somehow independent of any particular choice of basis.  This notion is made rigorous  with the notion of natural transformations of functors between categories.</p>
+
+<p>For a finite dimensional vector space <span  class="math">\(V\)</span> over a field <span  class="math">\(K\)</span>, there is a natural isomorphism <span  class="math">\(V \to V^{**}\)</span> sending a vector <span  class="math">\(v\)</span> to the evaluation at <span  class="math">\(v\)</span> map <span  class="math">\(\eta_{v} \colon V^* \to  K\)</span>, <span  class="math">\(v^* \mapsto v^*(v)\)</span>.</p>
+
+<p>More formally, let <span  class="math">\(\mathcal C\)</span> denote the category of finite dimensional vector spaces over a fixed field.  Then the assignment of the isomorphisms <span  class="math">\(\eta_V  \colon V \to V^{**}\)</span>, <span  class="math">\(v \mapsto \eta_v\)</span> for each <span  class="math">\(V\)</span> gives a natural transformation <span  class="math">\(\eta\)</span> between the identity functor  on <span  class="math">\(\mathcal C\)</span> and the double dual functor  <span  class="math">\( (  - ) ^{**} \colon \mathcal C \to \mathcal C\)</span>, which can be defined as the self-composition of the (contravariant) dual functor  <span  class="math">\((-)^* \colon \mathcal C \to \mathcal C\)</span> sending a linear map <span  class="math">\(\varphi \colon V \to W\)</span> to the pre-composition with <span  class="math">\(\varphi\)</span> map <span  class="math">\(\varphi^* \colon W^* \to V^*\)</span>,  <span  class="math">\(w^* \mapsto w^* \circ \varphi\)</span>.  Then <span  class="math">\(\varphi^{**} \colon V^{**} \to W^{**}\)</span> is given by <span  class="math">\(\varphi^{**}(v^{**}) = v^{**} \circ \varphi^*\)</span>, which is itself a map defined by <span  class="math">\(v^{**} \circ \varphi^* (w^*) = v^{**} (w^* \circ \varphi)\)</span>.   In other words,</p>
+
+<p><span  class="math">\[\begin{equation*}
+  \varphi^{**} \colon V^{**} \to W^{**}, \quad v^{**} \mapsto (w^* \mapsto v^{**} ( w^* \circ \varphi)). 
+\end{equation*}\]</span></p>
+
+<p>Let's now check that <span  class="math">\(\eta\)</span> is actually a natural transformation.  To this end, suppose <span  class="math">\(\varphi \colon V \to W\)</span> is a linear map.  We must verify that <span  class="math">\(\varphi^{**} \circ \eta_V = \eta_W \circ \varphi\)</span>.  Given <span  class="math">\(v \in V\)</span>, we have <span  class="math">\([\varphi^{**} \circ \eta_V] (v) = \varphi^{**} (\eta_v) = \eta_v \circ \varphi^*\)</span>.   For <span  class="math">\(w^* \in W^*\)</span>, it follows that <span  class="math">\([\eta_v \circ \varphi^*] (w^*) = \eta_v (w^* \circ \varphi) = w^* ( \varphi(v))\)</span>.  On the other hand, <span  class="math">\([\eta_W \circ \varphi](v)=\eta_{\varphi(v)}\)</span> and <span  class="math">\(\eta_{\varphi(v)}(w^*) = w^* (\varphi(v)\)</span>, so the claim is established.</p></section>
+</main>
+
+<footer class="ui" id="site">
+  <ul>
+    
+  </ul>
+
+  
+  <section id="copyright">© Shawn M. O’Hare.  <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Some rights reserved</a>.</section>
+</footer>
+</body>
+</html>

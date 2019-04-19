@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Complex Numbers as Matrices | Shawn M. O&#39;Hare</title>
+
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="author" content="Shawn O’Hare">
+<meta name="generator" content="Hugo 0.54.0" />
+
+<link rel="stylesheet" href="https://www.shawnohare.com/css/main.css">
+<link rel="stylesheet" href="https://www.shawnohare.com/css/override.css">
+
+
+<script type="text/javascript" src="https://www.shawnohare.com/js/mathjax.js"></script>
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS_CHTML-full">
+</script>
+
+
+</head>
+
+<body>
+<nav id="site" class="ui">
+  <ul>
+    
+    <li><a href="/">home</a></li>
+    
+    <li><a href="/post">posts</a></li>
+    
+    <li><a href="/page/about">about</a></li>
+    
+  </ul>
+</nav>
+
+<header>
+<section class="title">
+<h1>Complex Numbers as Matrices</h1>
+
+</section>
+
+
+</header>
+<main>
+  <section id="content-meta">
+  
+<section class="content-meta ui">
+<section class="date">09 June, 2013</section>
+
+
+
+<section class="author">By <a href="https://www.shawnohare.com">Shawn O’Hare</a></section>
+
+
+
+
+
+
+
+
+
+</section>
+
+
+  
+
+  </section>
+  <section class="content-main"><p>Many people take exception with the complex number field <span  class="math">\(\mathbb C\)</span> because the equality</p>
+
+<p><span  class="math">\[\begin{equation}
+\label{eq:neg1}  i^2 = -1 
+\end{equation}\]</span></p>
+
+<p>rankles them in some way.  I suspect that the layperson's distaste for this identity is their wont to interpret <span  class="math">\(i\)</span> as a real number, since they have the most experience with the arithmetic of real numbers.  Surely our convention of calling numbers such as <span  class="math">\(\sqrt 2\)</span>, <span  class="math">\(\pi\)</span>, and <span  class="math">\(e\)</span> real but <span  class="math">\(-2i\)</span> &quot;purely imaginary&quot; doesn't help.</p>
+
+<p>Identities of the form in \eqref{eq:neg1} abound in the wild.  For instance, within the ring <span  class="math">\(M_2(\mathbb R)\)</span> of <span  class="math">\(2 \times 2\)</span>-matrices with real entries, the rotation by <span  class="math">\(90^{\circ}\)</span> matrix <span  class="math">\(R\)</span> defined by</p>
+
+<p><span  class="math">\[\begin{equation}
+\label{eq:matrix}  R := \begin{pmatrix}   0 & -1 \\   1 & 0  \end{pmatrix} 
+\end{equation}\]</span></p>
+
+<p>satisfies <span  class="math">\(R^2 = -\mathbf{1}\)</span>.  Here <span  class="math">\(\mathbf{1}\)</span> signifies the identity matrix</p>
+
+<p><span  class="math">\[\begin{equation*}
+  \mathbf{1}:=\begin{pmatrix}   1 & 0 \\   0 & 1  \end{pmatrix}, 
+\end{equation*}\]</span></p>
+
+<p>which is the multiplicative identity in <span  class="math">\(M_2(\mathbb R)\)</span>.</p>
+
+<p>As another example, recall that two integers <span  class="math">\(x\)</span> and <span  class="math">\(y\)</span> are identified modulo a natural number <span  class="math">\(n\)</span>, written <span  class="math">\(x = y \mod n\)</span>, provided that there exists an integer <span  class="math">\(s\)</span> such that</p>
+
+<p><span  class="math">\[\begin{equation*}
+  x = sn + y. 
+\end{equation*}\]</span></p>
+
+<p>Since <span  class="math">\(2^2 = 1 \cdot 5 +  (-1)\)</span>, we have</p>
+
+<p><span  class="math">\[\begin{equation*}
+  2^2 = -1 \mod 5. 
+\end{equation*}\]</span></p>
+
+<p>To better understand why \eqref{eq:neg1} should cause us no philosophical consternation, let's consider how complex numbers are built. The complex number field <span  class="math">\(\mathbb C\)</span> consists of elements of the form <span  class="math">\(a + bi\)</span>, where <span  class="math">\(a\)</span> and <span  class="math">\(b\)</span> are real numbers and <span  class="math">\(i\)</span> is merely a symbol.  Given two complex numbers <span  class="math">\(a + bi\)</span> and <span  class="math">\(c + di\)</span>, we add them via <span  class="math">\((a + bi) + (c + di):=(a + c) + (b + d)i\)</span> and multiply them via <span  class="math">\((a + bi) \cdot (c + di) := (ac-bd) + (ad + bc)i\)</span>.  Given these definitions, <span  class="math">\(i^2 = (0 + i) \cdot (0 + i) = -1\)</span>.  This is actually what is meant when we say that &quot;<span  class="math">\(i\)</span> is the square root of <span  class="math">\(-1\)</span>&quot;.</p>
+
+<p>We can also identify a subset of <span  class="math">\(M_2(\mathbb R)\)</span> that has the exact same additive and multiplicative structure as <span  class="math">\(\mathbb C\)</span>.  Consider the set <span  class="math">\(\mathbb M\)</span> of real <span  class="math">\(2 \times 2\)</span>-matrices that have the form</p>
+
+<p><span  class="math">\[\begin{equation*}
+  \begin{pmatrix}   a & -b \\   b & a  \end{pmatrix}, 
+\end{equation*}\]</span></p>
+
+<p>where <span  class="math">\(a\)</span> and <span  class="math">\(b\)</span> are real numbers.  It is easy to verify that if <span  class="math">\(A\)</span> and <span  class="math">\(B\)</span> are two matrices in <span  class="math">\(\mathbb M\)</span>, then <span  class="math">\(A+B\)</span> and <span  class="math">\(AB\)</span> are both in <span  class="math">\(\mathbb M\)</span>, so <span  class="math">\(\mathbb M\)</span> is closed under addition and multiplication.  Now observe that if <span  class="math">\(a\)</span>, <span  class="math">\(b\)</span>, <span  class="math">\(c\)</span>, <span  class="math">\(d\)</span> are real numbers, then</p>
+
+<p><span  class="math">\[\begin{equation*}
+  \begin{pmatrix}   a & -b \\   b & a  \end{pmatrix}  \begin{pmatrix}   c & -d \\   d & c  \end{pmatrix}  =  \begin{pmatrix}   ac-bd & -(ad+bc) \\   ad + bc & ac-bd  \end{pmatrix}.  
+\end{equation*}\]</span></p>
+
+<p>This is the same multiplication law that we defined for <span  class="math">\(\mathbb C\)</span>.  Indeed, we can canonically identify the complex number <span  class="math">\(a+bi\)</span> with the matrix</p>
+
+<p><span  class="math">\[\begin{equation*}
+  \begin{pmatrix}   a & -b \\   b & a  \end{pmatrix}. 
+\end{equation*}\]</span></p>
+
+<p>When <span  class="math">\(a=0\)</span> and <span  class="math">\(b=1\)</span> we have the complex number <span  class="math">\(i\)</span>, which corresponds to our rotation matrix <span  class="math">\(R\)</span> from \eqref{eq:matrix}.  There are many other ways to construct an algebraic object with the same additive and multiplicative structures as the field of complex numbers.  This demonstrates to some degree that the isomorphism type of <span  class="math">\(\mathbb C\)</span>, i.e., the algebraic structure of <span  class="math">\(\mathbb C\)</span> viewed without regard to what the elements represent, is quite a natural object.</p></section>
+</main>
+
+<footer class="ui" id="site">
+  <ul>
+    
+  </ul>
+
+  
+  <section id="copyright">© Shawn M. O’Hare.  <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Some rights reserved</a>.</section>
+</footer>
+</body>
+</html>

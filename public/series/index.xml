@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Series on Shawn M. O&#39;Hare</title>
+    <link>https://www.shawnohare.com/series/</link>
+    <description>Recent content in Series on Shawn M. O&#39;Hare</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>© Shawn M. O’Hare.  &lt;a rel=&#34;license&#34; href=&#34;http://creativecommons.org/licenses/by-sa/4.0/&#34;&gt;Some rights reserved&lt;/a&gt;.</copyright>
+    <lastBuildDate>Sun, 08 May 2016 08:48:39 -0700</lastBuildDate>
+    
+	<atom:link href="https://www.shawnohare.com/series/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Migrating to Hugo</title>
+      <link>https://www.shawnohare.com/series/migrating-to-hugo/</link>
+      <pubDate>Sun, 08 May 2016 08:48:39 -0700</pubDate>
+      
+      <guid>https://www.shawnohare.com/series/migrating-to-hugo/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

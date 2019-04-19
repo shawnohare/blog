@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Simple Divisibility Tests | Shawn M. O&#39;Hare</title>
+
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="author" content="Shawn O’Hare">
+<meta name="generator" content="Hugo 0.54.0" />
+
+<link rel="stylesheet" href="https://www.shawnohare.com/css/main.css">
+<link rel="stylesheet" href="https://www.shawnohare.com/css/override.css">
+
+
+<script type="text/javascript" src="https://www.shawnohare.com/js/mathjax.js"></script>
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS_CHTML-full">
+</script>
+
+
+</head>
+
+<body>
+<nav id="site" class="ui">
+  <ul>
+    
+    <li><a href="/">home</a></li>
+    
+    <li><a href="/post">posts</a></li>
+    
+    <li><a href="/page/about">about</a></li>
+    
+  </ul>
+</nav>
+
+<header>
+<section class="title">
+<h1>Simple Divisibility Tests</h1>
+
+</section>
+
+
+</header>
+<main>
+  <section id="content-meta">
+  
+<section class="content-meta ui">
+<section class="date">12 November, 2013</section>
+
+
+
+<section class="author">By <a href="https://www.shawnohare.com">Shawn O’Hare</a></section>
+
+
+
+
+
+
+<section class="tags">
+
+<a href="/tags/">Tags</a>:
+
+<a  href="https://www.shawnohare.com/tags/math">math&nbsp;</a>
+
+</section>
+
+
+
+
+</section>
+
+
+  
+
+  </section>
+  <section class="content-main"><p>In this post we will justify some common divisibility tests that most school children are familiar with.  Recall that a number such as <span  class="math">\(111\)</span> is divisible by <span  class="math">\(3\)</span> if and only if the sum of the digits is  divisible by <span  class="math">\(3\)</span>.  Since <span  class="math">\(1+1+1=3\)</span> is divisible by <span  class="math">\(3\)</span>,  we see that <span  class="math">\(111\)</span> is divisible by three.</p>
+
+<p>More generally, an integer <span  class="math">\(N\)</span> is divisible by <span  class="math">\(3\)</span> if and only if the sum of the digits appearing in <span  class="math">\(N\)</span> is divisible by <span  class="math">\(3\)</span>. <div></p>
+
+<p>This can be proven quite easily using modular arithmetic.   Recall that an integer <span  class="math">\(N\)</span> with decimal expansion <span  class="math">\(N=a_n a_{n-1} \dots a_1 a_0\)</span> can be written as</p>
+
+<p><span  class="math">\[\begin{equation*}
+  N = \sum_{k=0}^n a_k 10^k. 
+\end{equation*}\]</span></p>
+
+<p>Here <span  class="math">\(a_k \in \{ 0, 1, \dots, 9 \}\)</span> for each <span  class="math">\(k=1, \dots, n\)</span>.   Since <span  class="math">\(10^k \equiv 1 \mod 3\)</span> for any natural number <span  class="math">\(k\)</span>, we see that</p>
+
+<p><span  class="math">\[\begin{equation*}
+  N \equiv \sum_{k=0}^n a_k \mod 3. 
+\end{equation*}\]</span></p>
+
+<p>This proves the claim.</div><div>
+Since <span  class="math">\(10^k \equiv 1 \mod 9\)</span> for each natural number <span  class="math">\(k\)</span>, the same divisibility test holds for <span  class="math">\(9\)</span> as well.  That is, a number <span  class="math">\(N\)</span> is divisible by <span  class="math">\(9\)</span> if and only if the sum of its digits is divisible by <span  class="math">\(9\)</span>.</p>
+
+<p>A similar observation gives a divisibility test for <span  class="math">\(11\)</span>. Note that <span  class="math">\(10^k \equiv (-1)^k \mod 11\)</span> for any natural number <span  class="math">\(k\)</span>, so <span  class="math">\(N = a_n \dots a_0\)</span> satisfies</p>
+
+<p><span  class="math">\[\begin{equation*}
+  N \equiv \sum_{k=0}^n (-1)^k a_k \mod 11. 
+\end{equation*}\]</span></p>
+
+<p>This <span  class="math">\(N\)</span> is divisible by <span  class="math">\(11\)</span> if and only if the alternating sum of its digits is divisible by <span  class="math">\(11\)</span>.  </div></p></section>
+</main>
+
+<footer class="ui" id="site">
+  <ul>
+    
+  </ul>
+
+  
+  <section id="copyright">© Shawn M. O’Hare.  <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Some rights reserved</a>.</section>
+</footer>
+</body>
+</html>

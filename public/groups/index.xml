@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Groups on Shawn M. O&#39;Hare</title>
+    <link>https://www.shawnohare.com/groups/</link>
+    <description>Recent content in Groups on Shawn M. O&#39;Hare</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>© Shawn M. O’Hare.  &lt;a rel=&#34;license&#34; href=&#34;http://creativecommons.org/licenses/by-sa/4.0/&#34;&gt;Some rights reserved&lt;/a&gt;.</copyright>
+    <lastBuildDate>Tue, 10 Dec 2013 19:56:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://www.shawnohare.com/groups/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Clustering</title>
+      <link>https://www.shawnohare.com/groups/clustering/</link>
+      <pubDate>Tue, 10 Dec 2013 19:56:00 +0000</pubDate>
+      
+      <guid>https://www.shawnohare.com/groups/clustering/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Nlp</title>
+      <link>https://www.shawnohare.com/groups/nlp/</link>
+      <pubDate>Tue, 10 Dec 2013 19:56:00 +0000</pubDate>
+      
+      <guid>https://www.shawnohare.com/groups/nlp/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

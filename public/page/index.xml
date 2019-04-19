@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pages on Shawn M. O&#39;Hare</title>
+    <link>https://www.shawnohare.com/page/</link>
+    <description>Recent content in Pages on Shawn M. O&#39;Hare</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>© Shawn M. O’Hare.  &lt;a rel=&#34;license&#34; href=&#34;http://creativecommons.org/licenses/by-sa/4.0/&#34;&gt;Some rights reserved&lt;/a&gt;.</copyright>
+    
+	<atom:link href="https://www.shawnohare.com/page/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>About Shawn M. O&#39;Hare</title>
+      <link>https://www.shawnohare.com/page/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.shawnohare.com/page/about/</guid>
+      <description>I am a mathematician, data scientist, and skeptic. Broadly, I am interested in the applications of mathematics&amp;mdash;specifically abstract algebra&amp;mdash;to machine learning, statistics, and artificial intelligence.
+The writings on this site represent an eclectic mixture of my interests. Generally the articles aim to please a mathematically sophisticated audience while still being informative to a lay reader.
+Contact  GitHub email  Site This site is powered by the static site generater Hugo and the hugo-morphism theme.</description>
+    </item>
+    
+  </channel>
+</rss>

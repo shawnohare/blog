@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Linear Algebra on Shawn M. O&#39;Hare</title>
+    <link>https://www.shawnohare.com/tags/linear-algebra/</link>
+    <description>Recent content in Linear Algebra on Shawn M. O&#39;Hare</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>© Shawn M. O’Hare.  &lt;a rel=&#34;license&#34; href=&#34;http://creativecommons.org/licenses/by-sa/4.0/&#34;&gt;Some rights reserved&lt;/a&gt;.</copyright>
+    <lastBuildDate>Fri, 29 Mar 2013 17:27:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://www.shawnohare.com/tags/linear-algebra/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Non-linear Additive Maps</title>
+      <link>https://www.shawnohare.com/post/2013/03/c7b5f3e2-7b55-4a84-84b8-9ea6f91f84f0/</link>
+      <pubDate>Fri, 29 Mar 2013 17:27:00 +0000</pubDate>
+      
+      <guid>https://www.shawnohare.com/post/2013/03/c7b5f3e2-7b55-4a84-84b8-9ea6f91f84f0/</guid>
+      <description>&lt;p&gt;While teaching an introductory linear algebra course, a colleague noticed that most of the examples of additive maps he gave turned out to be linear.  He asked whether I could think of a map which was additive, but not linear.  In a general context, the question was to find a ring &lt;span  class=&#34;math&#34;&gt;\(R\)&lt;/span&gt;, &lt;span  class=&#34;math&#34;&gt;\(R\)&lt;/span&gt;-modules &lt;span  class=&#34;math&#34;&gt;\( V\)&lt;/span&gt; and &lt;span  class=&#34;math&#34;&gt;\( W\)&lt;/span&gt;, and a map &lt;span  class=&#34;math&#34;&gt;\( f \colon V \to W\)&lt;/span&gt; such that &lt;span  class=&#34;math&#34;&gt;\( f \)&lt;/span&gt; is a group homomorphism, but not an &lt;span  class=&#34;math&#34;&gt;\( R\)&lt;/span&gt;-module morphism, i.e, &lt;span  class=&#34;math&#34;&gt;\( f(x+y)=f(x)+f(y)\)&lt;/span&gt; for all &lt;span  class=&#34;math&#34;&gt;\( x,y \in V,\)&lt;/span&gt; but there is some &lt;span  class=&#34;math&#34;&gt;\( r \in R\)&lt;/span&gt; and &lt;span  class=&#34;math&#34;&gt;\( z \in V\)&lt;/span&gt; such that &lt;span  class=&#34;math&#34;&gt;\( f(r \cdot z) \neq r \cdot f(z)\)&lt;/span&gt;.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

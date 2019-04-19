@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Markdown on Shawn M. O&#39;Hare</title>
+    <link>https://www.shawnohare.com/tags/markdown/</link>
+    <description>Recent content in Markdown on Shawn M. O&#39;Hare</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>© Shawn M. O’Hare.  &lt;a rel=&#34;license&#34; href=&#34;http://creativecommons.org/licenses/by-sa/4.0/&#34;&gt;Some rights reserved&lt;/a&gt;.</copyright>
+    <lastBuildDate>Sat, 25 Nov 2017 11:15:01 +0000</lastBuildDate>
+    
+	<atom:link href="https://www.shawnohare.com/tags/markdown/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Math (LaTeX) in Markdown</title>
+      <link>https://www.shawnohare.com/post/2017/11/ae8073e5-faad-4768-aa20-153731f16de6/</link>
+      <pubDate>Sat, 25 Nov 2017 11:15:01 +0000</pubDate>
+      
+      <guid>https://www.shawnohare.com/post/2017/11/ae8073e5-faad-4768-aa20-153731f16de6/</guid>
+      <description>&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
+
+&lt;p&gt;When writing mathematics in markdown, I prefer a combination of syntactically
+pure but robust LaTeX, portability with respect to markdown processors, and
+aesthetically pleasing in-editor highlighting. Unfortunately, the first two
+constraints often conflict.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

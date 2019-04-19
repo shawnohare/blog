@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Ring Endomorphisms of the Reals | Shawn M. O&#39;Hare</title>
+
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="author" content="Shawn O’Hare">
+<meta name="generator" content="Hugo 0.54.0" />
+
+<link rel="stylesheet" href="https://www.shawnohare.com/css/main.css">
+<link rel="stylesheet" href="https://www.shawnohare.com/css/override.css">
+
+
+<script type="text/javascript" src="https://www.shawnohare.com/js/mathjax.js"></script>
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS_CHTML-full">
+</script>
+
+
+</head>
+
+<body>
+<nav id="site" class="ui">
+  <ul>
+    
+    <li><a href="/">home</a></li>
+    
+    <li><a href="/post">posts</a></li>
+    
+    <li><a href="/page/about">about</a></li>
+    
+  </ul>
+</nav>
+
+<header>
+<section class="title">
+<h1>Ring Endomorphisms of the Reals</h1>
+
+</section>
+
+
+</header>
+<main>
+  <section id="content-meta">
+  
+<section class="content-meta ui">
+<section class="date">24 April, 2014</section>
+
+
+
+<section class="author">By <a href="https://www.shawnohare.com">Shawn O’Hare</a></section>
+
+
+
+
+
+
+<section class="tags">
+
+<a href="/tags/">Tags</a>:
+
+<a  href="https://www.shawnohare.com/tags/math">math&nbsp;</a>
+
+</section>
+
+
+
+
+</section>
+
+
+  
+
+  </section>
+  <section class="content-main"><p>Today we present a (mostly) algebraic proof that the only field endomorphism of the real numbers <span  class="math">\(\mathbb R\)</span> is the identity map.  Many arguments of this fact invoke continuity, which we particularly try to avoid.  To be clear, we require in this discussion that ring morphisms fix the multiplicative identity.    First we recall that any characteristic <span  class="math">\(0\)</span> field has a prime subfield isomorphic to the rationals <span  class="math">\(\mathbb Q\)</span>, so we will always assume characteristic <span  class="math">\(0\)</span> fields contain <span  class="math">\(\mathbb Q\)</span>.</p>
+
+<p>It's not too difficult to see that any field endomorphism fixes the prime  subfield, regardless of characteristic.  For the characteristic <span  class="math">\(0\)</span> case we can argue as follows.  Suppose  <span  class="math">\(K\)</span> is a field with characteristic <span  class="math">\(0\)</span> and  <span  class="math">\(f \colon K \to K\)</span> is a ring homomorphism.   As <span  class="math">\(f\)</span> is also an abelian group homomorphism, it is a <span  class="math">\(\mathbb Z\)</span>-module morphism, so  <span  class="math">\(f(n \cdot x) = n \cdot f (x)\)</span> for any <span  class="math">\(n \in \mathbb Z\)</span> and <span  class="math">\(x \in K\)</span>.   In particular, <span  class="math">\(f\)</span> fixes <span  class="math">\(\mathbb Z\)</span>.  Let <span  class="math">\(q \in \mathbb Q\)</span>.   We may write <span  class="math">\(q = n/m\)</span> where <span  class="math">\(n\)</span>, <span  class="math">\(m \in \mathbb Z\)</span> with <span  class="math">\(m \neq 0\)</span>.  Then</p>
+
+<p><span  class="math">\[\begin{equation*}
+  m f(q) = f(m) f(n/m) = f(m \cdot (n/m)) = f(n) = n, 
+\end{equation*}\]</span></p>
+
+<p>which yields <span  class="math">\(f(q) = n/m = q\)</span>, showing that <span  class="math">\(f\)</span> fixes <span  class="math">\(\mathbb Q\)</span>.</p>
+
+<p>Next, let's restrict the case to when <span  class="math">\(K = \mathbb R\)</span>.  We claim that <span  class="math">\(f\)</span> is a poset morphism, i.e, that <span  class="math">\(x \leq y\)</span> implies <span  class="math">\(f(x) \leq f(y)\)</span>.  This relies on the fact that any positive real is the square of some other real.  Suppose then that <span  class="math">\(x \leq y\)</span>, so that <span  class="math">\(y - x \geq 0\)</span>.  There exists a <span  class="math">\(z \in \mathbb R\)</span> such that <span  class="math">\(z^2 = y - x\)</span>.  Now <span  class="math">\(f(y) - f(x) = f(y - x) = f(z^2) = f(z) f(z) \geq 0\)</span> implying <span  class="math">\(f(y) \geq f(x)\)</span>, as desired.</p>
+
+<p>Finally we claim that <span  class="math">\(f \colon \mathbb R \to \mathbb R\)</span> is in fact the
+identity map.  Let <span  class="math">\(x \in \mathbb R\)</span> be arbitrary and suppose that <span  class="math">\(f(x)
+\neq x\)</span>.  If <span  class="math">\(x \lt f(x)\)</span>, then we may pick a rational <span  class="math">\(q\)</span> such that <span  class="math">\(x
+\lt q \lt f(x)\)</span>.  Because <span  class="math">\(f\)</span> is order preserving we have <span  class="math">\(f(x) \leq 
+f(q)=q\)</span>, a contradiction.  On the other hand if <span  class="math">\(f(x) \lt x\)</span> we may pick a
+rational <span  class="math">\(q\)</span> such that <span  class="math">\(f(x) \lt q \lt x\)</span>.  But then <span  class="math">\(q = f(q) \leq
+f(x)\)</span>, a contradiction.  This proves that <span  class="math">\(f\)</span> is the identity function, as
+desired.</p>
+
+<p>While we did have to invoke a topological property of the real numbers---namely that the rationals are dense in the reals---we avoided any continuity arguments and requirements that f was injective and by extension strictly monotone.</p></section>
+</main>
+
+<footer class="ui" id="site">
+  <ul>
+    
+  </ul>
+
+  
+  <section id="copyright">© Shawn M. O’Hare.  <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Some rights reserved</a>.</section>
+</footer>
+</body>
+</html>
