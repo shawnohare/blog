@@ -42,20 +42,18 @@ We can obtain the corpus vocabulary $\mathcal V$---the set of all distinct
 words that appear in the corpus---by taking the union over $\mathcal D$.  
 That is, 
 
-{{< display >}}
-```
+$$
 \[
   \mathcal V := \bigcup \limits_{D \in \mathcal D} D. 
 \] 
-```
-{{< /display >}}
+$$
 
 Since $\mathcal V$ is a set, all duplicate words are ignored.
 We can now naively embed $\mathcal D$ into the $\mathbb R$-span of 
 $\mathcal V$ via 
-{{< inline "$D \mapsto \sum_{w \in \mathcal D} w$">}}.
-This simply counts the number of times each word $w \in \mathcal V$ appears 
-in $\mathcal D$.  To conserve memory we can record only sparse vectors if we so desire.
+$$D \mapsto \sum_{w \in \mathcal D} w$$.
+This simply counts the number of times each word $$w \in \mathcal V$$ appears 
+in $$\mathcal D$$.  To conserve memory we can record only sparse vectors if we so desire.
 This naive approach has one immediate problem.
 The documents $D_1$, $D_2$ consisting of {"Whale."} and {"Whale. Whale."}
 have a distance of $2$ in $\mathbb R \mathcal V$ despite the fact they
@@ -73,13 +71,11 @@ and also by how infrequently it occurs in the entire corpus
 
 First define the raw count function 
 
-{{< display >}}
-```
+$$
 \[
 f \colon \mathcal V \times \mathcal D \to \mathbb Z 
 \]
-```
-{{< /display >}}
+$$
 
 where $f(w,D)$ is the number of times the word $w$ appears in the document $D$.
 Viewing $D$ as a subset of $\mathcal V$, let $\chi_D \colon \mathcal V \to \{ 0, 1\}$ 
