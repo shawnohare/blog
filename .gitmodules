@@ -1,7 +1,0 @@
-[submodule "themes/hugo-morphism"]
-	path = themes/hugo-morphism
-	url = https://github.com/shawnohare/hugo-morphism
-[submodule "public"]
-	path = public
-	url = git@github.com:shawnohare/shawnohare.github.io.git
-	branch = master
